@@ -1,10 +1,17 @@
 import React from 'react'
+import { PresentationComponent } from './PresentationStyle'
+import DEV from '../../../image/dev.png'
 
 const Presentation = () => {
     return (
-        <>
-            <h1>opa</h1>
-        </>
+        <PresentationComponent>
+            <div>
+                <p>Olá! Meu nome é</p>
+                <h1>Renato Gomes</h1>
+                <h2>Desenvolvedor Full Stack</h2>
+            </div>
+            <img className="dev" src={DEV} alt="Desenvolvedor" />
+        </PresentationComponent>
     )
 }
 

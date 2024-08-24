@@ -4,20 +4,27 @@ import styled from 'styled-components'
 import Presentation from './components/main/presentation/Presentation'
 
 const AppComponent = styled.div`
-    & section {
+    & .wraper {
         display: flex;
+
+        & .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
     }
 `
 
 const App = () => {
     return (
         <AppComponent>
-            <section>
+            <div className='wraper'>
                 <Header />
-                <div>
+                <div className='main'>
                     <Presentation />
                 </div>
-            </section>
+            </div>
         </AppComponent>
     )
 }

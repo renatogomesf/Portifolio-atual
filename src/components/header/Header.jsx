@@ -19,28 +19,28 @@ const Header = () => {
                 <ul>
                     <a href="">
                         <div>
-                            <FaHome />
+                            <FaHome className="icon" />
                             <li>Home</li>
                         </div>
                         <hr />
                     </a>
                     <a href="">
                         <div>
-                            <IoPersonSharp />
+                            <IoPersonSharp className="icon" />
                             <li>Sobre mim</li>
                         </div>
                         <hr />
                     </a>
                     <a href="">
                         <div>
-                            <GrVulnerability />
+                            <GrVulnerability className="icon" />
                             <li>Habilidades</li>
                         </div>
                         <hr />
                     </a>
                     <a href="">
                         <div>
-                            <FaDiagramProject />
+                            <FaDiagramProject className="icon" />
                             <li>Projetos</li>
                         </div>
                         <hr />
@@ -50,60 +50,57 @@ const Header = () => {
 
             <div className="contatos">
                 <div className="redes_sociais">
-                    <div>
-                        <a
-                            href="https://github.com/renatogomesf"
-                            target="blanck"
-                        >
-                            <FaGithub />
+                    <a href="https://github.com/renatogomesf" target="blanck">
+                        <div>
+                            <FaGithub className="icon" />
                             <p>github.com</p>
 
                             <button>
                                 <FaExternalLinkAlt />
                             </button>
-                        </a>
+                        </div>
                         <hr />
-                    </div>
+                    </a>
 
-                    <div>
-                        <a
-                            href="https://www.linkedin.com/in/renato-gomes-22b759236/"
-                            target="blanck"
-                        >
-                            <FaLinkedin />
+                    <a
+                        href="https://www.linkedin.com/in/renato-gomes-22b759236/"
+                        target="blanck"
+                    >
+                        <div>
+                            <FaLinkedin className="icon" />
                             <p>linkedin.com</p>
 
                             <button>
                                 <FaExternalLinkAlt />
                             </button>
-                        </a>
+                        </div>
                         <hr />
-                    </div>
+                    </a>
                 </div>
 
                 <div className="emails">
                     <div className="gmail">
-                        <div className="conteudo">
-                            <a href="mailto:renato.gfe.dev@gmail.com">
-                                <MdEmail />
+                        <a href="mailto:renato.gfe.dev@gmail.com">
+                            <div>
+                                <MdEmail className="icon" />
                                 <p className="texto_email">
                                     renato.gfe.dev@gmail.com
                                 </p>
-                            </a>
-                        </div>
-                        <hr />
+                            </div>
+                            <hr />
+                        </a>
                     </div>
 
                     <div className="hotmail">
-                        <div className="conteudo">
-                            <a href="mailto:renato_s5s@hotmail.com">
-                                <MdEmail />
+                        <a href="mailto:renato_s5s@hotmail.com">
+                            <div>
+                                <MdEmail className="icon" />
                                 <p className="texto_email">
                                     renato_s5s@hotmail.com
                                 </p>
-                            </a>
-                        </div>
-                        <hr />
+                            </div>
+                            <hr />
+                        </a>
                     </div>
                 </div>
             </div>
