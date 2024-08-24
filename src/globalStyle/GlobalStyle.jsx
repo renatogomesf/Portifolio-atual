@@ -6,7 +6,12 @@ export const GlobalStyle = createGlobalStyle`
         margin: 0px;
         padding: 0px;
 
+        font-family: "Nunito", sans-serif;
         text-decoration: none;
+    }
+
+    html{
+        scroll-behavior: smooth;
     }
 
     body{
@@ -14,13 +19,13 @@ export const GlobalStyle = createGlobalStyle`
         background-color: ${({ theme }) => theme.primary};
     }
 
-    /* ::-webkit-scrollbar{
-        background-color: ${({ theme }) => theme.light_gray_2};
+    ::-webkit-scrollbar{
+        background-color: ${({ theme }) => theme.secondary};
         width: 10px;
     }
 
     ::-webkit-scrollbar-thumb{
-        background-color: ${({ theme }) => theme.primary};
+        background-color: ${({ theme }) => theme.light_blue};
         border-radius: 5px;
-    } */
+    }
 `
