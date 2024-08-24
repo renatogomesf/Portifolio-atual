@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './components/header/Header'
-import Presentation from './components/main/Presentation'
 import styled from 'styled-components'
+import Presentation from './components/main/presentation/Presentation'
 
 const AppComponent = styled.div`
     & section {
