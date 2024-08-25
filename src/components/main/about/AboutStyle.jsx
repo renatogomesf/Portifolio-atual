@@ -4,8 +4,8 @@ export const AboutComponent = styled.section`
     display: flex;
     flex-direction: column;
     gap: 10px;
-    /* margin: 65px; */
     padding: 65px;
+    margin: 50px 0px;
     /* border-radius: 20px;
     background-color: ${({ theme }) => theme.primary}; */
 

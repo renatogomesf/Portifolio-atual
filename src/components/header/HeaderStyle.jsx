@@ -47,7 +47,7 @@ export const HeaderComponent = styled.header`
 
         &:hover {
             .icon {
-                color: ${({ theme }) => theme.cor3};
+                color: ${({ theme }) => theme.cor4};
             }
 
             hr {
@@ -61,11 +61,51 @@ export const HeaderComponent = styled.header`
     }
 
     hr {
-        background-color: ${({ theme }) => theme.cor3};
+        background-color: ${({ theme }) => theme.cor4};
         border: none;
         width: 0px;
         height: 2px;
         transition: 0.2s;
+    }
+
+    & .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        & h1 {
+            opacity: 0;
+            width: 0px;
+            margin-left: 5px;
+            font-weight: 800;
+
+            animation: logo 2s forwards;
+            animation-delay: 2s;
+        }
+
+        & img {
+            height: 50px;
+        }
+
+
+        @keyframes logo {
+            0%{
+                opacity: 0;
+                width: 0px;
+            }
+            25%{
+                opacity: 0;
+                width: 25%;
+            }
+            50%{
+                opacity: 0;
+                width: 50%;
+            }
+            100%{
+                opacity: 1;
+                width: 100%;
+            }
+        }
     }
 
     & nav {

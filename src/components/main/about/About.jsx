@@ -3,9 +3,11 @@ import { AboutComponent } from './AboutStyle'
 
 import FALA from '../../../image/fala.png'
 
+import Curriculo from './pdf/Currículo_Renato_Gomes_Ferreira.pdf'
+
 const About = () => {
     return (
-        <AboutComponent id='about'>
+        <AboutComponent id="about">
             <div className="titulo">
                 <img className="img_fala" src={FALA} alt="imagem de fala" />
                 <h1>Sobre mim</h1>
@@ -32,6 +34,23 @@ const About = () => {
                 com o mundo da programação. Foi difícil no começo, mas continuo
                 <strong>evoluindo dia após dia</strong>.
             </p>
+
+            <div className=''>
+                <a href={Curriculo} target="blank">
+                    <button className=''>
+                        Ver curriculo
+                    </button>
+                </a>
+
+                <a
+                    href={Curriculo}
+                    download="Currículo_Renato_Gomes_Ferreira.pdf"
+                >
+                    <button className=''>
+                        Baixar curriculo
+                    </button>
+                </a>
+            </div>
         </AboutComponent>
     )
 }

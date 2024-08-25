@@ -5,6 +5,7 @@ export const PresentationComponent = styled.section`
     align-items: center;
     justify-content: center;
     padding: 65px;
+    margin: 50px 0px;
     flex-wrap: wrap;
 
     & div {

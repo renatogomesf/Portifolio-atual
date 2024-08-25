@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const AbilityComponent = styled.section`
     padding: 65px;
+    margin: 50px 0px;
 
     & .titulo {
         display: flex;
