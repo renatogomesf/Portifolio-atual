@@ -4,13 +4,13 @@ import DEV from '../../../image/dev.png'
 
 const Presentation = () => {
     return (
-        <PresentationComponent>
+        <PresentationComponent id='presentation'>
             <div>
                 <p>Olá! Meu nome é</p>
                 <h1>Renato Gomes</h1>
                 <h2>Desenvolvedor Full Stack</h2>
             </div>
-            <img className="dev" src={DEV} alt="Desenvolvedor" />
+            <img className="img_dev" src={DEV} alt="Desenvolvedor" />
         </PresentationComponent>
     )
 }

@@ -40,14 +40,22 @@ export const HeaderComponent = styled.header`
             transition: 0.2s;
         }
 
-        &:hover {
+        .btn_redes {
+            background-color: ${({ theme }) => theme.cor2};
+            transition: 0.2s;
+        }
 
+        &:hover {
             .icon {
                 color: ${({ theme }) => theme.cor3};
             }
 
             hr {
                 width: 100%;
+            }
+
+            .btn_redes {
+                background-color: ${({ theme }) => theme.cor3};
             }
         }
     }
@@ -79,11 +87,22 @@ export const HeaderComponent = styled.header`
         gap: 15px;
         font-weight: bold;
 
-
         & .redes_sociais {
             display: flex;
             flex-direction: column;
             gap: 15px;
+
+            & .btn_redes {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 50px;
+                height: 40px;
+                border: none;
+                border-radius: 10px;
+                color: white;
+                cursor: pointer;
+            }
         }
 
         & .emails {

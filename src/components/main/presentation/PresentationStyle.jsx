@@ -1,9 +1,11 @@
 import styled from 'styled-components'
 
-export const PresentationComponent = styled.div`
+export const PresentationComponent = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 65px;
+    flex-wrap: wrap;
 
     & div {
 
@@ -15,6 +17,7 @@ export const PresentationComponent = styled.div`
             font-size: 5rem;
             font-weight: 800;
             color: ${({ theme }) => theme.tertiary};
+            white-space: nowrap;
         }
 
         & h2 {
@@ -22,7 +25,8 @@ export const PresentationComponent = styled.div`
         }
     }
 
-    & .dev {
-        width: 400px;
+    & .img_dev {
+        width: 100%;
+        max-width: 400px;
     }
 `

@@ -1,0 +1,29 @@
+import styled from 'styled-components'
+
+export const AboutComponent = styled.section`
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* margin: 65px; */
+    padding: 65px;
+    /* border-radius: 20px;
+    background-color: ${({ theme }) => theme.primary}; */
+
+    & .titulo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 50px;
+        margin-bottom: 40px;
+
+        & h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            color: ${({ theme }) => theme.tertiary};
+        }
+
+        & .img_fala {
+            width: 300px;
+        }
+    }
+`

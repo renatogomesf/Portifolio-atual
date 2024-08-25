@@ -2,13 +2,17 @@ import React from 'react'
 import Header from './components/header/Header'
 import styled from 'styled-components'
 import Presentation from './components/main/presentation/Presentation'
+import About from './components/main/about/About'
+import Ability from './components/main/ability/Ability'
+import Project from './components/main/project/Project'
 
 const AppComponent = styled.div`
     & .wraper {
         display: flex;
 
-        & .main{
+        & .main {
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
             width: 100%;
@@ -19,10 +23,13 @@ const AppComponent = styled.div`
 const App = () => {
     return (
         <AppComponent>
-            <div className='wraper'>
+            <div className="wraper">
                 <Header />
-                <div className='main'>
+                <div className="main">
                     <Presentation />
+                    <About />
+                    <Ability />
+                    <Project />
                 </div>
             </div>
         </AppComponent>

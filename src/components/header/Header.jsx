@@ -17,28 +17,28 @@ const Header = () => {
 
             <nav>
                 <ul>
-                    <a href="">
+                    <a href="#">
                         <div>
                             <FaHome className="icon" />
                             <li>Home</li>
                         </div>
                         <hr />
                     </a>
-                    <a href="">
+                    <a href="#about">
                         <div>
                             <IoPersonSharp className="icon" />
                             <li>Sobre mim</li>
                         </div>
                         <hr />
                     </a>
-                    <a href="">
+                    <a href="#ability">
                         <div>
                             <GrVulnerability className="icon" />
                             <li>Habilidades</li>
                         </div>
                         <hr />
                     </a>
-                    <a href="">
+                    <a href="#project">
                         <div>
                             <FaDiagramProject className="icon" />
                             <li>Projetos</li>
@@ -55,7 +55,7 @@ const Header = () => {
                             <FaGithub className="icon" />
                             <p>github.com</p>
 
-                            <button>
+                            <button className="btn_redes">
                                 <FaExternalLinkAlt />
                             </button>
                         </div>
@@ -70,7 +70,7 @@ const Header = () => {
                             <FaLinkedin className="icon" />
                             <p>linkedin.com</p>
 
-                            <button>
+                            <button className="btn_redes">
                                 <FaExternalLinkAlt />
                             </button>
                         </div>
