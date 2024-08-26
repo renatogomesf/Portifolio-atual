@@ -35,20 +35,16 @@ const About = () => {
                 <strong>evoluindo dia após dia</strong>.
             </p>
 
-            <div className=''>
+            <div className="">
                 <a href={Curriculo} target="blank">
-                    <button className=''>
-                        Ver curriculo
-                    </button>
+                    <button className="">Ver curriculo</button>
                 </a>
 
                 <a
                     href={Curriculo}
                     download="Currículo_Renato_Gomes_Ferreira.pdf"
                 >
-                    <button className=''>
-                        Baixar curriculo
-                    </button>
+                    <button className="">Baixar curriculo</button>
                 </a>
             </div>
         </AboutComponent>

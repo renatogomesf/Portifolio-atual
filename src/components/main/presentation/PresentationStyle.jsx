@@ -9,8 +9,7 @@ export const PresentationComponent = styled.section`
     flex-wrap: wrap;
 
     & div {
-
-        & p{
+        & p {
             font-weight: bold;
         }
 

@@ -29,6 +29,10 @@ export const HeaderComponent = styled.header`
             justify-content: start;
             gap: 10px;
 
+            & p {
+                font-size: 0.9rem;
+            }
+
             & li {
                 white-space: nowrap;
             }
@@ -43,11 +47,12 @@ export const HeaderComponent = styled.header`
         .btn_redes {
             background-color: ${({ theme }) => theme.cor2};
             transition: 0.2s;
+            border: 2px solid ${({ theme }) => theme.cor2};
         }
 
         &:hover {
             .icon {
-                color: ${({ theme }) => theme.cor4};
+                color: ${({ theme }) => theme.cor_aux_3};
             }
 
             hr {
@@ -55,20 +60,21 @@ export const HeaderComponent = styled.header`
             }
 
             .btn_redes {
-                background-color: ${({ theme }) => theme.cor3};
+                background-color: ${({ theme }) => theme.cor1};
+                border: 2px solid ${({ theme }) => theme.cor_aux_3};
             }
         }
     }
 
     hr {
-        background-color: ${({ theme }) => theme.cor4};
+        background-color: ${({ theme }) => theme.cor_aux_3};
         border: none;
         width: 0px;
         height: 2px;
         transition: 0.2s;
     }
 
-    & .logo{
+    & .logo {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -84,24 +90,25 @@ export const HeaderComponent = styled.header`
         }
 
         & img {
-            height: 50px;
+            height: 30px;
         }
 
-
         @keyframes logo {
-            0%{
+            0% {
                 opacity: 0;
                 width: 0px;
             }
-            25%{
+            25% {
                 opacity: 0;
-                width: 25%;
             }
-            50%{
+            50% {
                 opacity: 0;
-                width: 50%;
             }
-            100%{
+            75% {
+                opacity: 0;
+                width: 75%;
+            }
+            100% {
                 opacity: 1;
                 width: 100%;
             }
@@ -136,10 +143,9 @@ export const HeaderComponent = styled.header`
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                width: 50px;
-                height: 40px;
-                border: none;
-                border-radius: 10px;
+                width: 30px;
+                height: 30px;
+                border-radius: 5px;
                 color: white;
                 cursor: pointer;
             }

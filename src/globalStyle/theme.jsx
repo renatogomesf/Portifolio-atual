@@ -5,7 +5,7 @@ export const theme = {
     light_blue: '#159A9C',
     light_gray: '#B4BEC9',
 
-    teste: '#eeeeee',
+    cor_aux_0: '#eeeeee',
 
     cor_aux_1: '#BFBFBF',
     cor_aux_2: '#4C5958',

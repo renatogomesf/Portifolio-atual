@@ -4,7 +4,7 @@ import DEV from '../../../image/dev.png'
 
 const Presentation = () => {
     return (
-        <PresentationComponent id='presentation'>
+        <PresentationComponent id="presentation">
             <div>
                 <p>Olá! Meu nome é</p>
                 <h1>Renato Gomes</h1>

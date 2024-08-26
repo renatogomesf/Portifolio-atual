@@ -41,7 +41,7 @@ const habilidades = [
 
 const Ability = () => {
     return (
-        <AbilityComponent id='ability'>
+        <AbilityComponent id="ability">
             <div className="titulo">
                 <h1>Habilidades</h1>
                 <img

@@ -10,16 +10,15 @@ import { GrVulnerability } from 'react-icons/gr'
 import { FaDiagramProject } from 'react-icons/fa6'
 import { FaHome } from 'react-icons/fa'
 
-import LOGO_E from '../../image/logo-esquerdo.png'
-import LOGO_D from '../../image/logo-direito.png'
+import LOGO from '../../../public/logo.png'
 
 const Header = () => {
+
     return (
         <HeaderComponent>
-            <div className='logo'>
-                <img src={LOGO_E} alt="" />
+            <div className="logo">
+                <img src={LOGO} alt="" />
                 <h1>RDEV</h1>
-                <img src={LOGO_D} alt="" />
             </div>
 
             <nav>
