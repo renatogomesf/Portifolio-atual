@@ -21,4 +21,26 @@ export const ProjectComponent = styled.section`
             width: 300px;
         }
     }
+
+    & .projetos {
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 50px;
+
+        & .projeto {
+
+            background-color: ${({ theme }) => theme.cor_aux_1};
+
+            & .img_projeto {
+                width: 450px;
+            }
+
+            & .info {
+                & .img_tec {
+                    width: 50px;
+                }
+            }
+        }
+    }
 `
