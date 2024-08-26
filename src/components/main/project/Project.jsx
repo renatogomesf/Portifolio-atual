@@ -23,70 +23,90 @@ import JOGO_PERGUNTA from '../../../image/imgProjeto/jogo de perguntas.png'
 import CALCULADORA from '../../../image/imgProjeto/calculadora.png'
 import LISTA from '../../../image/imgProjeto/lista.png'
 
+import { FaCode } from 'react-icons/fa'
+import { GoProjectSymlink } from 'react-icons/go'
+
 const projetos = [
     {
         img: FORM_MONGODB,
         titulo: 'Formulário Full-Stack (MongoDB Atlas)',
         descricao:
-            'Formulário fullstack onde é possível cadastrar pessoas, realizar consultas por filtro, ver todos os cadastros, atualizar e deletar os cadastros. Ou seja, é possível realizar um CRUD completo.',
-        tecnologias: [REACT, SC, JS, NODE, MONGODB]
+            'Formulário fullstack onde é possível realizar um CRUD (Create, Read, Update e Delete) completo.',
+        tecnologias: [REACT, SC, JS, NODE, MONGODB],
+        link_projeto: 'https://renatogomesf.github.io/Formulario-MongoDB/',
+        link_codigo: 'https://github.com/renatogomesf/Formulario-MongoDB'
     },
     {
         img: FORM_MYSQL,
         titulo: 'Formulário Full-Stack (MySQL)',
         descricao:
-            'Formulário fullstack onde é possível cadastrar pessoas, realizar consultas por filtro, ver todos os cadastros, atualizar e deletar os cadastros. Ou seja, é possível realizar um CRUD completo.',
-        tecnologias: [REACT, SC, JS, NODE, MYSQL]
+            'Formulário fullstack onde é possível realizar um CRUD (Create, Read, Update e Delete) completo.',
+        tecnologias: [REACT, SC, JS, NODE, MYSQL],
+        link_projeto: 'https://renatogomesf.github.io/Formulario-MySQL/',
+        link_codigo: 'https://github.com/renatogomesf/Formulario-MySQL'
     },
     {
         img: LANDING_BARBEARIA,
         titulo: 'Landing page Barbearia',
         descricao:
             'Página destinada a divulgar uma determinada barbearia com cortes de cabelo e barba.',
-        tecnologias: [REACT, SC, JS]
+        tecnologias: [REACT, SC, JS],
+        link_projeto: 'https://renatogomesf.github.io/Landing-Page-Barbearia/',
+        link_codigo: 'https://github.com/renatogomesf/Landing-Page-Barbearia'
     },
     {
         img: LANDING_PAGE,
         titulo: 'Landing page Restaurante.',
         descricao:
             'Página destinada a divulgar um determinado restaurante com foco em delivery.',
-        tecnologias: [REACT, TAILWIND, JS]
+        tecnologias: [REACT, TAILWIND, JS],
+        link_projeto: 'https://renatogomesf.github.io/Landing-Page/',
+        link_codigo: 'https://github.com/renatogomesf/Landing-Page'
     },
     {
         img: PAGINA_RESORTS,
         titulo: 'Página de Resorts.',
         descricao:
             'Página destinada a facilitar a procura e a reserva de resorts na região desejada pelo usuário.',
-        tecnologias: [REACT, TAILWIND, JS]
+        tecnologias: [REACT, TAILWIND, JS],
+        link_projeto: 'https://renatogomesf.github.io/Pagina-de-Resorts/',
+        link_codigo: 'https://github.com/renatogomesf/Pagina-de-Resorts'
     },
     {
         img: PORTIFOLIO_ANTIGO,
         titulo: 'Primeiro Portifólio.',
         descricao:
             'Portifólio criado após o término do curso de HTML e CSS. Posteriormente, foi adicionado JavaScript para dar função de abrir e fechar ao menu mobile.',
-        tecnologias: [HTML, CSS, JS]
+        tecnologias: [HTML, CSS, JS],
+        link_projeto: 'https://renatogomesf.github.io/Primeiro-Portifolio/',
+        link_codigo: 'https://github.com/renatogomesf/Portifolio'
     },
     {
         img: JOGO_PERGUNTA,
         titulo: 'Perguntas e Respostas.',
         descricao:
             'Jogo de conhecimentos gerais de múltiplas escolhas na qual só existe uma correta.',
-        tecnologias: [HTML, CSS, JS]
+        tecnologias: [HTML, CSS, JS],
+        link_projeto: 'https://renatogomesf.github.io/Perguntas-e-Respostas/',
+        link_codigo: 'https://github.com/renatogomesf/Perguntas-e-Respostas'
     },
     {
         img: CALCULADORA,
         titulo: 'Calculadora.',
-        descricao:
-            'Aplicativo para efetuar calculos simples e rápidos.',
-        tecnologias: [HTML, CSS, JS]
+        descricao: 'Aplicativo para efetuar calculos simples e rápidos.',
+        tecnologias: [HTML, CSS, JS],
+        link_projeto: 'https://renatogomesf.github.io/Calculadora/',
+        link_codigo: 'https://github.com/renatogomesf/Calculadora'
     },
     {
         img: LISTA,
         titulo: 'Lista.',
         descricao:
             'Aplicativo para armazenar informações no geral, em forma de lista.',
-        tecnologias: [HTML, CSS, JS]
-    },
+        tecnologias: [HTML, CSS, JS],
+        link_projeto: 'https://renatogomesf.github.io/Lista/',
+        link_codigo: 'https://github.com/renatogomesf/Lista'
+    }
 ]
 
 const Project = () => {
@@ -105,28 +125,55 @@ const Project = () => {
                 {projetos.map((item, index) => {
                     return (
                         <div className="projeto" key={index}>
-                            <img
-                                className="img_projeto"
-                                src={item.img}
-                                alt={item.titulo}
-                            />
+                            <div className="div_img_info">
+                                <img
+                                    className="img_projeto"
+                                    src={item.img}
+                                    alt={item.titulo}
+                                />
+                                <div className="info">
+                                    <div>
+                                        <p className="descricao">Descrição:</p>
+                                        <p>{item.descricao}</p>
+                                    </div>
+                                    <p className="tec_usada">
+                                        Tecnologias usadas:
+                                    </p>
 
-                            <div className="info">
-                                <h4>{item.titulo}</h4>
-                                <p>{item.descricao}</p>
-                                <p>Tecnologias usadas:</p>
+                                    <div className="tecnologias">
+                                        {item.tecnologias.map((img, i) => {
+                                            return (
+                                                <img
+                                                    className="img_tec"
+                                                    key={i}
+                                                    src={img}
+                                                    alt=""
+                                                />
+                                            )
+                                        })}
+                                    </div>
+                                </div>
+                            </div>
 
-                                <div>
-                                    {item.tecnologias.map((img, i) => {
-                                        return (
-                                            <img
-                                                className="img_tec"
-                                                key={i}
-                                                src={img}
-                                                alt=""
-                                            />
-                                        )
-                                    })}
+                            <div className="açoes">
+                                <h4 className="titulo_projeto">
+                                    {item.titulo}
+                                </h4>
+                                <div className="btn_links">
+                                    <a href={item.link_projeto} target='blank'>
+                                        <div>
+                                            <GoProjectSymlink className="icon" />
+                                            <span>Ver projeto</span>
+                                        </div>
+                                        <hr />
+                                    </a>
+                                    <a href={item.link_codigo} target='blank'>
+                                        <div>
+                                            <FaCode className="icon" />
+                                            <span>Ver Código</span>
+                                        </div>
+                                        <hr />
+                                    </a>
                                 </div>
                             </div>
                         </div>
