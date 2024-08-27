@@ -7,7 +7,7 @@ export const FooterComponent = styled.section`
     & hr {
         border: none;
         height: 2px;
-        background-color: ${({ theme }) => theme.tertiary};
+        background-color: ${({ theme }) => theme.secondary};
     }
 
     & .info_portifolio {
