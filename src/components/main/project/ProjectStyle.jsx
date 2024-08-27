@@ -136,4 +136,32 @@ export const ProjectComponent = styled.section`
             }
         }
     }
+
+    @media (max-width: 1024px) {
+        padding: 30px;
+
+        & .titulo {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap-reverse;
+        }
+    }
+
+    @media (max-width: 915px) {
+        scroll-margin-top: 100px;
+
+        & .titulo {
+            display: flex;
+            flex-direction: row;
+        }
+    }
+
+    @media (max-width: 768px) {
+        scroll-margin-top: 100px;
+
+        & .titulo {
+            display: flex;
+            flex-direction: column;
+        }
+    }
 `

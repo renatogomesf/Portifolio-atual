@@ -48,4 +48,31 @@ export const AbilityComponent = styled.section`
             }
         }
     }
+
+    @media (max-width: 1024px) {
+
+        padding: 30px;
+
+        & .titulo {
+            display: flex;
+            flex-wrap: wrap-reverse;
+        }
+
+
+        & .tecnologias {
+            grid-template-columns: repeat(3, 1fr);
+        }
+    }
+
+    @media (max-width: 915px) {
+        scroll-margin-top: 100px;
+    }
+
+    /* @media (max-width: 768px) {
+        scroll-margin-top: 100px;
+
+        & .tecnologias {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    } */
 `

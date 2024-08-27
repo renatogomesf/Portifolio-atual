@@ -32,7 +32,7 @@ export const AboutComponent = styled.section`
         padding: 20px;
         border-radius: 10px;
         background-color: ${({ theme }) => theme.quaternary};
-        
+
         & p {
             text-indent: 15px;
         }
@@ -42,26 +42,26 @@ export const AboutComponent = styled.section`
             gap: 20px;
             margin-top: 30px;
             font-size: 1.2rem;
-    
+
             & a {
                 color: ${({ theme }) => theme.tertiary};
-    
+
                 &:hover {
                     color: ${({ theme }) => theme.light_green};
                 }
-    
+
                 & div {
                     display: flex;
                     align-items: center;
                     justify-content: center;
                     gap: 5px;
-    
+
                     & .icon {
                         font-size: 1.5rem;
                         color: ${({ theme }) => theme.tertiary};
                     }
                 }
-    
+
                 & hr {
                     border: none;
                     height: 2px;
@@ -71,4 +71,25 @@ export const AboutComponent = styled.section`
         }
     }
 
+    @media (max-width: 1024px) {
+        padding: 30px;
+
+        & .titulo {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+
+    @media (max-width: 915px) {
+        scroll-margin-top: 100px;
+    }
+
+    @media (max-width: 768px) {
+        padding: 30px;
+
+        & .titulo {
+            display: flex;
+            flex-direction: column;
+        }
+    }
 `
