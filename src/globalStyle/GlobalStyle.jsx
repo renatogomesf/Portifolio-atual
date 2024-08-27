@@ -20,12 +20,12 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     ::-webkit-scrollbar{
-        background-color: ${({ theme }) => theme.cor_aux_0};
+        background-color: ${({ theme }) => theme.quaternary};
         width: 10px;
     }
 
     ::-webkit-scrollbar-thumb{
-        background-color: ${({ theme }) => theme.cor2};
+        background-color: ${({ theme }) => theme.secondary};
         border-radius: 5px;
     }
 `

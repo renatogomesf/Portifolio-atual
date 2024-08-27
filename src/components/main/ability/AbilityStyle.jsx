@@ -14,7 +14,7 @@ export const AbilityComponent = styled.section`
         & h1 {
             font-size: 4rem;
             font-weight: 800;
-            color: ${({ theme }) => theme.tertiary};
+            color: ${({ theme }) => theme.secondary};
         }
 
         & .img_habilidade {
@@ -33,7 +33,7 @@ export const AbilityComponent = styled.section`
             align-items: center;
             justify-content: center;
 
-            background-color: ${({ theme }) => theme.cor_aux_0};
+            background-color: ${({ theme }) => theme.quaternary};
             padding: 10px;
             border-radius: 10px;
 

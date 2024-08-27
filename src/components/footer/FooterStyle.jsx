@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const FooterComponent = styled.section`
     width: 100%;
-    background-color: ${({ theme }) => theme.cor_aux_0};
+    background-color: ${({ theme }) => theme.tertiary};
 
     & hr {
         border: none;
@@ -19,6 +19,7 @@ export const FooterComponent = styled.section`
             display: flex;
             flex-direction: column;
             gap: 20px;
+            color: white;
 
             & p {
                 font-weight: bold;
@@ -36,7 +37,11 @@ export const FooterComponent = styled.section`
         }
 
         & .copy {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             font-weight: bold;
+            color: white;
         }
     }
 `

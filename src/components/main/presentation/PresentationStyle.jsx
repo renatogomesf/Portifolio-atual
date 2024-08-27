@@ -11,17 +11,18 @@ export const PresentationComponent = styled.section`
     & div {
         & p {
             font-weight: bold;
+            color: ${({ theme }) => theme.secondary};
         }
 
         & h1 {
             font-size: 5rem;
             font-weight: 800;
-            color: ${({ theme }) => theme.tertiary};
+            color: ${({ theme }) => theme.secondary};
             white-space: nowrap;
         }
 
         & h2 {
-            color: ${({ theme }) => theme.light_blue};
+            color: ${({ theme }) => theme.light_green};
             text-shadow: 1px 1px 0px black;
         }
     }

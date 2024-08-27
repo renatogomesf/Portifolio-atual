@@ -14,7 +14,7 @@ export const ProjectComponent = styled.section`
         & h1 {
             font-size: 4rem;
             font-weight: 800;
-            color: ${({ theme }) => theme.tertiary};
+            color: ${({ theme }) => theme.secondary};
         }
 
         & .img_projeto {
@@ -33,7 +33,7 @@ export const ProjectComponent = styled.section`
             border-radius: 10px;
             height: min-content;
             padding: 10px;
-            background-color: ${({ theme }) => theme.cor_aux_0};
+            background-color: ${({ theme }) => theme.quaternary};
 
             &:hover {
                 height: 100%;
@@ -66,7 +66,7 @@ export const ProjectComponent = styled.section`
                 overflow: hidden;
                 border-radius: 10px;
                 color: white;
-                background-color: ${({ theme }) => theme.cor_aux_2};
+                background-color: ${({ theme }) => theme.tertiary};
 
                 & .descricao {
                     margin: 10px 0px;
@@ -111,7 +111,7 @@ export const ProjectComponent = styled.section`
                         color: ${({ theme }) => theme.tertiary};
 
                         &:hover {
-                            color: ${({ theme }) => theme.light_blue};
+                            color: ${({ theme }) => theme.light_green};
                         }
 
                         & div {

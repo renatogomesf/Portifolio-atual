@@ -22,6 +22,7 @@ const Footer = () => {
 
                 <div className="copy">
                     <p>&copy; 2024 Renato Gomes</p>
+                    <p>v3.0.0</p>
                 </div>
             </div>
         </FooterComponent>

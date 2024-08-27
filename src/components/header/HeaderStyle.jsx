@@ -8,7 +8,7 @@ export const HeaderComponent = styled.header`
     justify-content: space-around;
     align-items: center;
 
-    background-color: ${({ theme }) => theme.tertiary};
+    background-color: ${({ theme }) => theme.secondary};
     width: 100%;
     height: 100vh;
     max-width: 270px;
@@ -39,20 +39,20 @@ export const HeaderComponent = styled.header`
         }
 
         .icon {
-            color: ${({ theme }) => theme.primary};
+            color: ${({ theme }) => theme.quaternary};
             font-size: 1.7rem;
             transition: 0.2s;
         }
 
         .btn_redes {
-            background-color: ${({ theme }) => theme.cor2};
+            background-color: ${({ theme }) => theme.tertiary};
             transition: 0.2s;
-            border: 2px solid ${({ theme }) => theme.cor2};
+            border: 2px solid ${({ theme }) => theme.tertiary};
         }
 
         &:hover {
             .icon {
-                color: ${({ theme }) => theme.cor_aux_3};
+                color: ${({ theme }) => theme.light_green};
             }
 
             hr {
@@ -60,14 +60,14 @@ export const HeaderComponent = styled.header`
             }
 
             .btn_redes {
-                background-color: ${({ theme }) => theme.cor1};
-                border: 2px solid ${({ theme }) => theme.cor_aux_3};
+                background-color: ${({ theme }) => theme.secondary};
+                border: 2px solid ${({ theme }) => theme.light_green};
             }
         }
     }
 
     hr {
-        background-color: ${({ theme }) => theme.cor_aux_3};
+        background-color: ${({ theme }) => theme.light_green};
         border: none;
         width: 0px;
         height: 2px;
@@ -90,7 +90,7 @@ export const HeaderComponent = styled.header`
         }
 
         & img {
-            height: 30px;
+            height: 50px;
         }
 
         @keyframes logo {
@@ -117,8 +117,8 @@ export const HeaderComponent = styled.header`
 
     & nav {
         padding: 30px 55px;
-        background-color: ${({ theme }) => theme.cor2};
-        border-radius: 20px;
+        background-color: ${({ theme }) => theme.tertiary};
+        border-radius: 10px;
 
         & ul {
             display: flex;

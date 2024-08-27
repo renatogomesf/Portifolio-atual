@@ -17,7 +17,7 @@ export const AboutComponent = styled.section`
         & h1 {
             font-size: 4rem;
             font-weight: 800;
-            color: ${({ theme }) => theme.tertiary};
+            color: ${({ theme }) => theme.secondary};
         }
 
         & .img_fala {
@@ -31,7 +31,7 @@ export const AboutComponent = styled.section`
         gap: 10px;
         padding: 20px;
         border-radius: 10px;
-        background-color: ${({ theme }) => theme.cor_aux_0};
+        background-color: ${({ theme }) => theme.quaternary};
         
         & p {
             text-indent: 15px;
@@ -47,7 +47,7 @@ export const AboutComponent = styled.section`
                 color: ${({ theme }) => theme.tertiary};
     
                 &:hover {
-                    color: ${({ theme }) => theme.light_blue};
+                    color: ${({ theme }) => theme.light_green};
                 }
     
                 & div {
