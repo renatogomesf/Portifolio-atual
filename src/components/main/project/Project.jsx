@@ -13,12 +13,15 @@ import MYSQL from '../../../image/imgHabilidade/mysql.png'
 import MONGODB from '../../../image/imgHabilidade/mongodb.png'
 import TAILWIND from '../../../image/imgHabilidade/tailwind.png'
 
+
+import DIGITAL_STORE from '../../../image/imgProjeto/digital-store.png'
+import PORTIFOLIO_V2 from '../../../image/imgProjeto/portifolio v2.png'
 import FORM_MONGODB from '../../../image/imgProjeto/formulario-mongodb.png'
 import FORM_MYSQL from '../../../image/imgProjeto/formulario.png'
 import LANDING_BARBEARIA from '../../../image/imgProjeto/landing-page-barbearia.png'
 import LANDING_PAGE from '../../../image/imgProjeto/landing page.png'
 import PAGINA_RESORTS from '../../../image/imgProjeto/pagina-de-resorts.png'
-import PORTIFOLIO_ANTIGO from '../../../image/imgProjeto/portifolio-antigo.png'
+import PORTIFOLIO_V1 from '../../../image/imgProjeto/portifolio-antigo.png'
 import JOGO_PERGUNTA from '../../../image/imgProjeto/jogo de perguntas.png'
 import CALCULADORA from '../../../image/imgProjeto/calculadora.png'
 import LISTA from '../../../image/imgProjeto/lista.png'
@@ -27,6 +30,24 @@ import { FaCode } from 'react-icons/fa'
 import { GoProjectSymlink } from 'react-icons/go'
 
 const projetos = [
+    {
+        img: DIGITAL_STORE,
+        titulo: 'Digital Store',
+        descricao:
+            'E-commerce de sapatos, roupas e acessórios',
+        tecnologias: [REACT, SC, JS],
+        link_projeto: 'https://renatogomesf.github.io/Digital-Store/',
+        link_codigo: 'https://github.com/renatogomesf/Digital-Store'
+    },
+    {
+        img: PORTIFOLIO_V2,
+        titulo: 'Portifólio v2',
+        descricao:
+            'Segunda versão do meu portifólio.',
+        tecnologias: [REACT, CSS, JS],
+        link_projeto: 'https://renatogomesf.github.io/Portifolio-v2/',
+        link_codigo: 'https://github.com/renatogomesf/Portifolio-v2'
+    },
     {
         img: FORM_MONGODB,
         titulo: 'Formulário Full-Stack (MongoDB Atlas)',
@@ -73,7 +94,7 @@ const projetos = [
         link_codigo: 'https://github.com/renatogomesf/Pagina-de-Resorts'
     },
     {
-        img: PORTIFOLIO_ANTIGO,
+        img: PORTIFOLIO_V1,
         titulo: 'Primeiro Portifólio.',
         descricao:
             'Portifólio criado após o término do curso de HTML e CSS. Posteriormente, foi adicionado JavaScript para dar função de abrir e fechar ao menu mobile.',
@@ -125,34 +146,12 @@ const Project = () => {
                 {projetos.map((item, index) => {
                     return (
                         <div className="projeto" key={index}>
-                            <div className="div_img_info">
+                            <div className="div_img">
                                 <img
                                     className="img_projeto"
                                     src={item.img}
                                     alt={item.titulo}
                                 />
-                                <div className="info">
-                                    <div>
-                                        <p className="descricao">Descrição:</p>
-                                        <p>{item.descricao}</p>
-                                    </div>
-                                    <p className="tec_usada">
-                                        Tecnologias usadas:
-                                    </p>
-
-                                    <div className="tecnologias">
-                                        {item.tecnologias.map((img, i) => {
-                                            return (
-                                                <img
-                                                    className="img_tec"
-                                                    key={i}
-                                                    src={img}
-                                                    alt=""
-                                                />
-                                            )
-                                        })}
-                                    </div>
-                                </div>
                             </div>
 
                             <div className="açoes">
@@ -160,20 +159,41 @@ const Project = () => {
                                     {item.titulo}
                                 </h4>
                                 <div className="btn_links">
-                                    <a href={item.link_projeto} target='blank'>
+                                    <a href={item.link_projeto} target="blank">
                                         <div>
                                             <GoProjectSymlink className="icon" />
                                             <span>Ver projeto</span>
                                         </div>
                                         <hr />
                                     </a>
-                                    <a href={item.link_codigo} target='blank'>
+                                    <a href={item.link_codigo} target="blank">
                                         <div>
                                             <FaCode className="icon" />
                                             <span>Ver Código</span>
                                         </div>
                                         <hr />
                                     </a>
+                                </div>
+                            </div>
+
+                            <div className="info">
+                                <div>
+                                    <p className="descricao">Descrição:</p>
+                                    <p>{item.descricao}</p>
+                                </div>
+                                <p className="tec_usada">Tecnologias usadas:</p>
+
+                                <div className="tecnologias">
+                                    {item.tecnologias.map((img, i) => {
+                                        return (
+                                            <img
+                                                className="img_tec"
+                                                key={i}
+                                                src={img}
+                                                alt=""
+                                            />
+                                        )
+                                    })}
                                 </div>
                             </div>
                         </div>

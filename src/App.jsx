@@ -5,6 +5,7 @@ import Presentation from './components/main/presentation/Presentation'
 import About from './components/main/about/About'
 import Ability from './components/main/ability/Ability'
 import Project from './components/main/project/Project'
+import Footer from './components/footer/Footer'
 
 const AppComponent = styled.div`
     & .wraper {
@@ -30,6 +31,7 @@ const App = () => {
                     <About />
                     <Ability />
                     <Project />
+                    <Footer />
                 </div>
             </div>
         </AppComponent>

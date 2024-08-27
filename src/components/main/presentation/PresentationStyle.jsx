@@ -22,6 +22,7 @@ export const PresentationComponent = styled.section`
 
         & h2 {
             color: ${({ theme }) => theme.light_blue};
+            text-shadow: 1px 1px 0px black;
         }
     }
 

@@ -31,65 +31,62 @@ export const ProjectComponent = styled.section`
             display: flex;
             flex-direction: column;
             border-radius: 10px;
-
-            background-color: ${({ theme }) => theme.cor_aux_0};
+            height: min-content;
             padding: 10px;
+            background-color: ${({ theme }) => theme.cor_aux_0};
 
-            & .div_img_info {
-                position: relative;
+            &:hover {
+                height: 100%;
+                transition: 0.5s;
+
+                .info {
+                    height: 100%;
+                    transition: 0.5s;
+                    padding: 10px 10px;
+                }
+            }
+
+            & .div_img {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-
-                &:hover {
-                    .info {
-                        top: 0%;
-                        background-color: ${({ theme }) => theme.cor2};
-                        height: 100%;
-                    }
-                }
+                flex-direction: column;
 
                 & .img_projeto {
                     width: 100%;
                     border-radius: 10px;
                 }
+            }
+            & .info {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                height: 0px;
+                padding: 0px 10px;
+                overflow: hidden;
+                border-radius: 10px;
+                color: white;
+                background-color: ${({ theme }) => theme.cor_aux_2};
 
-                & .info {
-                    position: absolute;
-                    top: 100%;
-                    left: 0%;
-                    right: 0%;
+                & .descricao {
+                    margin: 10px 0px;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                }
+
+                & .tec_usada {
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                }
+
+                & .tecnologias {
                     display: flex;
-                    flex-direction: column;
+                    align-items: center;
                     gap: 10px;
-                    height: 0px;
-                    padding: 0px 20px;
-                    overflow: hidden;
-                    border-radius: 10px;
-                    color: white;
-                    background-color: ${({ theme }) => theme.tertiary};
 
-                    transition: 0.2s;
-
-                    & .descricao {
-                        margin: 10px 0px;
-                        font-size: 1.2rem;
-                        font-weight: bold;
-                    }
-
-                    & .tec_usada {
-                        font-size: 1.2rem;
-                        font-weight: bold;
-                    }
-
-                    & .tecnologias {
-                        display: flex;
-                        align-items: center;
-                        gap: 10px;
-
-                        & .img_tec {
-                            width: 40px;
-                        }
+                    & .img_tec {
+                        width: 40px;
+                        filter: drop-shadow(1px 1px 0px black);
                     }
                 }
             }
