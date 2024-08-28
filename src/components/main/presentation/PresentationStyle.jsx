@@ -130,10 +130,77 @@ export const PresentationComponent = styled.section`
         }
     }
 
-    @media (max-width: 915px) {
+    @media (max-width: 915px) and (min-width: 690px) {
+        gap: 20px;
         & .contatos {
             display: flex;
             flex-direction: column;
+        }
+    }
+
+    @media (max-width: 690px) {
+        & div {
+            & h1 {
+                font-size: 4rem;
+            }
+        }
+
+        & .img_dev {
+            width: 100%;
+            max-width: 350px;
+        }
+    }
+
+    @media (max-width: 520px) {
+        & div {
+            & h1 {
+                font-size: 3rem;
+            }
+
+            & h2 {
+                font-size: 1.1rem;
+            }
+        }
+
+        & .img_dev {
+            width: 100%;
+            max-width: 300px;
+        }
+    }
+
+    @media (max-width: 375px) {
+        padding: 20px;
+        & div {
+            & h1 {
+                font-size: 2.5rem;
+            }
+
+            & h2 {
+                font-size: 1rem;
+            }
+        }
+
+        & .img_dev {
+            width: 100%;
+            max-width: 300px;
+        }
+    }
+
+    @media (max-width: 320px) {
+        & div {
+
+            & h1 {
+                font-size: 2.3rem;
+            }
+
+            & h2 {
+                font-size: 1rem;
+            }
+        }
+
+        & .img_dev {
+            width: 100%;
+            max-width: 250px;
         }
     }
 `

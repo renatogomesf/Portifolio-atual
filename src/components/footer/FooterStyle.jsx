@@ -44,4 +44,16 @@ export const FooterComponent = styled.section`
             color: white;
         }
     }
+
+
+    @media (max-width: 520px) {
+        & .info_portifolio {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        & .copy {
+            gap: 10px;
+        }
+    }
 `

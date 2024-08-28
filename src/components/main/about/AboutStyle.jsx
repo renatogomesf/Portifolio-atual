@@ -88,8 +88,55 @@ export const AboutComponent = styled.section`
         padding: 30px;
 
         & .titulo {
-            display: flex;
             flex-direction: column;
+            gap: 20px;
+
+            & h1 {
+                font-size: 4rem;
+            }
+
+            & .img_fala {
+                width: 300px;
+            }
+        }
+    }
+
+    @media (max-width: 520px) {
+        & .titulo {
+            & h1 {
+                font-size: 3rem;
+            }
+
+            & .img_fala {
+                width: 250px;
+            }
+        }
+
+        & .textos {
+            & .link_pdf {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    @media (max-width: 375px) {
+        padding: 20px;
+        & .titulo {
+            & h1 {
+                font-size: 2rem;
+            }
+
+            & .img_fala {
+                width: 200px;
+            }
+        }
+
+        & .textos {
+            & .link_pdf {
+                flex-direction: column;
+                align-items: center;
+                font-size: 1rem;
+            }
         }
     }
 `

@@ -157,11 +157,60 @@ export const ProjectComponent = styled.section`
     }
 
     @media (max-width: 768px) {
-        scroll-margin-top: 100px;
-
         & .titulo {
-            display: flex;
             flex-direction: column;
+            gap: 20px;
+
+            & h1 {
+                font-size: 4rem;
+            }
+
+            & .img_fala {
+                width: 300px;
+            }
         }
+    }
+
+    @media (max-width: 690px) {
+        & .projetos {
+            justify-content: center;
+            grid-template-columns: repeat(1, 0.9fr);
+            gap: 50px;
+        }
+    }
+
+    @media (max-width: 520px) {
+        & .titulo {
+            & h1 {
+                font-size: 3rem;
+            }
+
+            & .img_projeto {
+                width: 250px;
+            }
+        }
+
+        & .projetos {
+            justify-content: center;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 50px;
+        }
+    }
+
+    @media (max-width: 375px) {
+        padding: 20px;
+        & .titulo {
+            & h1 {
+                font-size: 2rem;
+            }
+
+            & .img_projeto{
+                width: 200px;
+            }
+        }
+    }
+
+    @media (max-width: 320px) {
+        
     }
 `
