@@ -8,10 +8,8 @@ import Project from './components/main/project/Project'
 import Footer from './components/footer/Footer'
 
 const AppComponent = styled.div`
-    /* width: 100%; */
     & .wraper {
         display: flex;
-        /* width: 100%; */
 
         & .main {
             display: flex;
@@ -26,7 +24,6 @@ const AppComponent = styled.div`
         & .wraper {
             display: flex;
             flex-direction: column;
-            /* width: 100vw; */
         }
     }
 `

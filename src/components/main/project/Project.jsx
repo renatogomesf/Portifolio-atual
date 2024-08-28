@@ -13,7 +13,6 @@ import MYSQL from '../../../image/imgHabilidade/mysql.png'
 import MONGODB from '../../../image/imgHabilidade/mongodb.png'
 import TAILWIND from '../../../image/imgHabilidade/tailwind.png'
 
-
 import DIGITAL_STORE from '../../../image/imgProjeto/digital-store.png'
 import PORTIFOLIO_V2 from '../../../image/imgProjeto/portifolio v2.png'
 import FORM_MONGODB from '../../../image/imgProjeto/formulario-mongodb.png'
@@ -33,8 +32,7 @@ const projetos = [
     {
         img: DIGITAL_STORE,
         titulo: 'Digital Store',
-        descricao:
-            'E-commerce de sapatos, roupas e acessórios',
+        descricao: 'E-commerce de sapatos, roupas e acessórios',
         tecnologias: [REACT, SC, JS],
         link_projeto: 'https://renatogomesf.github.io/Digital-Store/',
         link_codigo: 'https://github.com/renatogomesf/Digital-Store'
@@ -42,8 +40,7 @@ const projetos = [
     {
         img: PORTIFOLIO_V2,
         titulo: 'Portifólio v2',
-        descricao:
-            'Segunda versão do meu portifólio.',
+        descricao: 'Segunda versão do meu portifólio.',
         tecnologias: [REACT, CSS, JS],
         link_projeto: 'https://renatogomesf.github.io/Portifolio-v2/',
         link_codigo: 'https://github.com/renatogomesf/Portifolio-v2'

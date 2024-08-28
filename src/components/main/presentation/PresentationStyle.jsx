@@ -123,11 +123,6 @@ export const PresentationComponent = styled.section`
 
     @media (max-width: 1024px) {
         padding: 30px;
-
-        & .titulo {
-            display: flex;
-            flex-direction: column;
-        }
     }
 
     @media (max-width: 915px) and (min-width: 690px) {
@@ -188,7 +183,6 @@ export const PresentationComponent = styled.section`
 
     @media (max-width: 320px) {
         & div {
-
             & h1 {
                 font-size: 2.3rem;
             }

@@ -158,42 +158,11 @@ export const HeaderComponent = styled.header`
         }
     }
 
-    @media (max-width: 1024px) {
-        /* height: 103vh; */
-    }
-
     @media (max-width: 915px) {
-        display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
         height: 100px;
         max-width: 100%;
         z-index: 100;
-
-        a {
-            .icon {
-                color: ${({ theme }) => theme.quaternary};
-                font-size: 1.5rem;
-            }
-
-            .btn_redes {
-                background-color: ${({ theme }) => theme.tertiary};
-                border: 2px solid ${({ theme }) => theme.tertiary};
-            }
-
-            &:hover {
-                .icon {
-                    color: ${({ theme }) => theme.light_green};
-                }
-
-                .btn_redes {
-                    background-color: ${({ theme }) => theme.secondary};
-                    border: 2px solid ${({ theme }) => theme.light_green};
-                }
-            }
-        }
 
         & .logo {
             & img {
@@ -206,7 +175,6 @@ export const HeaderComponent = styled.header`
             background-color: ${({ theme }) => theme.secondary};
 
             & ul {
-                display: flex;
                 flex-direction: row;
             }
         }
@@ -215,7 +183,6 @@ export const HeaderComponent = styled.header`
             display: none;
         }
     }
-
 
     @media (max-width: 690px) {
         & nav {

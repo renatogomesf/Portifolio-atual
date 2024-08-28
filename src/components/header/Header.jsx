@@ -13,7 +13,6 @@ import { FaHome } from 'react-icons/fa'
 import LOGO from '../../../public/logo.png'
 
 const Header = () => {
-
     return (
         <HeaderComponent>
             <div className="logo">

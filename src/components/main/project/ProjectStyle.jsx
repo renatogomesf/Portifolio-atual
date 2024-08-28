@@ -141,7 +141,6 @@ export const ProjectComponent = styled.section`
         padding: 30px;
 
         & .titulo {
-            display: flex;
             flex-direction: column;
             flex-wrap: wrap-reverse;
         }
@@ -151,7 +150,6 @@ export const ProjectComponent = styled.section`
         scroll-margin-top: 100px;
 
         & .titulo {
-            display: flex;
             flex-direction: row;
         }
     }
@@ -204,13 +202,9 @@ export const ProjectComponent = styled.section`
                 font-size: 2rem;
             }
 
-            & .img_projeto{
+            & .img_projeto {
                 width: 200px;
             }
         }
-    }
-
-    @media (max-width: 320px) {
-        
     }
 `

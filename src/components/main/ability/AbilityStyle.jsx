@@ -53,12 +53,7 @@ export const AbilityComponent = styled.section`
         padding: 30px;
 
         & .titulo {
-            display: flex;
             flex-wrap: wrap-reverse;
-        }
-
-        & .tecnologias {
-            grid-template-columns: repeat(3, 1fr);
         }
     }
 

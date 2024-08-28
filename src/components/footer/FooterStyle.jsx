@@ -45,7 +45,6 @@ export const FooterComponent = styled.section`
         }
     }
 
-
     @media (max-width: 520px) {
         & .info_portifolio {
             flex-direction: column;

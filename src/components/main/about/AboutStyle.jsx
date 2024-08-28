@@ -75,7 +75,6 @@ export const AboutComponent = styled.section`
         padding: 30px;
 
         & .titulo {
-            display: flex;
             flex-wrap: wrap;
         }
     }
