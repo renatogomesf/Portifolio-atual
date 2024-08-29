@@ -206,14 +206,14 @@ export const HeaderComponent = styled.header`
             position: relative;
             display: flex;
             align-items: center;
-            width: 24px;
-            height: 24px;
+            width: 26px;
+            height: 27px;
 
             &::before {
                 position: absolute;
                 top: 18px;
                 content: '';
-                width: 24px;
+                width: 26px;
                 height: 2px;
                 border-radius: 1px;
                 background-color: white;
@@ -226,7 +226,7 @@ export const HeaderComponent = styled.header`
                         transform: rotate(0deg);
                     }
                     to {
-                        transform: rotate(-37deg);
+                        transform: rotate(-33deg);
                     }
                 }
             }
@@ -235,7 +235,7 @@ export const HeaderComponent = styled.header`
                 position: absolute;
                 top: 4px;
                 content: '';
-                width: 24px;
+                width: 26px;
                 height: 2px;
                 border-radius: 1px;
                 background-color: white;
@@ -248,14 +248,14 @@ export const HeaderComponent = styled.header`
                         transform: rotate(0deg);
                     }
                     to {
-                        transform: rotate(37deg);
+                        transform: rotate(33deg);
                     }
                 }
             }
 
             & .menuOpen {
                 display: block;
-                width: 24px;
+                width: 26px;
                 height: 2px;
                 border-radius: 1px;
                 background-color: white;
@@ -277,14 +277,14 @@ export const HeaderComponent = styled.header`
             position: relative;
             display: flex;
             align-items: center;
-            width: 24px;
-            height: 24px;
+            width: 26px;
+            height: 27px;
 
             &::before {
                 position: absolute;
-                top: 18px;
+                top: 20px;
                 content: '';
-                width: 24px;
+                width: 26px;
                 height: 2px;
                 border-radius: 1px;
                 background-color: white;
@@ -306,7 +306,7 @@ export const HeaderComponent = styled.header`
                 position: absolute;
                 top: 4px;
                 content: '';
-                width: 24px;
+                width: 26px;
                 height: 2px;
                 border-radius: 1px;
                 background-color: white;
@@ -326,7 +326,7 @@ export const HeaderComponent = styled.header`
 
             & .menuClose {
                 display: block;
-                width: 24px;
+                width: 26px;
                 height: 2px;
                 border-radius: 1px;
                 background-color: white;
@@ -352,7 +352,7 @@ export const HeaderComponent = styled.header`
             flex-direction: column;
             background-color: ${({ theme }) => theme.secondary};
             height: min-content;
-            padding: 10px;
+            padding: 20px;
             gap: 20px;
             border-radius: 0px 0px 10px 0px;
 
@@ -406,11 +406,11 @@ export const HeaderComponent = styled.header`
         & .navegaçao {
             position: absolute;
             top: 100px;
-            left: -250px;
+            left: -270px;
             display: flex;
             background-color: ${({ theme }) => theme.secondary};
             height: min-content;
-            padding: 10px;
+            padding: 20px;
             gap: 20px;
             border-radius: 0px 0px 10px 0px;
 
