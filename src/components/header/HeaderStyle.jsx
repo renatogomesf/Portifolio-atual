@@ -115,46 +115,57 @@ export const HeaderComponent = styled.header`
         }
     }
 
-    & nav {
-        padding: 30px 45px;
-        background-color: ${({ theme }) => theme.tertiary};
-        border-radius: 10px;
-
-        & ul {
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            list-style: none;
-        }
+    & #menuMobile {
+        display: none;
     }
 
-    & .contatos {
+    & .navegaçao {
         display: flex;
         flex-direction: column;
-        gap: 15px;
-        font-weight: bold;
+        justify-content: space-around;
+        height: 80%;
 
-        & .redes_sociais {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
+        & nav {
+            padding: 30px 45px;
+            background-color: ${({ theme }) => theme.tertiary};
+            border-radius: 10px;
 
-            & .btn_redes {
+            & ul {
                 display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 30px;
-                height: 30px;
-                border-radius: 5px;
-                color: white;
-                cursor: pointer;
+                flex-direction: column;
+                gap: 20px;
+                list-style: none;
             }
         }
 
-        & .emails {
+        & .contatos {
             display: flex;
             flex-direction: column;
             gap: 15px;
+            font-weight: bold;
+
+            & .redes_sociais {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+
+                & .btn_redes {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 5px;
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+
+            & .emails {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+            }
         }
     }
 
@@ -170,23 +181,284 @@ export const HeaderComponent = styled.header`
             }
         }
 
-        & nav {
-            padding: 15px;
-            background-color: ${({ theme }) => theme.secondary};
+        & .navegaçao {
+            & nav {
+                padding: 15px;
+                background-color: ${({ theme }) => theme.secondary};
 
-            & ul {
-                flex-direction: row;
+                & ul {
+                    flex-direction: row;
+                }
             }
-        }
 
-        & .contatos {
-            display: none;
+            & .contatos {
+                display: none;
+            }
         }
     }
 
     @media (max-width: 690px) {
-        & nav {
-            display: none;
+        & #menuMobile {
+            display: flex;
+        }
+
+        & .menuMobileOpen {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 24px;
+            height: 24px;
+
+            &::before {
+                position: absolute;
+                top: 18px;
+                content: '';
+                width: 24px;
+                height: 2px;
+                border-radius: 1px;
+                background-color: white;
+                transform-origin: left;
+
+                animation: AbrirMenuBefore 0.3s forwards;
+
+                @keyframes AbrirMenuBefore {
+                    from {
+                        transform: rotate(0deg);
+                    }
+                    to {
+                        transform: rotate(-37deg);
+                    }
+                }
+            }
+
+            &::after {
+                position: absolute;
+                top: 4px;
+                content: '';
+                width: 24px;
+                height: 2px;
+                border-radius: 1px;
+                background-color: white;
+                transform-origin: left;
+
+                animation: AbrirMenuAfter 0.3s forwards;
+
+                @keyframes AbrirMenuAfter {
+                    from {
+                        transform: rotate(0deg);
+                    }
+                    to {
+                        transform: rotate(37deg);
+                    }
+                }
+            }
+
+            & .menuOpen {
+                display: block;
+                width: 24px;
+                height: 2px;
+                border-radius: 1px;
+                background-color: white;
+
+                animation: AbrirMenu 0.3s forwards;
+
+                @keyframes AbrirMenu {
+                    from {
+                        opacity: 1;
+                    }
+                    to {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+
+        & .menuMobileClose {
+            position: relative;
+            display: flex;
+            align-items: center;
+            width: 24px;
+            height: 24px;
+
+            &::before {
+                position: absolute;
+                top: 18px;
+                content: '';
+                width: 24px;
+                height: 2px;
+                border-radius: 1px;
+                background-color: white;
+                transform-origin: left;
+
+                animation: FecharMenuBefore 0.3s forwards;
+
+                @keyframes FecharMenuBefore {
+                    from {
+                        transform: rotate(-37deg);
+                    }
+                    to {
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+
+            &::after {
+                position: absolute;
+                top: 4px;
+                content: '';
+                width: 24px;
+                height: 2px;
+                border-radius: 1px;
+                background-color: white;
+                transform-origin: left;
+
+                animation: FecharMenuAfter 0.3s forwards;
+
+                @keyframes FecharMenuAfter {
+                    from {
+                        transform: rotate(37deg);
+                    }
+                    to {
+                        transform: rotate(0deg);
+                    }
+                }
+            }
+
+            & .menuClose {
+                display: block;
+                width: 24px;
+                height: 2px;
+                border-radius: 1px;
+                background-color: white;
+
+                animation: FecharMenu 0.3s forwards;
+
+                @keyframes FecharMenu {
+                    from {
+                        opacity: 0;
+                    }
+                    to {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        & .navegaçaoOpen {
+            position: absolute;
+            top: 100px;
+            left: 0px;
+            display: flex;
+            flex-direction: column;
+            background-color: ${({ theme }) => theme.secondary};
+            height: min-content;
+            padding: 10px;
+            gap: 20px;
+            border-radius: 0px 0px 10px 0px;
+
+            transition: 0.5s;
+
+            & nav {
+                display: flex;
+                padding: 30px 45px;
+                background-color: ${({ theme }) => theme.tertiary};
+                border-radius: 10px;
+
+                & ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    list-style: none;
+                }
+            }
+
+            & .contatos {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                font-weight: bold;
+
+                & .redes_sociais {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+
+                    & .btn_redes {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 5px;
+                        color: white;
+                        cursor: pointer;
+                    }
+                }
+
+                & .emails {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                }
+            }
+        }
+
+        & .navegaçao {
+            position: absolute;
+            top: 100px;
+            left: -250px;
+            display: flex;
+            background-color: ${({ theme }) => theme.secondary};
+            height: min-content;
+            padding: 10px;
+            gap: 20px;
+            border-radius: 0px 0px 10px 0px;
+
+            transition: 0.5s;
+
+            & nav {
+                display: flex;
+                padding: 30px 45px;
+                background-color: ${({ theme }) => theme.tertiary};
+                border-radius: 10px;
+
+                & ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    list-style: none;
+                }
+            }
+
+            & .contatos {
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                font-weight: bold;
+
+                & .redes_sociais {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+
+                    & .btn_redes {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 5px;
+                        color: white;
+                        cursor: pointer;
+                    }
+                }
+
+                & .emails {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                }
+            }
         }
     }
 `

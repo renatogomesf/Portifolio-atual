@@ -25,7 +25,7 @@ export const AbilityComponent = styled.section`
     & .tecnologias {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 70px;
+        gap: 50px;
 
         & .tecnologia {
             display: flex;
@@ -74,12 +74,16 @@ export const AbilityComponent = styled.section`
                 width: 300px;
             }
         }
+
+        & .tecnologias {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
     }
 
     @media (max-width: 690px) {
         & .tecnologias {
             grid-template-columns: repeat(2, 0.8fr);
-            gap: 40px;
         }
     }
 
@@ -99,6 +103,12 @@ export const AbilityComponent = styled.section`
         & .tecnologias {
             grid-template-columns: repeat(1, 1fr);
             gap: 40px;
+
+            & .tecnologia {
+                margin: auto;
+                width: 170px;
+                height: 170px;
+            }
         }
     }
 

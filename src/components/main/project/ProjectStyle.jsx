@@ -196,7 +196,7 @@ export const ProjectComponent = styled.section`
     }
 
     @media (max-width: 375px) {
-        padding: 20px;
+        padding: 10px;
         & .titulo {
             & h1 {
                 font-size: 2rem;
