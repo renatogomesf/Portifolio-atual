@@ -22,8 +22,29 @@ export const PresentationComponent = styled.section`
         }
 
         & h2 {
+            position: relative;
             color: ${({ theme }) => theme.light_green};
-            /* text-shadow: 1px 1px 0px black; */
+
+            /* &::before{
+                position: absolute;
+                top: 0px;
+
+                bottom: 0px;
+                content: '';
+                width: 2px;
+
+                background-color: red;
+            }
+
+            &::after{
+                position: absolute;
+                top: 0px;
+
+                bottom: 0px;
+                content: '';
+
+                background-color: red;
+            } */
         }
     }
 
@@ -168,10 +189,6 @@ export const PresentationComponent = styled.section`
         & div {
             & h1 {
                 font-size: 2.5rem;
-            }
-
-            & h2 {
-                /* font-size: 1rem; */
             }
         }
 

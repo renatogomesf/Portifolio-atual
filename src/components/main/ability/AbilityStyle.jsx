@@ -27,24 +27,108 @@ export const AbilityComponent = styled.section`
         grid-template-columns: repeat(3, 1fr);
         gap: 50px;
 
-        & .tecnologia {
+        & #tecnologia {
+            position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
 
-            background-color: ${({ theme }) => theme.quaternary};
+            background-color: ${({ theme }) => theme.primary};
             padding: 10px;
-            border-radius: 10px;
+            border-radius: 20px;
+
+            width: 180px;
+            height: 180px;
+            overflow: hidden;
 
             & img {
                 margin: 20px;
                 width: 100px;
                 filter: drop-shadow(1px 1px 0px black);
+                z-index: 10;
             }
 
             & p {
                 font-weight: bold;
+                z-index: 10;
+            }
+
+            &::before {
+                position: absolute;
+                content: '';
+                width: 185px;
+                height: 185px;
+                background-color: ${({ theme }) => theme.quaternary};
+                border-radius: 15px;
+                z-index: 1;
+            }
+
+            &::after {
+                position: absolute;
+                content: '';
+                width: 320px;
+                height: 100px;
+                transform: rotate(45deg);
+                animation: rotate 10s infinite linear;
+            }
+        }
+
+        & .html::after {
+            background-color: #e34f26;
+        }
+        & .css::after {
+            background-color: #264de4;
+        }
+        & .js::after {
+            background-color: #f0dc4e;
+        }
+        & .react::after {
+            background-color: #61dafb;
+        }
+        & .sc::after {
+            background-color: #ce6dba;
+        }
+        & .node::after {
+            background-color: #529f41;
+        }
+        & .mysql::after {
+            background-color: #ffa518;
+        }
+        & .cypress::after {
+            background-color: #1b1e2e;
+        }
+        & .jest::after {
+            background-color: #99425b;
+        }
+        & .vitest::after {
+            background-color: #729b1b;
+        }
+        & .mongo::after {
+            background-color: #00684a;
+        }
+        & .tailwind::after {
+            background-color: #35bef8;
+        }
+        & .vite::after {
+            background-image: linear-gradient(#46caff, #bd34ff);
+        }
+        & .git::after {
+            background-color: #f05033;
+        }
+        & .github::after {
+            background-color: #000000;
+        }
+        & .vscode::after {
+            background-color: #3c99d4;
+        }
+
+        @keyframes rotate {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
             }
         }
     }
@@ -102,13 +186,6 @@ export const AbilityComponent = styled.section`
     @media (max-width: 425px) {
         & .tecnologias {
             grid-template-columns: repeat(1, 1fr);
-            gap: 40px;
-
-            & .tecnologia {
-                margin: auto;
-                width: 170px;
-                height: 170px;
-            }
         }
     }
 

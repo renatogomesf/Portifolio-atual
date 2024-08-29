@@ -21,22 +21,22 @@ import JEST from '../../../image/imgHabilidade/jest.png'
 import VITEST from '../../../image/imgHabilidade/vitest.png'
 
 const habilidades = [
-    { img: HTML, title: 'HTML' },
-    { img: CSS, title: 'CSS' },
-    { img: JS, title: 'JavaScript' },
-    { img: REACT, title: 'React.js' },
-    { img: SC, title: 'Styled Componts' },
-    { img: NODE, title: 'Node.js' },
-    { img: MYSQL, title: 'MySQL' },
-    { img: CYPRESS, title: 'Cypress' },
-    { img: JEST, title: 'Jest' },
-    { img: VITEST, title: 'Vitest' },
-    { img: MONGODB, title: 'MongoDB Atlas' },
-    { img: TAILWIND, title: 'Tailwind' },
-    { img: VITE, title: 'Vite' },
-    { img: GIT, title: 'Git' },
-    { img: GITHUB, title: 'GitHub' },
-    { img: VSCODE, title: 'VS Code' }
+    { img: HTML, title: 'HTML', class: 'html' },
+    { img: CSS, title: 'CSS', class: 'css' },
+    { img: JS, title: 'JavaScript', class: 'js' },
+    { img: REACT, title: 'React.js', class: 'react' },
+    { img: SC, title: 'Styled Componts', class: 'sc' },
+    { img: NODE, title: 'Node.js', class: 'node' },
+    { img: MYSQL, title: 'MySQL', class: 'mysql' },
+    { img: CYPRESS, title: 'Cypress', class: 'cypress' },
+    { img: JEST, title: 'Jest', class: 'jest' },
+    { img: VITEST, title: 'Vitest', class: 'vitest' },
+    { img: MONGODB, title: 'MongoDB Atlas', class: 'mongo' },
+    { img: TAILWIND, title: 'Tailwind', class: 'tailwind' },
+    { img: VITE, title: 'Vite', class: 'vite' },
+    { img: GIT, title: 'Git', class: 'git' },
+    { img: GITHUB, title: 'GitHub', class: 'github' },
+    { img: VSCODE, title: 'VS Code', class: 'vscode' }
 ]
 
 const Ability = () => {
@@ -54,7 +54,7 @@ const Ability = () => {
             <div className="tecnologias">
                 {habilidades.map((item, index) => {
                     return (
-                        <div className="tecnologia" key={index}>
+                        <div id="tecnologia" className={item.class} key={index}>
                             <img src={item.img} alt={item.title} />
                             <p>{item.title}</p>
                         </div>
