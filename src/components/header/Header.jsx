@@ -35,13 +35,14 @@ const Header = () => {
 
     return (
         <HeaderComponent>
-            <div className="logo">
-                <img src={LOGO} alt="" />
-                <h1>RDEV</h1>
-            </div>
-
-            <div id="menuMobile" className="menuMobileClose" onClick={Menu}>
-                <span id="menu" className="menuClose"></span>
+            <div className='header'>
+                <div className="logo">
+                    <img src={LOGO} alt="" />
+                    <h1>RDEV</h1>
+                </div>
+                <div id="menuMobile" className="menuMobileClose" onClick={Menu}>
+                    <span id="menu" className="menuClose"></span>
+                </div>
             </div>
 
             <div id="navegaçaoMobile" className="navegaçao">

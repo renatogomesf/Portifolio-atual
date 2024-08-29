@@ -74,49 +74,51 @@ export const HeaderComponent = styled.header`
         transition: 0.2s;
     }
 
-    & .logo {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    & .header {
+        & .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
-        & h1 {
-            opacity: 0;
-            width: 0px;
-            margin-left: 5px;
-            font-weight: 800;
-
-            animation: logo 2s forwards;
-            animation-delay: 2s;
-        }
-
-        & img {
-            height: 50px;
-        }
-
-        @keyframes logo {
-            0% {
+            & h1 {
                 opacity: 0;
                 width: 0px;
+                margin-left: 5px;
+                font-weight: 800;
+
+                animation: logo 2s forwards;
+                animation-delay: 2s;
             }
-            25% {
-                opacity: 0;
+
+            & img {
+                height: 50px;
             }
-            50% {
-                opacity: 0;
-            }
-            75% {
-                opacity: 0;
-                width: 75%;
-            }
-            100% {
-                opacity: 1;
-                width: 100%;
+
+            @keyframes logo {
+                0% {
+                    opacity: 0;
+                    width: 0px;
+                }
+                25% {
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 0;
+                }
+                75% {
+                    opacity: 0;
+                    width: 75%;
+                }
+                100% {
+                    opacity: 1;
+                    width: 100%;
+                }
             }
         }
-    }
 
-    & #menuMobile {
-        display: none;
+        & #menuMobile {
+            display: none;
+        }
     }
 
     & .navegaçao {
@@ -175,9 +177,11 @@ export const HeaderComponent = styled.header`
         max-width: 100%;
         z-index: 100;
 
-        & .logo {
-            & img {
-                height: 40px;
+        & .header {
+            & .logo {
+                & img {
+                    height: 40px;
+                }
             }
         }
 
@@ -198,147 +202,158 @@ export const HeaderComponent = styled.header`
     }
 
     @media (max-width: 690px) {
-        & #menuMobile {
-            display: flex;
-        }
+        background-color: transparent;
 
-        & .menuMobileOpen {
-            position: relative;
+        & .header {
             display: flex;
+            justify-content: space-around;
             align-items: center;
-            width: 26px;
-            height: 27px;
+            width: 100%;
+            height: 100%;
+            background-color: ${({ theme }) => theme.secondary};
 
-            &::before {
-                position: absolute;
-                top: 18px;
-                content: '';
+            & #menuMobile {
+                display: flex;
+            }
+
+            & .menuMobileOpen {
+                position: relative;
+                display: flex;
+                align-items: center;
                 width: 26px;
-                height: 2px;
-                border-radius: 1px;
-                background-color: white;
-                transform-origin: left;
+                height: 27px;
 
-                animation: AbrirMenuBefore 0.3s forwards;
+                &::before {
+                    position: absolute;
+                    top: 18px;
+                    content: '';
+                    width: 26px;
+                    height: 2px;
+                    border-radius: 1px;
+                    background-color: white;
+                    transform-origin: left;
 
-                @keyframes AbrirMenuBefore {
-                    from {
-                        transform: rotate(0deg);
+                    animation: AbrirMenuBefore 0.3s forwards;
+
+                    @keyframes AbrirMenuBefore {
+                        from {
+                            transform: rotate(0deg);
+                        }
+                        to {
+                            transform: rotate(-33deg);
+                        }
                     }
-                    to {
-                        transform: rotate(-33deg);
+                }
+
+                &::after {
+                    position: absolute;
+                    top: 4px;
+                    content: '';
+                    width: 26px;
+                    height: 2px;
+                    border-radius: 1px;
+                    background-color: white;
+                    transform-origin: left;
+
+                    animation: AbrirMenuAfter 0.3s forwards;
+
+                    @keyframes AbrirMenuAfter {
+                        from {
+                            transform: rotate(0deg);
+                        }
+                        to {
+                            transform: rotate(33deg);
+                        }
+                    }
+                }
+
+                & .menuOpen {
+                    display: block;
+                    width: 26px;
+                    height: 2px;
+                    border-radius: 1px;
+                    background-color: white;
+
+                    animation: AbrirMenu 0.3s forwards;
+
+                    @keyframes AbrirMenu {
+                        from {
+                            opacity: 1;
+                        }
+                        to {
+                            opacity: 0;
+                        }
                     }
                 }
             }
 
-            &::after {
-                position: absolute;
-                top: 4px;
-                content: '';
+            & .menuMobileClose {
+                position: relative;
+                display: flex;
+                align-items: center;
                 width: 26px;
-                height: 2px;
-                border-radius: 1px;
-                background-color: white;
-                transform-origin: left;
+                height: 27px;
 
-                animation: AbrirMenuAfter 0.3s forwards;
+                &::before {
+                    position: absolute;
+                    top: 20px;
+                    content: '';
+                    width: 26px;
+                    height: 2px;
+                    border-radius: 1px;
+                    background-color: white;
+                    transform-origin: left;
 
-                @keyframes AbrirMenuAfter {
-                    from {
-                        transform: rotate(0deg);
-                    }
-                    to {
-                        transform: rotate(33deg);
+                    animation: FecharMenuBefore 0.3s forwards;
+
+                    @keyframes FecharMenuBefore {
+                        from {
+                            transform: rotate(-37deg);
+                        }
+                        to {
+                            transform: rotate(0deg);
+                        }
                     }
                 }
-            }
 
-            & .menuOpen {
-                display: block;
-                width: 26px;
-                height: 2px;
-                border-radius: 1px;
-                background-color: white;
+                &::after {
+                    position: absolute;
+                    top: 4px;
+                    content: '';
+                    width: 26px;
+                    height: 2px;
+                    border-radius: 1px;
+                    background-color: white;
+                    transform-origin: left;
 
-                animation: AbrirMenu 0.3s forwards;
+                    animation: FecharMenuAfter 0.3s forwards;
 
-                @keyframes AbrirMenu {
-                    from {
-                        opacity: 1;
-                    }
-                    to {
-                        opacity: 0;
-                    }
-                }
-            }
-        }
-
-        & .menuMobileClose {
-            position: relative;
-            display: flex;
-            align-items: center;
-            width: 26px;
-            height: 27px;
-
-            &::before {
-                position: absolute;
-                top: 20px;
-                content: '';
-                width: 26px;
-                height: 2px;
-                border-radius: 1px;
-                background-color: white;
-                transform-origin: left;
-
-                animation: FecharMenuBefore 0.3s forwards;
-
-                @keyframes FecharMenuBefore {
-                    from {
-                        transform: rotate(-37deg);
-                    }
-                    to {
-                        transform: rotate(0deg);
+                    @keyframes FecharMenuAfter {
+                        from {
+                            transform: rotate(37deg);
+                        }
+                        to {
+                            transform: rotate(0deg);
+                        }
                     }
                 }
-            }
 
-            &::after {
-                position: absolute;
-                top: 4px;
-                content: '';
-                width: 26px;
-                height: 2px;
-                border-radius: 1px;
-                background-color: white;
-                transform-origin: left;
+                & .menuClose {
+                    display: block;
+                    width: 26px;
+                    height: 2px;
+                    border-radius: 1px;
+                    background-color: white;
 
-                animation: FecharMenuAfter 0.3s forwards;
+                    animation: FecharMenu 0.3s forwards;
 
-                @keyframes FecharMenuAfter {
-                    from {
-                        transform: rotate(37deg);
-                    }
-                    to {
-                        transform: rotate(0deg);
-                    }
-                }
-            }
-
-            & .menuClose {
-                display: block;
-                width: 26px;
-                height: 2px;
-                border-radius: 1px;
-                background-color: white;
-
-                animation: FecharMenu 0.3s forwards;
-
-                @keyframes FecharMenu {
-                    from {
-                        opacity: 0;
-                    }
-                    to {
-                        opacity: 1;
+                    @keyframes FecharMenu {
+                        from {
+                            opacity: 0;
+                        }
+                        to {
+                            opacity: 1;
+                        }
                     }
                 }
             }
@@ -347,16 +362,17 @@ export const HeaderComponent = styled.header`
         & .navegaçaoOpen {
             position: absolute;
             top: 100px;
-            left: 0px;
+            right: 0px;
             display: flex;
             flex-direction: column;
             background-color: ${({ theme }) => theme.secondary};
             height: min-content;
             padding: 20px;
             gap: 20px;
-            border-radius: 0px 0px 10px 0px;
+            border-radius: 0px 0px 0px 10px;
 
             transition: 0.5s;
+            z-index: -1;
 
             & nav {
                 display: flex;
@@ -405,16 +421,17 @@ export const HeaderComponent = styled.header`
 
         & .navegaçao {
             position: absolute;
-            top: 100px;
-            left: -270px;
+            top: -430px;
+            right: 0px;
             display: flex;
             background-color: ${({ theme }) => theme.secondary};
             height: min-content;
             padding: 20px;
             gap: 20px;
-            border-radius: 0px 0px 10px 0px;
+            border-radius: 0px 0px 0px 10px;
 
             transition: 0.5s;
+            z-index: -1;
 
             & nav {
                 display: flex;
