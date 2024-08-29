@@ -23,34 +23,64 @@ export const PresentationComponent = styled.section`
 
         & h2 {
             position: relative;
+            display: inline-block;
             color: ${({ theme }) => theme.light_green};
 
-            /* &::before{
+            &::before {
+                display: flex;
+                justify-content: end;
+                align-items: end;
                 position: absolute;
                 top: 0px;
-
+                right: -5px;
                 bottom: 0px;
                 content: '';
-                width: 2px;
+                width: 101%;
+                border-left: 3px solid ${({ theme }) => theme.secondary};
+                background-color: ${({ theme }) => theme.primary};
 
-                background-color: red;
+                animation:
+                    digitar 5s steps(24) infinite alternate,
+                    piscar 0.5s infinite linear;
             }
 
-            &::after{
-                position: absolute;
-                top: 0px;
+            @keyframes digitar {
+                0% {
+                    width: 101%;
+                }
+                70% {
+                    width: 0%;
+                }
+                100% {
+                    width: 0%;
+                }
+            }
 
-                bottom: 0px;
-                content: '';
-
-                background-color: red;
-            } */
+            @keyframes piscar {
+                from {
+                    border-left-style: solid;
+                }
+                to {
+                    border-left-style: none;
+                }
+            }
         }
     }
 
     & .img_dev {
         width: 100%;
         max-width: 400px;
+
+        animation: mover 5s infinite linear alternate;
+
+        @keyframes mover {
+            from {
+                transform: translate(20px, -20px)
+            }
+            to {
+                transform: translate(-20px, 20px)
+            }
+        }
     }
 
     a {

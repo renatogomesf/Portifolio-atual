@@ -35,6 +35,7 @@ export const AbilityComponent = styled.section`
             justify-content: center;
 
             background-color: ${({ theme }) => theme.primary};
+            margin: auto;
             padding: 10px;
             border-radius: 20px;
 
