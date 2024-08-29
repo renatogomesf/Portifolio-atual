@@ -23,7 +23,7 @@ export const PresentationComponent = styled.section`
 
         & h2 {
             color: ${({ theme }) => theme.light_green};
-            text-shadow: 1px 1px 0px black;
+            /* text-shadow: 1px 1px 0px black; */
         }
     }
 
@@ -171,12 +171,11 @@ export const PresentationComponent = styled.section`
             }
 
             & h2 {
-                font-size: 1rem;
+                /* font-size: 1rem; */
             }
         }
 
         & .img_dev {
-            width: 100%;
             max-width: 300px;
         }
     }
@@ -186,14 +185,9 @@ export const PresentationComponent = styled.section`
             & h1 {
                 font-size: 2.3rem;
             }
-
-            & h2 {
-                font-size: 1rem;
-            }
         }
 
         & .img_dev {
-            width: 100%;
             max-width: 250px;
         }
     }
