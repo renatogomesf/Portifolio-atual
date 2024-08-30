@@ -225,44 +225,48 @@ export const HeaderComponent = styled.header`
 
                 &::before {
                     position: absolute;
-                    top: 18px;
-                    content: '';
-                    width: 26px;
-                    height: 2px;
-                    border-radius: 1px;
-                    background-color: white;
-                    transform-origin: left;
-
-                    animation: AbrirMenuBefore 0.3s forwards;
-
-                    @keyframes AbrirMenuBefore {
-                        from {
-                            transform: rotate(0deg);
-                        }
-                        to {
-                            transform: rotate(-33deg);
-                        }
-                    }
-                }
-
-                &::after {
-                    position: absolute;
                     top: 4px;
                     content: '';
                     width: 26px;
                     height: 2px;
                     border-radius: 1px;
                     background-color: white;
-                    transform-origin: left;
+                    transform-origin: center;
+
+                    animation: AbrirMenuBefore 0.3s forwards;
+
+                    @keyframes AbrirMenuBefore {
+                        from {
+                            transform: rotate(0deg);
+                            top: 4px;
+                        }
+                        to {
+                            transform: rotate(-45deg);
+                            top: 50%;
+                        }
+                    }
+                }
+
+                &::after {
+                    position: absolute;
+                    top: 20px;
+                    content: '';
+                    width: 26px;
+                    height: 2px;
+                    border-radius: 1px;
+                    background-color: white;
+                    transform-origin: center;
 
                     animation: AbrirMenuAfter 0.3s forwards;
 
                     @keyframes AbrirMenuAfter {
                         from {
                             transform: rotate(0deg);
+                            top: 20px;
                         }
                         to {
-                            transform: rotate(33deg);
+                            transform: rotate(45deg);
+                            top: 50%;
                         }
                     }
                 }
@@ -296,44 +300,48 @@ export const HeaderComponent = styled.header`
 
                 &::before {
                     position: absolute;
-                    top: 20px;
-                    content: '';
-                    width: 26px;
-                    height: 2px;
-                    border-radius: 1px;
-                    background-color: white;
-                    transform-origin: left;
-
-                    animation: FecharMenuBefore 0.3s forwards;
-
-                    @keyframes FecharMenuBefore {
-                        from {
-                            transform: rotate(-37deg);
-                        }
-                        to {
-                            transform: rotate(0deg);
-                        }
-                    }
-                }
-
-                &::after {
-                    position: absolute;
                     top: 4px;
                     content: '';
                     width: 26px;
                     height: 2px;
                     border-radius: 1px;
                     background-color: white;
-                    transform-origin: left;
+                    transform-origin: center;
+
+                    animation: FecharMenuBefore 0.3s forwards;
+
+                    @keyframes FecharMenuBefore {
+                        from {
+                            transform: rotate(-45deg);
+                            top: 50%;
+                        }
+                        to {
+                            transform: rotate(0deg);
+                            top: 4px;
+                        }
+                    }
+                }
+
+                &::after {
+                    position: absolute;
+                    top: 20px;
+                    content: '';
+                    width: 26px;
+                    height: 2px;
+                    border-radius: 1px;
+                    background-color: white;
+                    transform-origin: center;
 
                     animation: FecharMenuAfter 0.3s forwards;
 
                     @keyframes FecharMenuAfter {
                         from {
-                            transform: rotate(37deg);
+                            transform: rotate(45deg);
+                            top: 50%;
                         }
                         to {
                             transform: rotate(0deg);
+                            top: 20px;
                         }
                     }
                 }

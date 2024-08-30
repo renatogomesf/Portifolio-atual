@@ -26,6 +26,8 @@ export const PresentationComponent = styled.section`
             position: relative;
             display: inline-block;
             color: ${({ theme }) => theme.light_green};
+            font-family: monospace;
+            font-size: 1.8rem;
 
             &::before {
                 display: flex;
@@ -33,7 +35,7 @@ export const PresentationComponent = styled.section`
                 align-items: end;
                 position: absolute;
                 top: 0px;
-                right: -5px;
+                right: -2px;
                 bottom: 0px;
                 content: '';
                 width: 101%;
@@ -76,10 +78,10 @@ export const PresentationComponent = styled.section`
 
         @keyframes mover {
             from {
-                transform: translateY(20px)
+                transform: translateY(20px);
             }
             to {
-                transform: translateY(-20px)
+                transform: translateY(-20px);
             }
         }
     }
