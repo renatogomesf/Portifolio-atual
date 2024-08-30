@@ -39,8 +39,8 @@ export const AbilityComponent = styled.section`
             padding: 10px;
             border-radius: 20px;
 
-            width: 180px;
-            height: 180px;
+            width: 190px;
+            height: 190px;
             overflow: hidden;
 
             & img {
@@ -58,8 +58,8 @@ export const AbilityComponent = styled.section`
             &::before {
                 position: absolute;
                 content: '';
-                width: 185px;
-                height: 185px;
+                width: 200px;
+                height: 200px;
                 background-color: ${({ theme }) => theme.quaternary};
                 border-radius: 15px;
                 z-index: 1;
@@ -161,7 +161,7 @@ export const AbilityComponent = styled.section`
         }
 
         & .tecnologias {
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(2, 1fr);
             gap: 40px;
         }
     }
@@ -184,7 +184,7 @@ export const AbilityComponent = styled.section`
         }
     }
 
-    @media (max-width: 425px) {
+    @media (max-width: 430px) {
         & .tecnologias {
             grid-template-columns: repeat(1, 1fr);
         }
