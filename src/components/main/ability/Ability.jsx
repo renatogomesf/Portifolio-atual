@@ -25,7 +25,7 @@ const habilidades = [
     { img: CSS, title: 'CSS', class: 'css' },
     { img: JS, title: 'JavaScript', class: 'js' },
     { img: REACT, title: 'React.js', class: 'react' },
-    { img: SC, title: 'Styled Componts', class: 'sc' },
+    { img: SC, title: 'Styled Components', class: 'sc' },
     { img: NODE, title: 'Node.js', class: 'node' },
     { img: MYSQL, title: 'MySQL', class: 'mysql' },
     { img: CYPRESS, title: 'Cypress', class: 'cypress' },

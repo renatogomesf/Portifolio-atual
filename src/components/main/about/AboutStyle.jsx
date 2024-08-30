@@ -35,6 +35,23 @@ export const AboutComponent = styled.section`
 
         & p {
             text-indent: 15px;
+
+            & strong {
+                font-weight: 800;
+                color: ${({ theme }) => theme.light_green};
+            }
+
+            & span {
+                & a {
+                    font-weight: bold;
+                    color: ${({ theme }) => theme.light_green};
+                    margin-right: 7px;
+
+                    & .icon {
+                        font-size: 0.8rem;
+                    }
+                }
+            }
         }
 
         & .link_pdf {

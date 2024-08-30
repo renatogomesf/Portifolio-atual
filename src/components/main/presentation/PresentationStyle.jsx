@@ -4,7 +4,8 @@ export const PresentationComponent = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 65px;
+    gap: 10px;
+    padding: 60px 10px;
     margin: 50px 0px;
     flex-wrap: wrap;
 
@@ -75,10 +76,10 @@ export const PresentationComponent = styled.section`
 
         @keyframes mover {
             from {
-                transform: translate(20px, -20px)
+                transform: translateY(20px)
             }
             to {
-                transform: translate(-20px, 20px)
+                transform: translateY(-20px)
             }
         }
     }

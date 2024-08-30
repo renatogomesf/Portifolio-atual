@@ -7,6 +7,7 @@ import Curriculo from './pdf/Currículo_Renato_Gomes_Ferreira.pdf'
 
 import { GoProjectSymlink } from 'react-icons/go'
 import { MdOutlineFileDownload } from 'react-icons/md'
+import { FaExternalLinkAlt } from 'react-icons/fa'
 
 const About = () => {
     return (
@@ -18,26 +19,39 @@ const About = () => {
             <div className="textos">
                 <p>
                     Oi! Sou <strong>Renato Gomes</strong>, tenho 27 anos e moro
-                    em Fortaleza - Ceará. Sou
-                    <strong>Desenvolverdor Full Stack</strong>, onde possuo 1
-                    ano de estudos em front-end e 3 meses de estudos em
-                    <strong>Back-End + Banco de dados</strong>. Tudo o que eu
-                    aprendi foi de forma independente e através do YouTube, com
-                    o professor Gustavo Guanabara, do canal Curso em Video, onde
-                    aprendi <strong>HTML 5, CSS 3</strong> e o básico de
-                    <strong>JavaScript</strong> e com o Bruno Campos, do canal
-                    CFBCursos, onde aprendi mais a fundo JavaScript e aprendi do
-                    zero <strong>React.js, Node.js e MySQL</strong>.
+                    em Fortaleza - Ceará. Sou{' '}
+                    <strong>Desenvolvedor Full Stack</strong> em início de
+                    carreira, apaixonado por tecnologia e por transformar ideias
+                    em soluções funcionais. Possuo mais de 1 ano de estudo
+                    independentes na área, neste ano fiz o curso full stack da{' '}
+                    <span>
+                        <a
+                            href="https://geracaotech.iel-ce.org.br/"
+                            target="blanck"
+                        >
+                            Geração Tech <FaExternalLinkAlt className="icon" />
+                        </a>
+                    </span>
+                    e, também neste ano, me tornei aluno de{' '}
+                    <strong>Engenharia de Software</strong> no Centro
+                    Universitário União das Américas Descomplica.
                 </p>
+
                 <p>
-                    <strong>Gosto muito de tecnologia</strong>, adoro por a mão
-                    na massa, sou uma pessoa bem curiosa e gosto muito de saber
-                    como as coisas funcionam e aprender como se faz. Com a web
-                    não foi diferente, então fui atrás de saber como funcionava
-                    e me deparei com o mundo da programação. Foi difícil no
-                    começo, mas continuo
-                    <strong>evoluindo dia após dia</strong>.
+                    Ao longo do meu aprendizado, desenvolvi projetos pessoais
+                    que me permitiram adquirir habilidades em{' '}
+                    <strong>
+                        React.js, Styled Components, Cypress, Node.js, Jest
+                    </strong>{' '}
+                    e bancos de dados como <strong>MySQL</strong>, entre outras
+                    tecnologias. Estou constantemente buscando aprimorar meu
+                    conhecimento, seja através de cursos, estudos autodidatas ou
+                    experimentando novas ferramentas. Estou animado para aplicar
+                    minhas habilidades em projetos do mundo real e continuar
+                    crescendo como desenvolvedor. Meu objetivo é contribuir para
+                    equipes que valorizem inovação e aprendizado contínuo.
                 </p>
+
                 <div className="link_pdf">
                     <a href={Curriculo} target="blank">
                         <div>
