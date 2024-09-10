@@ -12,7 +12,7 @@ export const PresentationComponent = styled.section`
     height: 88vh;
     scroll-margin-top: 100px;
 
-    background-image: url("common-bg.svg");
+    background-image: linear-gradient(to right, rgba(245, 245, 245, 0.7), rgba(245, 245, 245, 0.8)), url("common-bg.svg");
     background-position: center;
     background-size: contain;
 
