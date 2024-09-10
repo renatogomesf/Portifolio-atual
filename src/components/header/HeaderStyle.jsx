@@ -1,37 +1,44 @@
 import styled from 'styled-components'
+// import imagem from  '../../image/common-bg.svg'
 
 export const HeaderComponent = styled.header`
     position: sticky;
     top: 0px;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: space-around;
     align-items: center;
 
-    background-color: ${({ theme }) => theme.secondary};
+    background-color: ${({ theme }) => theme.quaternary};
     width: 100%;
-    height: 100vh;
-    max-width: 270px;
-
-    color: white;
+    height: 100px;
+    /* height: 100vh; */
+    /* max-width: 270px; */
+    z-index: 1111111111;
+    transition: 0.3s;
 
     .active {
-        .icon {
-            color: ${({ theme }) => theme.light_green};
-        }
-
-        hr {
-            width: 100%;
-        }
+        transform: translate(-5px, -5px);
+        transition: 0.3s;
+        box-shadow: 5px 5px 0px black;
+        background-color: ${({ theme }) => theme.light_green};
+        color: white;
     }
 
     a {
         display: flex;
-        flex-direction: column;
-        color: white;
-        width: min-content;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: center;
+        color: black;
+        /* width: min-content; */
         font-weight: bold;
         gap: 4px;
+        padding: 10px 20px;
+        border-radius: 10px 0px 10px 0px;
+        transition: 0.3s;
+
+        border: 2px solid black;
 
         & div {
             display: flex;
@@ -61,6 +68,10 @@ export const HeaderComponent = styled.header`
         }
 
         &:hover {
+            transform: translate(-5px, -5px);
+            transition: 0.3s;
+            box-shadow: 5px 5px 0px black;
+
             .icon {
                 color: ${({ theme }) => theme.light_green};
             }
@@ -133,18 +144,19 @@ export const HeaderComponent = styled.header`
 
     & .navegaçao {
         display: flex;
-        flex-direction: column;
+        /* flex-direction: column; */
         justify-content: space-around;
+        align-items: center;
         height: 80%;
 
         & nav {
-            padding: 30px 45px;
-            background-color: ${({ theme }) => theme.tertiary};
+            padding: 30px;
+            /* background-color: ${({ theme }) => theme.tertiary}; */
             border-radius: 10px;
 
             & ul {
                 display: flex;
-                flex-direction: column;
+                /* flex-direction: column; */
                 gap: 20px;
                 list-style: none;
             }

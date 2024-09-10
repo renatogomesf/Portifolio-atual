@@ -2,7 +2,12 @@ import styled from 'styled-components'
 
 export const ProjectComponent = styled.section`
     padding: 65px;
-    margin: 50px 0px;
+    /* margin: 50px 0px; */
+    scroll-margin-top: 100px;
+
+    background-image: url("common-bg.svg");
+    background-position: center;
+    background-size: contain;
 
     & .titulo {
         display: flex;

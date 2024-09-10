@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const FooterComponent = styled.section`
     width: 100%;
-    background-color: ${({ theme }) => theme.tertiary};
+    background-color: ${({ theme }) => theme.secondary};
 
     & hr {
         border: none;

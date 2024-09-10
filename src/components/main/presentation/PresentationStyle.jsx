@@ -5,9 +5,16 @@ export const PresentationComponent = styled.section`
     align-items: center;
     justify-content: center;
     gap: 10px;
-    padding: 60px 10px;
-    margin: 50px 0px;
+    /* padding: 60px 10px; */
+    /* margin: 50px 0px; */
     flex-wrap: wrap;
+    width: 100%;
+    height: 88vh;
+    scroll-margin-top: 100px;
+
+    background-image: url("common-bg.svg");
+    background-position: center;
+    background-size: contain;
 
     & div {
         & p {

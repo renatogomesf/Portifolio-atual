@@ -35,8 +35,20 @@ const Header = () => {
         }
     }
 
+    window.addEventListener('scroll', () => {
+        let top = window.scrollY
+        const topo = document.querySelector('.topo')
+
+        if(top > 0){
+            topo.style.boxShadow = "0px 0px 50px rgba(0, 0, 0, 0.2)"
+        }else{
+            topo.style.boxShadow = "0px 0px 0px rgba(0, 0, 0, 0.2)"
+        }
+
+    })
+
     return (
-        <HeaderComponent>
+        <HeaderComponent className='topo'>
             <div className='header'>
                 <div className="logo">
                     <img src={LOGO} alt="" />
@@ -52,35 +64,35 @@ const Header = () => {
                     <ul>
                         <a href="#presentation" className='links' onClick={Menu}>
                             <div>
-                                <FaHome className="icon" />
+                                {/* <FaHome className="icon" /> */}
                                 <li>Home</li>
                             </div>
                             <hr />
                         </a>
                         <a href="#about" className='links' onClick={Menu}>
                             <div>
-                                <IoPersonSharp className="icon" />
+                                {/* <IoPersonSharp className="icon" /> */}
                                 <li>Sobre mim</li>
                             </div>
                             <hr />
                         </a>
                         <a href="#ability" className='links' onClick={Menu}>
                             <div>
-                                <GrVulnerability className="icon" />
+                                {/* <GrVulnerability className="icon" /> */}
                                 <li>Habilidades</li>
                             </div>
                             <hr />
                         </a>
                         <a href="#project" className='links' onClick={Menu}>
                             <div>
-                                <FaDiagramProject className="icon" />
+                                {/* <FaDiagramProject className="icon" /> */}
                                 <li>Projetos</li>
                             </div>
                             <hr />
                         </a>
                     </ul>
                 </nav>
-                <div className="contatos">
+                {/* <div className="contatos">
                     <div className="redes_sociais">
                         <a
                             href="https://github.com/renatogomesf"
@@ -133,7 +145,7 @@ const Header = () => {
                             </a>
                         </div>
                     </div>
-                </div>
+                </div> */}
             </div>
         </HeaderComponent>
     )

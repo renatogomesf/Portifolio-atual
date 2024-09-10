@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Header from './components/header/Header'
 import styled from 'styled-components'
 import Presentation from './components/main/presentation/Presentation'
@@ -29,33 +29,35 @@ const AppComponent = styled.div`
 `
 
 const App = () => {
-    const links = document.querySelectorAll('.links')
-    const sections = document.querySelectorAll('.section')
+    useEffect(() => {
+        const links = document.querySelectorAll('.links')
+        const sections = document.querySelectorAll('.section')
 
-    window.addEventListener('scroll', () => {
-        sections.forEach((section) => {
-            let top = window.scrollY
-            let offset = section.offsetTop - 100
-            let heightSection = section.offsetHeight
-            let idSection = section.getAttribute('id')
+        window.addEventListener('scroll', () => {
+            sections.forEach((section) => {
+                let top = window.scrollY
+                let offset = section.offsetTop - 120
+                let heightSection = section.offsetHeight
+                let idSection = section.getAttribute('id')
 
-            if (top >= offset && top < offset + heightSection) {
-                links.forEach((link) => {
-                    link.classList.remove('active')
+                if (top >= offset && top < offset + heightSection) {
+                    links.forEach((link) => {
+                        link.classList.remove('active')
 
-                    document
-                        .querySelector(`header nav a[href*='${idSection}']`)
-                        .classList.add('active')
-                })
-            }
+                        document
+                            .querySelector(`header nav a[href*='${idSection}']`)
+                            .classList.add('active')
+                    })
+                }
+            })
         })
-    })
+    }, [])
 
     return (
         <AppComponent>
             <div className="wraper">
-                <Header />
                 <div className="main">
+                    <Header />
                     <Presentation />
                     <About />
                     <Ability />

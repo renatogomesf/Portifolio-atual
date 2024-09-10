@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const AbilityComponent = styled.section`
     padding: 65px;
     margin: 50px 0px;
-
+    scroll-margin-top: 100px;
     & .titulo {
         display: flex;
         align-items: center;
