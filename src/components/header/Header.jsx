@@ -12,6 +12,8 @@ import { FaHome } from 'react-icons/fa'
 
 import LOGO from '../../../public/logo.png'
 
+// import { NavLink } from 'react-router-dom'
+
 const Header = () => {
     const Menu = () => {
         const windowWidth = window.innerWidth
@@ -48,28 +50,28 @@ const Header = () => {
             <div id="navegaçaoMobile" className="navegaçao">
                 <nav>
                     <ul>
-                        <a href="#" onClick={Menu}>
+                        <a href="#presentation" className='links' onClick={Menu}>
                             <div>
                                 <FaHome className="icon" />
                                 <li>Home</li>
                             </div>
                             <hr />
                         </a>
-                        <a href="#about" onClick={Menu}>
+                        <a href="#about" className='links' onClick={Menu}>
                             <div>
                                 <IoPersonSharp className="icon" />
                                 <li>Sobre mim</li>
                             </div>
                             <hr />
                         </a>
-                        <a href="#ability" onClick={Menu}>
+                        <a href="#ability" className='links' onClick={Menu}>
                             <div>
                                 <GrVulnerability className="icon" />
                                 <li>Habilidades</li>
                             </div>
                             <hr />
                         </a>
-                        <a href="#project" onClick={Menu}>
+                        <a href="#project" className='links' onClick={Menu}>
                             <div>
                                 <FaDiagramProject className="icon" />
                                 <li>Projetos</li>

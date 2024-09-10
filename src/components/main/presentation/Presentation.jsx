@@ -9,7 +9,7 @@ import { FaExternalLinkAlt } from 'react-icons/fa'
 
 const Presentation = () => {
     return (
-        <PresentationComponent id="presentation">
+        <PresentationComponent id="presentation" className='section'>
             <div>
                 <p>Olá! Meu nome é</p>
                 <h1>Renato Gomes</h1>

@@ -15,6 +15,16 @@ export const HeaderComponent = styled.header`
 
     color: white;
 
+    .active {
+        .icon {
+            color: ${({ theme }) => theme.light_green};
+        }
+
+        hr {
+            width: 100%;
+        }
+    }
+
     a {
         display: flex;
         flex-direction: column;

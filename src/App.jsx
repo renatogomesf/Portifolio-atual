@@ -29,6 +29,28 @@ const AppComponent = styled.div`
 `
 
 const App = () => {
+    const links = document.querySelectorAll('.links')
+    const sections = document.querySelectorAll('.section')
+
+    window.addEventListener('scroll', () => {
+        sections.forEach((section) => {
+            let top = window.scrollY
+            let offset = section.offsetTop - 100
+            let heightSection = section.offsetHeight
+            let idSection = section.getAttribute('id')
+
+            if (top >= offset && top < offset + heightSection) {
+                links.forEach((link) => {
+                    link.classList.remove('active')
+
+                    document
+                        .querySelector(`header nav a[href*='${idSection}']`)
+                        .classList.add('active')
+                })
+            }
+        })
+    })
+
     return (
         <AppComponent>
             <div className="wraper">

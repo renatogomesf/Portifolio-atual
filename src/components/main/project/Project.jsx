@@ -129,7 +129,7 @@ const projetos = [
 
 const Project = () => {
     return (
-        <ProjectComponent id="project">
+        <ProjectComponent id="project" className='section'>
             <div className="titulo">
                 <img
                     className="img_projeto"

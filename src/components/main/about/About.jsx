@@ -11,7 +11,7 @@ import { FaExternalLinkAlt } from 'react-icons/fa'
 
 const About = () => {
     return (
-        <AboutComponent id="about">
+        <AboutComponent id="about" className='section'>
             <div className="titulo">
                 <img className="img_fala" src={FALA} alt="imagem de fala" />
                 <h1>Sobre mim</h1>
