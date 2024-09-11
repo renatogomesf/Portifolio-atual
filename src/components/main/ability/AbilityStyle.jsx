@@ -34,7 +34,8 @@ export const AbilityComponent = styled.section`
             align-items: center;
             justify-content: center;
 
-            background-color: ${({ theme }) => theme.primary};
+            /* background-color: ${({ theme }) => theme.primary}; */
+            background-color: #000113;
             margin: auto;
             padding: 10px;
             border-radius: 20px;
@@ -97,7 +98,8 @@ export const AbilityComponent = styled.section`
             background-color: #ffa518;
         }
         & .cypress::after {
-            background-color: #1b1e2e;
+            /* background-color: #1b1e2e; */
+            background-color: #69d3a7;
         }
         & .jest::after {
             background-color: #99425b;
@@ -118,7 +120,8 @@ export const AbilityComponent = styled.section`
             background-color: #f05033;
         }
         & .github::after {
-            background-color: #000000;
+            /* background-color: #000000; */
+            background-color: #fff;
         }
         & .vscode::after {
             background-color: #3c99d4;

@@ -12,9 +12,6 @@ export const PresentationComponent = styled.section`
     height: 88vh;
     scroll-margin-top: 100px;
 
-    background-image: linear-gradient(to right, rgba(245, 245, 245, 0.7), rgba(245, 245, 245, 0.8)), url("common-bg.svg");
-    background-position: center;
-    background-size: contain;
 
     & div {
         & p {
@@ -25,7 +22,8 @@ export const PresentationComponent = styled.section`
         & h1 {
             font-size: 5rem;
             font-weight: 800;
-            color: ${({ theme }) => theme.secondary};
+            /* color: ${({ theme }) => theme.secondary}; */
+            color: white;
             white-space: nowrap;
         }
 
@@ -45,13 +43,13 @@ export const PresentationComponent = styled.section`
                 right: -2px;
                 bottom: 0px;
                 content: '';
-                width: 101%;
+                /* width: 101%; */
                 border-left: 3px solid ${({ theme }) => theme.secondary};
                 background-color: ${({ theme }) => theme.primary};
 
-                animation:
+                /* animation:
                     digitar 5s steps(24) infinite alternate,
-                    piscar 0.5s infinite linear;
+                    piscar 0.5s infinite linear; */
             }
 
             @keyframes digitar {

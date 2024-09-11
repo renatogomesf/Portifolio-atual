@@ -5,9 +5,21 @@ export const ProjectComponent = styled.section`
     /* margin: 50px 0px; */
     scroll-margin-top: 100px;
 
-    background-image: linear-gradient(to right, rgba(245, 245, 245, 0.7), rgba(245, 245, 245, 0.8)), url("common-bg.svg");
+    position: relative;
+    background-image: url('galaxy2.jpg');
     background-position: center;
-    background-size: contain;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    overflow: hidden;
+
+    padding: 0px 0px 100px 0px;
+
+    & .curva2 {
+        fill: #fafafa;
+        /* padding-bottom: 100px; */
+    }
 
     & .titulo {
         display: flex;
@@ -19,7 +31,8 @@ export const ProjectComponent = styled.section`
         & h1 {
             font-size: 4rem;
             font-weight: 800;
-            color: ${({ theme }) => theme.secondary};
+            /* color: ${({ theme }) => theme.secondary}; */
+            color: white;
         }
 
         & .img_projeto {
@@ -31,6 +44,7 @@ export const ProjectComponent = styled.section`
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 50px;
+        padding: 0px 30px;
 
         & .projeto {
             display: flex;

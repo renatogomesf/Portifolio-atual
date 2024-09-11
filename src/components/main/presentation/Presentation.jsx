@@ -1,6 +1,8 @@
 import React from 'react'
 import { PresentationComponent } from './PresentationStyle'
-import DEV from '../../../image/dev.png'
+// import DEV from '../../../image/dev.png'
+
+// import svg from '../../../../public/arc-divider.svg'
 
 import { FaGithub } from 'react-icons/fa'
 import { FaLinkedin } from 'react-icons/fa'
@@ -9,13 +11,13 @@ import { FaExternalLinkAlt } from 'react-icons/fa'
 
 const Presentation = () => {
     return (
-        <PresentationComponent id="presentation" className='section'>
+        <PresentationComponent id="presentation" className="section">
             <div>
-                <p>Olá! Meu nome é</p>
-                <h1>Renato Gomes</h1>
+                {/* <p>Olá! Meu nome é</p> */}
+                <h1>Olá! Meu nome é Renato Gomes</h1>
                 <h2>Desenvolvedor Full Stack</h2>
             </div>
-            <img className="img_dev" src={DEV} alt="Desenvolvedor" />
+            {/* <img className="img_dev" src={DEV} alt="Desenvolvedor" /> */}
 
             <div className="contatos">
                 <div className="redes_sociais">

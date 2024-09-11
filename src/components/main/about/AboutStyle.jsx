@@ -8,6 +8,7 @@ export const AboutComponent = styled.section`
     margin: 50px 0px;
     scroll-margin-top: 100px;
 
+
     & .titulo {
         display: flex;
         align-items: center;
@@ -18,7 +19,8 @@ export const AboutComponent = styled.section`
         & h1 {
             font-size: 4rem;
             font-weight: 800;
-            color: ${({ theme }) => theme.secondary};
+            /* color: ${({ theme }) => theme.secondary}; */
+            color: white;
         }
 
         & .img_fala {

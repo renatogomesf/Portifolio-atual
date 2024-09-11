@@ -17,6 +17,27 @@ const AppComponent = styled.div`
             justify-content: center;
             align-items: center;
             width: 100%;
+
+            & .quemsou {
+                position: relative;
+                background-image: url('galaxy2.jpg');
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+
+                overflow: hidden;
+
+                padding: 0px 0px 100px 0px;
+
+                & .curva {
+                    position: absolute;
+                    bottom: -1px;
+                    right: -1px;
+                    transform: rotateX(180deg);
+                    fill: #fafafa;  
+                }
+            }
         }
     }
 
@@ -58,8 +79,17 @@ const App = () => {
             <div className="wraper">
                 <div className="main">
                     <Header />
-                    <Presentation />
-                    <About />
+                    <div className="quemsou">
+                        <Presentation />
+                        <About />
+                        <svg className='curva'
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 1000 100"
+                            fill="#000"
+                        >
+                            <path d="M1000 0H0v52C62.5 28 125 4 250 4c250 0 250 96 500 96 125 0 187.5-24 250-48V0Z"></path>
+                        </svg>
+                    </div>
                     <Ability />
                     <Project />
                     <Footer />
