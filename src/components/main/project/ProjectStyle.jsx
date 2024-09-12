@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const ProjectComponent = styled.section`
-    padding: 65px;
     /* margin: 50px 0px; */
     scroll-margin-top: 100px;
 
@@ -12,7 +11,7 @@ export const ProjectComponent = styled.section`
     background-repeat: no-repeat;
     background-attachment: fixed;
 
-    overflow: hidden;
+    /* overflow: hidden; */
 
     padding: 0px 0px 100px 0px;
 
@@ -44,7 +43,7 @@ export const ProjectComponent = styled.section`
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 50px;
-        padding: 0px 30px;
+        padding: 0px 60px;
 
         & .projeto {
             display: flex;

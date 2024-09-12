@@ -6,6 +6,7 @@ import About from './components/main/about/About'
 import Ability from './components/main/ability/Ability'
 import Project from './components/main/project/Project'
 import Footer from './components/footer/Footer'
+import Contact from './components/main/contact/Contact'
 
 const AppComponent = styled.div`
     & .wraper {
@@ -77,6 +78,7 @@ const App = () => {
     return (
         <AppComponent>
             <div className="wraper">
+                <Contact/>
                 <div className="main">
                     <Header />
                     <div className="quemsou">

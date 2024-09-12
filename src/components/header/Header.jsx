@@ -1,14 +1,14 @@
 import React from 'react'
 import { HeaderComponent } from './HeaderStyle'
 
-import { FaGithub } from 'react-icons/fa'
-import { FaLinkedin } from 'react-icons/fa'
-import { MdEmail } from 'react-icons/md'
-import { FaExternalLinkAlt } from 'react-icons/fa'
-import { IoPersonSharp } from 'react-icons/io5'
-import { GrVulnerability } from 'react-icons/gr'
-import { FaDiagramProject } from 'react-icons/fa6'
-import { FaHome } from 'react-icons/fa'
+// import { FaGithub } from 'react-icons/fa'
+// import { FaLinkedin } from 'react-icons/fa'
+// import { MdEmail } from 'react-icons/md'
+// import { FaExternalLinkAlt } from 'react-icons/fa'
+// import { IoPersonSharp } from 'react-icons/io5'
+// import { GrVulnerability } from 'react-icons/gr'
+// import { FaDiagramProject } from 'react-icons/fa6'
+// import { FaHome } from 'react-icons/fa'
 
 import LOGO from '../../../public/logo.png'
 
@@ -62,7 +62,7 @@ const Header = () => {
             <div id="navegaçaoMobile" className="navegaçao">
                 <nav>
                     <ul>
-                        <a href="#presentation" className='links' onClick={Menu}>
+                        <a href="#presentation" className='links active' onClick={Menu}>
                             <div>
                                 {/* <FaHome className="icon" /> */}
                                 <li>Home</li>

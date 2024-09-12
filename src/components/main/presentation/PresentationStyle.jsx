@@ -20,7 +20,7 @@ export const PresentationComponent = styled.section`
         }
 
         & h1 {
-            font-size: 5rem;
+            font-size: 4rem;
             font-weight: 800;
             /* color: ${({ theme }) => theme.secondary}; */
             color: white;
