@@ -6,7 +6,7 @@ export const AboutComponent = styled.section`
     gap: 10px;
     padding: 65px;
     margin: 50px 0px;
-    scroll-margin-top: 100px;
+    scroll-margin-top: 70px;
 
 
     & .titulo {

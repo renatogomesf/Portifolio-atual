@@ -39,20 +39,24 @@ const Header = () => {
         let top = window.scrollY
         const topo = document.querySelector('.topo')
 
-        if(top > 0){
-            topo.style.boxShadow = "0px 0px 50px rgba(0, 0, 0, 0.2)"
-        }else{
-            topo.style.boxShadow = "0px 0px 0px rgba(0, 0, 0, 0.2)"
+        if (top > 0) {
+            topo.style.boxShadow = '0px 0px 50px rgba(0, 0, 0, 0.2)'
+            topo.style.backgroundColor = 'white'
+        } else {
+            topo.style.boxShadow = '0px 0px 0px rgba(0, 0, 0, 0.2)'
+            topo.style.backgroundColor = 'transparent'
         }
-
     })
 
     return (
-        <HeaderComponent className='topo'>
-            <div className='header'>
+        <HeaderComponent className="topo">
+            <div className="header">
                 <div className="logo">
                     <img src={LOGO} alt="" />
-                    <h1><span className='R'>R</span><span className='DEV'>DEV</span></h1>
+                    <h1>
+                        <span className="R">R</span>
+                        <span className="DEV">DEV</span>
+                    </h1>
                 </div>
                 <div id="menuMobile" className="menuMobileClose" onClick={Menu}>
                     <span id="menu" className="menuClose"></span>
@@ -62,28 +66,32 @@ const Header = () => {
             <div id="navegaçaoMobile" className="navegaçao">
                 <nav>
                     <ul>
-                        <a href="#presentation" className='links active' onClick={Menu}>
+                        <a
+                            href="#presentation"
+                            className="links active"
+                            onClick={Menu}
+                        >
                             <div>
                                 {/* <FaHome className="icon" /> */}
                                 <li>Home</li>
                             </div>
                             <hr />
                         </a>
-                        <a href="#about" className='links' onClick={Menu}>
+                        <a href="#about" className="links" onClick={Menu}>
                             <div>
                                 {/* <IoPersonSharp className="icon" /> */}
                                 <li>Sobre mim</li>
                             </div>
                             <hr />
                         </a>
-                        <a href="#ability" className='links' onClick={Menu}>
+                        <a href="#ability" className="links" onClick={Menu}>
                             <div>
                                 {/* <GrVulnerability className="icon" /> */}
                                 <li>Habilidades</li>
                             </div>
                             <hr />
                         </a>
-                        <a href="#project" className='links' onClick={Menu}>
+                        <a href="#project" className="links" onClick={Menu}>
                             <div>
                                 {/* <FaDiagramProject className="icon" /> */}
                                 <li>Projetos</li>

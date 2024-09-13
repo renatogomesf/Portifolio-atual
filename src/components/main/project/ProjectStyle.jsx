@@ -2,10 +2,10 @@ import styled from 'styled-components'
 
 export const ProjectComponent = styled.section`
     /* margin: 50px 0px; */
-    scroll-margin-top: 100px;
+    scroll-margin-top: 70px;
 
     position: relative;
-    background-image: url('galaxy2.jpg');
+    background-image: url('https://cdn.svgator.com/images/2022/06/use-svg-as-background-image-particle-strokes.svg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

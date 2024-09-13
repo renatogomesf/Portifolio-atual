@@ -21,7 +21,7 @@ const AppComponent = styled.div`
 
             & .quemsou {
                 position: relative;
-                background-image: url('galaxy2.jpg');
+                background-image: url('https://cdn.svgator.com/images/2022/06/use-svg-as-background-image-particle-strokes.svg');
                 background-position: center;
                 background-size: cover;
                 background-repeat: no-repeat;
@@ -36,7 +36,7 @@ const AppComponent = styled.div`
                     bottom: -1px;
                     right: -1px;
                     transform: rotateX(180deg);
-                    fill: #fafafa;  
+                    fill: #fafafa;
                 }
             }
         }
@@ -78,13 +78,14 @@ const App = () => {
     return (
         <AppComponent>
             <div className="wraper">
-                <Contact/>
+                <Contact />
                 <div className="main">
-                    <Header />
                     <div className="quemsou">
+                        <Header />
                         <Presentation />
                         <About />
-                        <svg className='curva'
+                        <svg
+                            className="curva"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 1000 100"
                             fill="#000"

@@ -10,7 +10,8 @@ export const PresentationComponent = styled.section`
     flex-wrap: wrap;
     width: 100%;
     height: 88vh;
-    scroll-margin-top: 100px;
+    margin-top: 75px;
+    scroll-margin-top: 70px;
 
 
     & div {
@@ -20,7 +21,7 @@ export const PresentationComponent = styled.section`
         }
 
         & h1 {
-            font-size: 4rem;
+            font-size: 5rem;
             font-weight: 800;
             /* color: ${({ theme }) => theme.secondary}; */
             color: white;

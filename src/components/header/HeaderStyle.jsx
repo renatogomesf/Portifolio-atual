@@ -2,16 +2,16 @@ import styled from 'styled-components'
 // import imagem from  '../../image/common-bg.svg'
 
 export const HeaderComponent = styled.header`
-    position: sticky;
+    position: fixed;
     top: 0px;
     display: flex;
     /* flex-direction: column; */
     justify-content: space-around;
     align-items: center;
 
-    background-color: ${({ theme }) => theme.quaternary};
+    /* background-color: ${({ theme }) => theme.quaternary}; */
     width: 100%;
-    height: 100px;
+    height: 70px;
     /* height: 100vh; */
     /* max-width: 270px; */
     z-index: 1111111111;
@@ -21,7 +21,8 @@ export const HeaderComponent = styled.header`
         transform: translate(-5px, -5px);
         transition: 0.3s;
         box-shadow: 5px 5px 0px black;
-        background-color: ${({ theme }) => theme.light_green};
+        /* background-color: ${({ theme }) => theme.light_green}; */
+        background-color: #00c1cf;
         color: white;
     }
 
@@ -113,7 +114,7 @@ export const HeaderComponent = styled.header`
                 color: ${({ theme }) => theme.light_green};
 
                 & .R {
-                    color: #000113;
+                    /* color: #000113; */
                 }
             }
 
