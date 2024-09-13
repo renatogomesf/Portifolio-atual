@@ -26,7 +26,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     ::-webkit-scrollbar-thumb{
-        background-color: ${({ theme }) => theme.light_green};
+        background-color: #000113;
         border-radius: 5px;
     }
 `

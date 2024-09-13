@@ -129,8 +129,15 @@ const projetos = [
 
 const Project = () => {
     return (
-        <ProjectComponent id="project" className='section'>
-            <svg className='curva2' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1000 100' fill='#000'><path d='M1000 100C500 100 500 4 0 4V0h1000v100Z'></path></svg>
+        <ProjectComponent id="project" className="section">
+            <svg
+                className="curva2"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1000 100"
+                fill="#000"
+            >
+                <path d="M1000 100C500 100 500 4 0 4V0h1000v100Z"></path>
+            </svg>
 
             <div className="titulo">
                 <img
@@ -153,29 +160,35 @@ const Project = () => {
                                 />
                             </div>
 
-                            <div className="açoes">
-                                <h4 className="titulo_projeto">
-                                    {item.titulo}
-                                </h4>
-                                <div className="btn_links">
-                                    <a href={item.link_projeto} target="blank">
-                                        <div>
-                                            <GoProjectSymlink className="icon" />
-                                            <span>Ver projeto</span>
-                                        </div>
-                                        <hr />
-                                    </a>
-                                    <a href={item.link_codigo} target="blank">
-                                        <div>
-                                            <FaCode className="icon" />
-                                            <span>Ver Código</span>
-                                        </div>
-                                        <hr />
-                                    </a>
-                                </div>
-                            </div>
-
                             <div className="info">
+                                <div className="açoes">
+                                    <h4 className="titulo_projeto">
+                                        {item.titulo}
+                                    </h4>
+                                    <div className="btn_links">
+                                        <a
+                                            href={item.link_projeto}
+                                            target="blank"
+                                        >
+                                            <div>
+                                                <GoProjectSymlink className="icon" />
+                                                <span>Ver projeto</span>
+                                            </div>
+                                            <hr />
+                                        </a>
+                                        <a
+                                            href={item.link_codigo}
+                                            target="blank"
+                                        >
+                                            <div>
+                                                <FaCode className="icon" />
+                                                <span>Ver Código</span>
+                                            </div>
+                                            <hr />
+                                        </a>
+                                    </div>
+                                </div>
+                                
                                 <div>
                                     <p className="descricao">Descrição:</p>
                                     <p>{item.descricao}</p>
@@ -194,6 +207,7 @@ const Project = () => {
                                         )
                                     })}
                                 </div>
+
                             </div>
                         </div>
                     )

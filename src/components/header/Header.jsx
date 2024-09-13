@@ -52,7 +52,7 @@ const Header = () => {
             <div className='header'>
                 <div className="logo">
                     <img src={LOGO} alt="" />
-                    <h1>RDEV</h1>
+                    <h1><span className='R'>R</span><span className='DEV'>DEV</span></h1>
                 </div>
                 <div id="menuMobile" className="menuMobileClose" onClick={Menu}>
                     <span id="menu" className="menuClose"></span>

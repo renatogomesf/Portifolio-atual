@@ -30,7 +30,7 @@ export const HeaderComponent = styled.header`
         /* flex-direction: column; */
         align-items: center;
         justify-content: center;
-        color: black;
+        color: ${({ theme }) => theme.light_green};
         /* width: min-content; */
         font-weight: bold;
         gap: 4px;
@@ -109,10 +109,17 @@ export const HeaderComponent = styled.header`
 
                 animation: logo 2s forwards;
                 animation-delay: 2s;
+
+                color: ${({ theme }) => theme.light_green};
+
+                & .R {
+                    color: #000113;
+                }
             }
 
             & img {
                 height: 50px;
+                /* filter: drop-shadow(2px 2px 0px black); */
             }
 
             @keyframes logo {
