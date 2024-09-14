@@ -13,7 +13,7 @@ export const ContactComponent = styled.section`
     height: 200px;
     background-color: white;
     border-radius: 0px 10px 10px 0px;
-    box-shadow: 3px 3px 0px black;
+    box-shadow: 3px 3px 10px black;
     overflow: hidden;
     transition: 0.5s;
 

@@ -59,8 +59,8 @@ export const AbilityComponent = styled.section`
             &::before {
                 position: absolute;
                 content: '';
-                width: 200px;
-                height: 200px;
+                width: 180px;
+                height: 180px;
                 background-color: ${({ theme }) => theme.quaternary};
                 border-radius: 15px;
                 z-index: 1;

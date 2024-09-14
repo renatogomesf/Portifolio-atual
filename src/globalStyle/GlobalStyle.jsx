@@ -9,6 +9,7 @@ export const GlobalStyle = createGlobalStyle`
         /* font-family: "Nunito", sans-serif; */
         font-family: "Source Sans 3", sans-serif;
         text-decoration: none;
+        box-sizing: border-box;
     }
 
     html{
