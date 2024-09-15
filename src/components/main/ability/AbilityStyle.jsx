@@ -151,7 +151,7 @@ export const AbilityComponent = styled.section`
     }
 
     @media (max-width: 915px) {
-        scroll-margin-top: 100px;
+        scroll-margin-top: 70px;
     }
 
     @media (max-width: 768px) {

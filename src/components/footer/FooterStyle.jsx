@@ -85,6 +85,8 @@ export const FooterComponent = styled.section`
 
     @media (max-width: 690px) {
         & .info_portifolio {
+            padding: 40px 30px;
+
             & .info {
                 /* display: flex; */
                 align-items: start;

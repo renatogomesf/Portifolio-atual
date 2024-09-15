@@ -206,7 +206,7 @@ export const ProjectComponent = styled.section`
     }
 
     @media (max-width: 915px) {
-        scroll-margin-top: 100px;
+        scroll-margin-top: 70px;
 
         & .titulo {
             flex-direction: row;
@@ -214,7 +214,7 @@ export const ProjectComponent = styled.section`
 
         & .projetos {
             justify-content: center;
-            grid-template-columns: repeat(1, 0.9fr);
+            grid-template-columns: repeat(1, 1fr);
             gap: 50px;
         }
     }
@@ -237,7 +237,6 @@ export const ProjectComponent = styled.section`
     @media (max-width: 690px) {
         & .projetos {
             justify-content: center;
-            grid-template-columns: repeat(1, 1fr);
             gap: 50px;
             padding: 30px;
         }
@@ -256,7 +255,6 @@ export const ProjectComponent = styled.section`
 
         & .projetos {
             justify-content: center;
-            grid-template-columns: repeat(1, 1fr);
             gap: 50px;
             padding: 10px;
 
