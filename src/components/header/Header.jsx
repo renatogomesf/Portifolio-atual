@@ -75,28 +75,24 @@ const Header = () => {
                                 {/* <FaHome className="icon" /> */}
                                 <li>Home</li>
                             </div>
-                            <hr />
                         </a>
                         <a href="#about" className="links" onClick={Menu}>
                             <div>
                                 {/* <IoPersonSharp className="icon" /> */}
                                 <li>Sobre mim</li>
                             </div>
-                            <hr />
                         </a>
                         <a href="#ability" className="links" onClick={Menu}>
                             <div>
                                 {/* <GrVulnerability className="icon" /> */}
                                 <li>Habilidades</li>
                             </div>
-                            <hr />
                         </a>
                         <a href="#project" className="links" onClick={Menu}>
                             <div>
                                 {/* <FaDiagramProject className="icon" /> */}
                                 <li>Projetos</li>
                             </div>
-                            <hr />
                         </a>
                     </ul>
                 </nav>
@@ -113,7 +109,6 @@ const Header = () => {
                                     <FaExternalLinkAlt />
                                 </button> */}
                             </div>
-                            <hr />
                         </a>
                         <a
                             href="https://www.linkedin.com/in/renato-gomes-22b759236/"
@@ -126,7 +121,6 @@ const Header = () => {
                                     <FaExternalLinkAlt />
                                 </button> */}
                             </div>
-                            <hr />
                         </a>
                     </div>
                     <div className="emails">
@@ -138,7 +132,6 @@ const Header = () => {
                                         renato.gfe.dev@gmail.com
                                     </p>
                                 </div>
-                                <hr />
                             </a>
                         </div>
                         <div className="hotmail">
@@ -149,7 +142,6 @@ const Header = () => {
                                         renato_s5s@hotmail.com
                                     </p>
                                 </div>
-                                <hr />
                             </a>
                         </div>
                     </div>

@@ -78,23 +78,11 @@ export const HeaderComponent = styled.header`
                 color: ${({ theme }) => theme.light_green};
             }
 
-            hr {
-                width: 100%;
-            }
-
             .btn_redes {
                 background-color: ${({ theme }) => theme.secondary};
                 border: 2px solid ${({ theme }) => theme.light_green};
             }
         }
-    }
-
-    hr {
-        background-color: ${({ theme }) => theme.light_green};
-        border: none;
-        width: 0px;
-        height: 2px;
-        transition: 0.2s;
     }
 
     & .header {

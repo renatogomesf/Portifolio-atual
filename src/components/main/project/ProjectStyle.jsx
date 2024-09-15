@@ -4,7 +4,7 @@ export const ProjectComponent = styled.section`
     position: relative;
     width: 100%;
     /* margin: 50px 0px; */
-    scroll-margin-top: 70px;
+    scroll-margin-top: 30px;
 
     position: relative;
     background-image: url('https://cdn.svgator.com/images/2022/06/use-svg-as-background-image-particle-strokes.svg');
@@ -206,7 +206,7 @@ export const ProjectComponent = styled.section`
     }
 
     @media (max-width: 915px) {
-        scroll-margin-top: 70px;
+        scroll-margin-top: 0px;
 
         & .titulo {
             flex-direction: row;
