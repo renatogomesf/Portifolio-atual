@@ -41,116 +41,133 @@ export const ProjectComponent = styled.section`
 
     & .projetos {
         display: grid;
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
         gap: 50px;
         padding: 0px 60px;
 
         & .projeto {
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+            /* grid-template-columns: repeat(2, 1fr); */
             /* gap: 50px; */
             /* flex-direction: row; */
             border-radius: 10px;
-            height: min-content;
+            /* height: min-content; */
             padding: 10px;
             /* background-color: ${({ theme }) => theme.quaternary}; */
 
-            /* &:hover {
-                height: 100%;
-                transition: 0.5s;
-
-                .info {
-                    height: 100%;
-                    transition: 0.5s;
-                    padding: 10px 10px;
+            &:hover {
+                & .div_img {
+                    & .img_projeto {
+                        filter: grayscale(1);
+                    }
+    
+                    & .info {
+                        padding: 20px;
+                        top: 0%;
+                        opacity: 1;
+                    }
                 }
-            } */
+
+            }
 
             & .div_img {
+                position: relative;
                 display: flex;
-                align-items: center;
+                /* align-items: center; */
                 justify-content: center;
                 flex-direction: column;
 
                 & .img_projeto {
                     width: 100%;
-                    max-width: 700px;
+                    height: 100%;
+                    max-width: 600px;
                     /* border-radius: 10px; */
-                }
-            }
-            & .info {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-                /* height: 0px; */
-                padding: 20px 20px;
-                overflow: hidden;
-                border-radius: 10px;
-                color: white;
-                /* background-color: ${({ theme }) => theme.tertiary}; */
-
-                & .descricao {
-                    margin: 10px 0px;
-                    font-size: 1.2rem;
-                    font-weight: bold;
+                    transition: 0.2s;
                 }
 
-                & .tec_usada {
-                    font-size: 1.2rem;
-                    font-weight: bold;
-                }
-
-                & .tecnologias {
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
-
-                    & .img_tec {
-                        width: 40px;
-                        filter: drop-shadow(1px 1px 0px black);
-                    }
-                }
-
-                & .açoes {
+                & .info {
+                    position: absolute;
+                    top: 100%;
+                    right: 0px;
+                    bottom: 0px;
+                    left: 0px;
                     display: flex;
                     flex-direction: column;
-                    /* padding: 10px; */
                     gap: 10px;
-    
-                    & .titulo_projeto {
+                    /* height: 0px; */
+                    padding: 20px;
+                    opacity: 0;
+                    overflow: hidden;
+                    /* border-radius: 10px; */
+                    color: white;
+                    background-color: #000000d5;
+                    transition: 0.2s;
+
+                    & .descricao {
+                        margin: 10px 0px;
                         font-size: 1.2rem;
-                        font-weight: 800;
-                        /* color: ${({ theme }) => theme.tertiary}; */
+                        font-weight: bold;
                     }
-    
-                    & .btn_links {
+
+                    & .tec_usada {
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                    }
+
+                    & .tecnologias {
                         display: flex;
-                        gap: 20px;
-    
-                        & a {
+                        align-items: center;
+                        gap: 10px;
+
+                        & .img_tec {
+                            width: 40px;
+                            filter: drop-shadow(1px 1px 0px black);
+                        }
+                    }
+
+                    & .açoes {
+                        display: flex;
+                        flex-direction: column;
+                        /* padding: 10px; */
+                        gap: 10px;
+
+                        & .titulo_projeto {
+                            font-size: 1.2rem;
+                            font-weight: 800;
                             /* color: ${({ theme }) => theme.tertiary}; */
-                            color: white;
-    
-                            &:hover {
-                                color: ${({ theme }) => theme.light_green};
-                            }
-    
-                            & div {
-                                display: flex;
-                                align-items: center;
-                                justify-content: center;
-                                gap: 5px;
-    
-                                & .icon {
-                                    font-size: 1.3rem;
-                                    /* color: ${({ theme }) => theme.tertiary}; */
+                        }
+
+                        & .btn_links {
+                            display: flex;
+                            gap: 20px;
+
+                            & a {
+                                /* color: ${({ theme }) => theme.tertiary}; */
+                                color: white;
+
+                                &:hover {
+                                    color: ${({ theme }) => theme.light_green};
                                 }
-                            }
-    
-                            & hr {
-                                border: none;
-                                /* background-color: ${({ theme }) => theme.tertiary}; */
-                                height: 2px;
+
+                                & div {
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    gap: 5px;
+
+                                    & .icon {
+                                        font-size: 1.3rem;
+                                        /* color: ${({ theme }) =>
+                                            theme.tertiary}; */
+                                    }
+                                }
+
+                                & hr {
+                                    border: none;
+                                    /* background-color: ${({ theme }) =>
+                                        theme.tertiary}; */
+                                    height: 2px;
+                                }
                             }
                         }
                     }

@@ -41,10 +41,10 @@ const Header = () => {
 
         if (top > 0) {
             topo.style.boxShadow = '0px 0px 50px rgba(0, 0, 0, 0.2)'
-            topo.style.backgroundColor = 'white'
+            // topo.style.backgroundColor = 'white'
         } else {
             topo.style.boxShadow = '0px 0px 0px rgba(0, 0, 0, 0.2)'
-            topo.style.backgroundColor = 'transparent'
+            // topo.style.backgroundColor = 'transparent'
         }
     })
 

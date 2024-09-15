@@ -158,56 +158,56 @@ const Project = () => {
                                     src={item.img}
                                     alt={item.titulo}
                                 />
-                            </div>
+                                <div className="info">
+                                    <div className="açoes">
+                                        <h4 className="titulo_projeto">
+                                            {item.titulo}
+                                        </h4>
+                                        <div className="btn_links">
+                                            <a
+                                                href={item.link_projeto}
+                                                target="blank"
+                                            >
+                                                <div>
+                                                    <GoProjectSymlink className="icon" />
+                                                    <span>Ver projeto</span>
+                                                </div>
+                                                <hr />
+                                            </a>
+                                            <a
+                                                href={item.link_codigo}
+                                                target="blank"
+                                            >
+                                                <div>
+                                                    <FaCode className="icon" />
+                                                    <span>Ver Código</span>
+                                                </div>
+                                                <hr />
+                                            </a>
+                                        </div>
+                                    </div>
 
-                            <div className="info">
-                                <div className="açoes">
-                                    <h4 className="titulo_projeto">
-                                        {item.titulo}
-                                    </h4>
-                                    <div className="btn_links">
-                                        <a
-                                            href={item.link_projeto}
-                                            target="blank"
-                                        >
-                                            <div>
-                                                <GoProjectSymlink className="icon" />
-                                                <span>Ver projeto</span>
-                                            </div>
-                                            <hr />
-                                        </a>
-                                        <a
-                                            href={item.link_codigo}
-                                            target="blank"
-                                        >
-                                            <div>
-                                                <FaCode className="icon" />
-                                                <span>Ver Código</span>
-                                            </div>
-                                            <hr />
-                                        </a>
+                                    <div>
+                                        <p className="descricao">Descrição:</p>
+                                        <p>{item.descricao}</p>
+                                    </div>
+                                    <p className="tec_usada">
+                                        Tecnologias usadas:
+                                    </p>
+
+                                    <div className="tecnologias">
+                                        {item.tecnologias.map((img, i) => {
+                                            return (
+                                                <img
+                                                    className="img_tec"
+                                                    key={i}
+                                                    src={img}
+                                                    alt=""
+                                                />
+                                            )
+                                        })}
                                     </div>
                                 </div>
-                                
-                                <div>
-                                    <p className="descricao">Descrição:</p>
-                                    <p>{item.descricao}</p>
-                                </div>
-                                <p className="tec_usada">Tecnologias usadas:</p>
-
-                                <div className="tecnologias">
-                                    {item.tecnologias.map((img, i) => {
-                                        return (
-                                            <img
-                                                className="img_tec"
-                                                key={i}
-                                                src={img}
-                                                alt=""
-                                            />
-                                        )
-                                    })}
-                                </div>
-
                             </div>
                         </div>
                     )

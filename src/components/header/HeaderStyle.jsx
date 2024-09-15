@@ -9,7 +9,7 @@ export const HeaderComponent = styled.header`
     justify-content: space-around;
     align-items: center;
 
-    /* background-color: ${({ theme }) => theme.quaternary}; */
+    background-color: ${({ theme }) => theme.quaternary};
     width: 100%;
     height: 70px;
     /* height: 100vh; */
