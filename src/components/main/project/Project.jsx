@@ -94,7 +94,7 @@ const projetos = [
         img: PORTIFOLIO_V1,
         titulo: 'Primeiro Portifólio.',
         descricao:
-            'Portifólio criado após o término do curso de HTML e CSS. Posteriormente, foi adicionado JavaScript para dar função de abrir e fechar ao menu mobile.',
+            'Portifólio criado após o curso de HTML e CSS. Posteriormente, foi adicionado JavaScript para dar função de abrir e fechar ao menu mobile.',
         tecnologias: [HTML, CSS, JS],
         link_projeto: 'https://renatogomesf.github.io/Primeiro-Portifolio/',
         link_codigo: 'https://github.com/renatogomesf/Portifolio'
@@ -191,10 +191,9 @@ const Project = () => {
                                         <p className="descricao">Descrição:</p>
                                         <p>{item.descricao}</p>
                                     </div>
-                                    <p className="tec_usada">
-                                        Tecnologias usadas:
-                                    </p>
-
+                                </div>
+                                <div className='tec'>
+                                    <p className="tec_usada">Tecnologias usadas:</p>
                                     <div className="tecnologias">
                                         {item.tecnologias.map((img, i) => {
                                             return (

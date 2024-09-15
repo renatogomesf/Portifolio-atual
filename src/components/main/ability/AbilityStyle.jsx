@@ -140,6 +140,11 @@ export const AbilityComponent = styled.section`
     @media (max-width: 1024px) {
         padding: 30px;
 
+        & .tecnologias {
+
+            grid-template-columns: repeat(3, 1fr);
+        }
+
         & .titulo {
             flex-wrap: wrap-reverse;
         }
@@ -170,6 +175,7 @@ export const AbilityComponent = styled.section`
     }
 
     @media (max-width: 690px) {
+        padding: 30px;
         & .tecnologias {
             grid-template-columns: repeat(2, 0.8fr);
         }

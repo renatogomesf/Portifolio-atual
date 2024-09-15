@@ -1,9 +1,9 @@
 import React from 'react'
 import { HeaderComponent } from './HeaderStyle'
 
-// import { FaGithub } from 'react-icons/fa'
-// import { FaLinkedin } from 'react-icons/fa'
-// import { MdEmail } from 'react-icons/md'
+import { FaGithub } from 'react-icons/fa'
+import { FaLinkedin } from 'react-icons/fa'
+import { MdEmail } from 'react-icons/md'
 // import { FaExternalLinkAlt } from 'react-icons/fa'
 // import { IoPersonSharp } from 'react-icons/io5'
 // import { GrVulnerability } from 'react-icons/gr'
@@ -100,7 +100,7 @@ const Header = () => {
                         </a>
                     </ul>
                 </nav>
-                {/* <div className="contatos">
+                <div className="contatos">
                     <div className="redes_sociais">
                         <a
                             href="https://github.com/renatogomesf"
@@ -109,9 +109,9 @@ const Header = () => {
                             <div>
                                 <FaGithub className="icon" />
                                 <p>github.com</p>
-                                <button className="btn_redes">
+                                {/* <button className="btn_redes">
                                     <FaExternalLinkAlt />
-                                </button>
+                                </button> */}
                             </div>
                             <hr />
                         </a>
@@ -122,9 +122,9 @@ const Header = () => {
                             <div>
                                 <FaLinkedin className="icon" />
                                 <p>linkedin.com</p>
-                                <button className="btn_redes">
+                                {/* <button className="btn_redes">
                                     <FaExternalLinkAlt />
-                                </button>
+                                </button> */}
                             </div>
                             <hr />
                         </a>
@@ -153,7 +153,7 @@ const Header = () => {
                             </a>
                         </div>
                     </div>
-                </div> */}
+                </div>
             </div>
         </HeaderComponent>
     )

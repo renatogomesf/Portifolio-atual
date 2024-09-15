@@ -15,7 +15,7 @@ export const ContactComponent = styled.section`
     border-radius: 0px 10px 10px 0px;
     box-shadow: 3px 3px 10px black;
     overflow: hidden;
-    transition: 0.5s;
+    transition: 0.2s;
 
     &:hover{
         width: 260px;
@@ -35,6 +35,8 @@ export const ContactComponent = styled.section`
 
             & a {
                 color: black;
+                width: min-content;
+                transition: 0.2s;
 
                 & div {
                     display: flex;
@@ -44,9 +46,25 @@ export const ContactComponent = styled.section`
                     & .icon {
                         color: #000113;
                         font-size: 30px;
+                        transition: 0.2s;
+                    }
+                }
+
+                &:hover {
+                    color: ${({ theme }) => theme.light_green};
+
+                    & div {
+                        & .icon {
+                            color: ${({ theme }) => theme.light_green};
+                        }
                     }
                 }
             }
         }
+    }
+
+
+    @media (max-width: 690px) {
+        display: none;
     }
 `

@@ -5,7 +5,7 @@ import { ContactComponent } from "./ContactStyle";
 import { FaGithub } from 'react-icons/fa'
 import { FaLinkedin } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
-import { FaExternalLinkAlt } from 'react-icons/fa'
+// import { FaExternalLinkAlt } from 'react-icons/fa'
 
 const Contact = () => {
     return (
@@ -17,9 +17,9 @@ const Contact = () => {
                             <FaGithub className="icon" />
                             <p>github.com</p>
 
-                            <button className="btn_redes">
+                            {/* <button className="btn_redes">
                                 <FaExternalLinkAlt />
-                            </button>
+                            </button> */}
                         </div>
                         {/* <hr /> */}
                     </a>
@@ -32,9 +32,9 @@ const Contact = () => {
                             <FaLinkedin className="icon" />
                             <p>linkedin.com</p>
 
-                            <button className="btn_redes">
+                            {/* <button className="btn_redes">
                                 <FaExternalLinkAlt />
-                            </button>
+                            </button> */}
                         </div>
                         {/* <hr /> */}
                     </a>

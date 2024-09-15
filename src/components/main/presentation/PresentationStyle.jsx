@@ -5,7 +5,7 @@ export const PresentationComponent = styled.section`
     align-items: center;
     justify-content: center;
     gap: 10px;
-    /* padding: 60px 10px; */
+    padding: 70px;
     /* margin: 50px 0px; */
     flex-wrap: wrap;
     width: 100%;
@@ -25,7 +25,7 @@ export const PresentationComponent = styled.section`
             font-weight: 800;
             /* color: ${({ theme }) => theme.secondary}; */
             color: white;
-            white-space: nowrap;
+            /* white-space: nowrap; */
         }
 
         & h2 {
@@ -35,7 +35,7 @@ export const PresentationComponent = styled.section`
             font-family: monospace;
             font-size: 1.8rem;
 
-            &::before {
+            /* &::before {
                 display: flex;
                 justify-content: end;
                 align-items: end;
@@ -44,14 +44,14 @@ export const PresentationComponent = styled.section`
                 right: -2px;
                 bottom: 0px;
                 content: '';
-                /* width: 101%; */
+                width: 101%;
                 border-left: 3px solid ${({ theme }) => theme.secondary};
                 background-color: ${({ theme }) => theme.primary};
 
-                /* animation:
+                animation:
                     digitar 5s steps(24) infinite alternate,
-                    piscar 0.5s infinite linear; */
-            }
+                    piscar 0.5s infinite linear;
+            } */
 
             @keyframes digitar {
                 0% {
@@ -181,19 +181,20 @@ export const PresentationComponent = styled.section`
         }
     }
 
-    @media (max-width: 1024px) {
-        padding: 30px;
-    }
+    /* @media (max-width: 1024px) {
+        padding: 60px;
+    } */
 
     @media (max-width: 915px) and (min-width: 690px) {
-        gap: 20px;
-        & .contatos {
+        /* gap: 20px; */
+        /* & .contatos {
             display: flex;
             flex-direction: column;
-        }
+        } */
     }
 
     @media (max-width: 690px) {
+        padding: 30px;
         & div {
             & h1 {
                 font-size: 4rem;

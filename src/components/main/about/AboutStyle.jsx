@@ -91,20 +91,19 @@ export const AboutComponent = styled.section`
         }
     }
 
-    @media (max-width: 1024px) {
-        padding: 30px;
+    /* @media (max-width: 1024px) {
+        padding: 60px;
 
         & .titulo {
             flex-wrap: wrap;
         }
-    }
+    } */
 
     @media (max-width: 915px) {
         scroll-margin-top: 100px;
     }
 
     @media (max-width: 768px) {
-        padding: 30px;
 
         & .titulo {
             flex-direction: column;
@@ -120,7 +119,8 @@ export const AboutComponent = styled.section`
         }
     }
 
-    @media (max-width: 520px) {
+    @media (max-width: 690px) {
+        padding: 30px;
         & .titulo {
             & h1 {
                 font-size: 3rem;
