@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const ContactComponent = styled.section`
     position: fixed;
-    top: 300px;
+    top: calc(50% - 70px);
     left: 0px;
     display: flex;
     flex-direction: column;
