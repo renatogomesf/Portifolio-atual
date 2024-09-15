@@ -1,36 +1,27 @@
-import React from 'react'
-import { PresentationComponent } from './PresentationStyle'
-// import DEV from '../../../image/dev.png'
+import React from "react";
 
-// import svg from '../../../../public/arc-divider.svg'
+import { ContactComponent } from "./ContactStyle";
 
 import { FaGithub } from 'react-icons/fa'
 import { FaLinkedin } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
-import { FaExternalLinkAlt } from 'react-icons/fa'
+// import { FaExternalLinkAlt } from 'react-icons/fa'
 
-const Presentation = () => {
+const Contact = () => {
     return (
-        <PresentationComponent id="presentation" className="section">
-            <div>
-                {/* <p>Olá! Meu nome é</p> */}
-                <h1>Olá! Meu nome é Renato Gomes</h1>
-                <h2>Desenvolvedor Full Stack</h2>
-            </div>
-            {/* <img className="img_dev" src={DEV} alt="Desenvolvedor" /> */}
-
+        <ContactComponent>
             <div className="contatos">
-                <div className="redes_sociais">
+                <div className="linkss">
                     <a href="https://github.com/renatogomesf" target="blanck">
                         <div>
                             <FaGithub className="icon" />
                             <p>github.com</p>
 
-                            <button className="btn_redes">
+                            {/* <button className="btn_redes">
                                 <FaExternalLinkAlt />
-                            </button>
+                            </button> */}
                         </div>
-                        <hr />
+                        {/* <hr /> */}
                     </a>
 
                     <a
@@ -41,15 +32,15 @@ const Presentation = () => {
                             <FaLinkedin className="icon" />
                             <p>linkedin.com</p>
 
-                            <button className="btn_redes">
+                            {/* <button className="btn_redes">
                                 <FaExternalLinkAlt />
-                            </button>
+                            </button> */}
                         </div>
-                        <hr />
+                        {/* <hr /> */}
                     </a>
                 </div>
 
-                <div className="emails">
+                <div className="linkss">
                     <div className="gmail">
                         <a href="mailto:renato.gfe.dev@gmail.com">
                             <div>
@@ -58,7 +49,7 @@ const Presentation = () => {
                                     renato.gfe.dev@gmail.com
                                 </p>
                             </div>
-                            <hr />
+                            {/* <hr /> */}
                         </a>
                     </div>
 
@@ -70,13 +61,13 @@ const Presentation = () => {
                                     renato_s5s@hotmail.com
                                 </p>
                             </div>
-                            <hr />
+                            {/* <hr /> */}
                         </a>
                     </div>
                 </div>
             </div>
-        </PresentationComponent>
-    )
+        </ContactComponent>
+    );
 }
-
-export default Presentation
+ 
+export default Contact;

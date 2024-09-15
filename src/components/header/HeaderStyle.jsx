@@ -1,27 +1,46 @@
 import styled from 'styled-components'
+// import imagem from  '../../image/common-bg.svg'
 
 export const HeaderComponent = styled.header`
-    position: sticky;
+    position: fixed;
     top: 0px;
     display: flex;
-    flex-direction: column;
+    /* flex-direction: column; */
     justify-content: space-around;
     align-items: center;
 
-    background-color: ${({ theme }) => theme.secondary};
+    background-color: ${({ theme }) => theme.quaternary};
     width: 100%;
-    height: 100vh;
-    max-width: 270px;
+    height: 70px;
+    /* height: 100vh; */
+    /* max-width: 270px; */
+    z-index: 1111111111;
+    transition: 0.3s;
 
-    color: white;
+    .active {
+        transform: translate(-5px, -5px);
+        transition: 0.3s;
+        box-shadow: 5px 5px 0px black;
+        background-color: ${({ theme }) => theme.light_green};
+        background-color: #00c1cf;
+        color: white;
+    }
 
     a {
         display: flex;
-        flex-direction: column;
-        color: white;
-        width: min-content;
+        /* flex-direction: column; */
+        align-items: center;
+        justify-content: center;
+        color: ${({ theme }) => theme.light_green};
+        /* color: #00c1cf; */
+        /* width: min-content; */
         font-weight: bold;
         gap: 4px;
+        padding: 10px 20px;
+        border-radius: 10px 0px 10px 0px;
+        transition: 0.3s;
+
+        border: 2px solid black;
 
         & div {
             display: flex;
@@ -51,6 +70,10 @@ export const HeaderComponent = styled.header`
         }
 
         &:hover {
+            transform: translate(-5px, -5px);
+            transition: 0.3s;
+            box-shadow: 5px 5px 0px black;
+
             .icon {
                 color: ${({ theme }) => theme.light_green};
             }
@@ -88,10 +111,17 @@ export const HeaderComponent = styled.header`
 
                 animation: logo 2s forwards;
                 animation-delay: 2s;
+
+                color: ${({ theme }) => theme.light_green};
+
+                & .R {
+                    /* color: #000113; */
+                }
             }
 
             & img {
                 height: 50px;
+                /* filter: drop-shadow(2px 2px 0px black); */
             }
 
             @keyframes logo {
@@ -123,30 +153,31 @@ export const HeaderComponent = styled.header`
 
     & .navegaçao {
         display: flex;
-        flex-direction: column;
+        /* flex-direction: column; */
         justify-content: space-around;
+        align-items: center;
         height: 80%;
 
         & nav {
-            padding: 30px 45px;
-            background-color: ${({ theme }) => theme.tertiary};
+            /* padding: 30px; */
+            /* background-color: ${({ theme }) => theme.tertiary}; */
             border-radius: 10px;
 
             & ul {
                 display: flex;
-                flex-direction: column;
+                /* flex-direction: column; */
                 gap: 20px;
                 list-style: none;
             }
         }
 
         & .contatos {
-            display: flex;
+            display: none;
             flex-direction: column;
             gap: 15px;
             font-weight: bold;
 
-            & .redes_sociais {
+            /* & .redes_sociais {
                 display: flex;
                 flex-direction: column;
                 gap: 15px;
@@ -167,37 +198,41 @@ export const HeaderComponent = styled.header`
                 display: flex;
                 flex-direction: column;
                 gap: 15px;
-            }
+            } */
         }
     }
 
     @media (max-width: 915px) {
-        flex-direction: row;
+        /* flex-direction: row;
         height: 100px;
         max-width: 100%;
-        z-index: 100;
+        z-index: 100; */
 
         & .header {
             & .logo {
                 & img {
                     height: 40px;
                 }
+
+                & h1 {
+                    font-size: 2rem;
+                }
             }
         }
 
         & .navegaçao {
             & nav {
-                padding: 15px;
-                background-color: ${({ theme }) => theme.secondary};
+                /* padding: 15px; */
+                /* background-color: ${({ theme }) => theme.secondary}; */
 
-                & ul {
+                /* & ul {
                     flex-direction: row;
-                }
+                } */
             }
 
-            & .contatos {
+            /* & .contatos {
                 display: none;
-            }
+            } */
         }
     }
 
@@ -210,7 +245,7 @@ export const HeaderComponent = styled.header`
             align-items: center;
             width: 100%;
             height: 100%;
-            background-color: ${({ theme }) => theme.secondary};
+            background-color: ${({ theme }) => theme.primary};
 
             & #menuMobile {
                 display: flex;
@@ -230,7 +265,7 @@ export const HeaderComponent = styled.header`
                     width: 26px;
                     height: 2px;
                     border-radius: 1px;
-                    background-color: white;
+                    background-color: black;
                     transform-origin: center;
 
                     animation: AbrirMenuBefore 0.3s forwards;
@@ -254,7 +289,7 @@ export const HeaderComponent = styled.header`
                     width: 26px;
                     height: 2px;
                     border-radius: 1px;
-                    background-color: white;
+                    background-color: black;
                     transform-origin: center;
 
                     animation: AbrirMenuAfter 0.3s forwards;
@@ -276,7 +311,7 @@ export const HeaderComponent = styled.header`
                     width: 26px;
                     height: 2px;
                     border-radius: 1px;
-                    background-color: white;
+                    background-color: black;
 
                     animation: AbrirMenu 0.3s forwards;
 
@@ -305,7 +340,7 @@ export const HeaderComponent = styled.header`
                     width: 26px;
                     height: 2px;
                     border-radius: 1px;
-                    background-color: white;
+                    background-color: black;
                     transform-origin: center;
 
                     animation: FecharMenuBefore 0.3s forwards;
@@ -329,7 +364,7 @@ export const HeaderComponent = styled.header`
                     width: 26px;
                     height: 2px;
                     border-radius: 1px;
-                    background-color: white;
+                    background-color: black;
                     transform-origin: center;
 
                     animation: FecharMenuAfter 0.3s forwards;
@@ -351,7 +386,7 @@ export const HeaderComponent = styled.header`
                     width: 26px;
                     height: 2px;
                     border-radius: 1px;
-                    background-color: white;
+                    background-color: black;
 
                     animation: FecharMenu 0.3s forwards;
 
@@ -369,11 +404,11 @@ export const HeaderComponent = styled.header`
 
         & .navegaçaoOpen {
             position: absolute;
-            top: 100px;
+            top: 69px;
             right: 0px;
             display: flex;
             flex-direction: column;
-            background-color: ${({ theme }) => theme.secondary};
+            background-color: ${({ theme }) => theme.primary};
             height: min-content;
             padding: 20px;
             gap: 20px;
@@ -382,17 +417,23 @@ export const HeaderComponent = styled.header`
             transition: 0.5s;
             z-index: -1;
 
+            & .icon {
+                color: ${({ theme }) => theme.light_green};
+            }
+
             & nav {
                 display: flex;
-                padding: 30px 45px;
-                background-color: ${({ theme }) => theme.tertiary};
+                /* padding: 30px 45px; */
+                /* background-color: ${({ theme }) => theme.tertiary}; */
                 border-radius: 10px;
+                /* width: 100%; */
 
                 & ul {
                     display: flex;
                     flex-direction: column;
                     gap: 20px;
                     list-style: none;
+                    width: 100%;
                 }
             }
 
@@ -407,7 +448,7 @@ export const HeaderComponent = styled.header`
                     flex-direction: column;
                     gap: 15px;
 
-                    & .btn_redes {
+                    /* & .btn_redes {
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -416,7 +457,7 @@ export const HeaderComponent = styled.header`
                         border-radius: 5px;
                         color: white;
                         cursor: pointer;
-                    }
+                    } */
                 }
 
                 & .emails {
@@ -429,29 +470,36 @@ export const HeaderComponent = styled.header`
 
         & .navegaçao {
             position: absolute;
-            top: -430px;
+            top: -530px;
             right: 0px;
             display: flex;
-            background-color: ${({ theme }) => theme.secondary};
+            flex-direction: column;
+            background-color: ${({ theme }) => theme.primary};
             height: min-content;
             padding: 20px;
-            gap: 20px;
+            /* gap: 20px; */
             border-radius: 0px 0px 0px 10px;
 
             transition: 0.5s;
             z-index: -1;
 
+            & .icon {
+                color: ${({ theme }) => theme.light_green};
+            }
+
             & nav {
-                display: flex;
-                padding: 30px 45px;
-                background-color: ${({ theme }) => theme.tertiary};
-                border-radius: 10px;
+                /* display: flex; */
+                /* padding: 30px 45px; */
+                /* background-color: ${({ theme }) => theme.tertiary}; */
+                /* border-radius: 10px; */
+                width: 100%;
 
                 & ul {
                     display: flex;
                     flex-direction: column;
-                    gap: 20px;
-                    list-style: none;
+                    /* gap: 20px; */
+                    /* list-style: none; */
+                    width: 100%;
                 }
             }
 
@@ -466,7 +514,7 @@ export const HeaderComponent = styled.header`
                     flex-direction: column;
                     gap: 15px;
 
-                    & .btn_redes {
+                    /* & .btn_redes {
                         display: flex;
                         align-items: center;
                         justify-content: center;
@@ -475,7 +523,7 @@ export const HeaderComponent = styled.header`
                         border-radius: 5px;
                         color: white;
                         cursor: pointer;
-                    }
+                    } */
                 }
 
                 & .emails {

@@ -6,6 +6,8 @@ export const AboutComponent = styled.section`
     gap: 10px;
     padding: 65px;
     margin: 50px 0px;
+    scroll-margin-top: 70px;
+
 
     & .titulo {
         display: flex;
@@ -17,7 +19,8 @@ export const AboutComponent = styled.section`
         & h1 {
             font-size: 4rem;
             font-weight: 800;
-            color: ${({ theme }) => theme.secondary};
+            /* color: ${({ theme }) => theme.secondary}; */
+            color: white;
         }
 
         & .img_fala {
@@ -88,20 +91,19 @@ export const AboutComponent = styled.section`
         }
     }
 
-    @media (max-width: 1024px) {
-        padding: 30px;
+    /* @media (max-width: 1024px) {
+        padding: 60px;
 
         & .titulo {
             flex-wrap: wrap;
         }
-    }
+    } */
 
     @media (max-width: 915px) {
         scroll-margin-top: 100px;
     }
 
     @media (max-width: 768px) {
-        padding: 30px;
 
         & .titulo {
             flex-direction: column;
@@ -117,7 +119,8 @@ export const AboutComponent = styled.section`
         }
     }
 
-    @media (max-width: 520px) {
+    @media (max-width: 690px) {
+        padding: 30px;
         & .titulo {
             & h1 {
                 font-size: 3rem;

@@ -4,13 +4,15 @@ import { HeaderComponent } from './HeaderStyle'
 import { FaGithub } from 'react-icons/fa'
 import { FaLinkedin } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
-import { FaExternalLinkAlt } from 'react-icons/fa'
-import { IoPersonSharp } from 'react-icons/io5'
-import { GrVulnerability } from 'react-icons/gr'
-import { FaDiagramProject } from 'react-icons/fa6'
-import { FaHome } from 'react-icons/fa'
+// import { FaExternalLinkAlt } from 'react-icons/fa'
+// import { IoPersonSharp } from 'react-icons/io5'
+// import { GrVulnerability } from 'react-icons/gr'
+// import { FaDiagramProject } from 'react-icons/fa6'
+// import { FaHome } from 'react-icons/fa'
 
 import LOGO from '../../../public/logo.png'
+
+// import { NavLink } from 'react-router-dom'
 
 const Header = () => {
     const Menu = () => {
@@ -33,12 +35,28 @@ const Header = () => {
         }
     }
 
+    window.addEventListener('scroll', () => {
+        let top = window.scrollY
+        const topo = document.querySelector('.topo')
+
+        if (top > 0) {
+            topo.style.boxShadow = '0px 0px 50px rgba(0, 0, 0, 0.2)'
+            // topo.style.backgroundColor = 'white'
+        } else {
+            topo.style.boxShadow = '0px 0px 0px rgba(0, 0, 0, 0.2)'
+            // topo.style.backgroundColor = 'transparent'
+        }
+    })
+
     return (
-        <HeaderComponent>
-            <div className='header'>
+        <HeaderComponent className="topo">
+            <div className="header">
                 <div className="logo">
                     <img src={LOGO} alt="" />
-                    <h1>RDEV</h1>
+                    <h1>
+                        <span className="R">R</span>
+                        <span className="DEV">DEV</span>
+                    </h1>
                 </div>
                 <div id="menuMobile" className="menuMobileClose" onClick={Menu}>
                     <span id="menu" className="menuClose"></span>
@@ -48,30 +66,34 @@ const Header = () => {
             <div id="navegaçaoMobile" className="navegaçao">
                 <nav>
                     <ul>
-                        <a href="#" onClick={Menu}>
+                        <a
+                            href="#presentation"
+                            className="links active"
+                            onClick={Menu}
+                        >
                             <div>
-                                <FaHome className="icon" />
+                                {/* <FaHome className="icon" /> */}
                                 <li>Home</li>
                             </div>
                             <hr />
                         </a>
-                        <a href="#about" onClick={Menu}>
+                        <a href="#about" className="links" onClick={Menu}>
                             <div>
-                                <IoPersonSharp className="icon" />
+                                {/* <IoPersonSharp className="icon" /> */}
                                 <li>Sobre mim</li>
                             </div>
                             <hr />
                         </a>
-                        <a href="#ability" onClick={Menu}>
+                        <a href="#ability" className="links" onClick={Menu}>
                             <div>
-                                <GrVulnerability className="icon" />
+                                {/* <GrVulnerability className="icon" /> */}
                                 <li>Habilidades</li>
                             </div>
                             <hr />
                         </a>
-                        <a href="#project" onClick={Menu}>
+                        <a href="#project" className="links" onClick={Menu}>
                             <div>
-                                <FaDiagramProject className="icon" />
+                                {/* <FaDiagramProject className="icon" /> */}
                                 <li>Projetos</li>
                             </div>
                             <hr />
@@ -87,9 +109,9 @@ const Header = () => {
                             <div>
                                 <FaGithub className="icon" />
                                 <p>github.com</p>
-                                <button className="btn_redes">
+                                {/* <button className="btn_redes">
                                     <FaExternalLinkAlt />
-                                </button>
+                                </button> */}
                             </div>
                             <hr />
                         </a>
@@ -100,9 +122,9 @@ const Header = () => {
                             <div>
                                 <FaLinkedin className="icon" />
                                 <p>linkedin.com</p>
-                                <button className="btn_redes">
+                                {/* <button className="btn_redes">
                                     <FaExternalLinkAlt />
-                                </button>
+                                </button> */}
                             </div>
                             <hr />
                         </a>

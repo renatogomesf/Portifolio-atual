@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const AbilityComponent = styled.section`
     padding: 65px;
     margin: 50px 0px;
-
+    scroll-margin-top: 70px;
     & .titulo {
         display: flex;
         align-items: center;
@@ -24,7 +24,7 @@ export const AbilityComponent = styled.section`
 
     & .tecnologias {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         gap: 50px;
 
         & #tecnologia {
@@ -34,7 +34,8 @@ export const AbilityComponent = styled.section`
             align-items: center;
             justify-content: center;
 
-            background-color: ${({ theme }) => theme.primary};
+            /* background-color: ${({ theme }) => theme.primary}; */
+            background-color: #000113;
             margin: auto;
             padding: 10px;
             border-radius: 20px;
@@ -46,7 +47,7 @@ export const AbilityComponent = styled.section`
             & img {
                 margin: 20px;
                 width: 100px;
-                filter: drop-shadow(1px 1px 0px black);
+                filter: drop-shadow(2px 2px 0px black);
                 z-index: 10;
             }
 
@@ -58,8 +59,8 @@ export const AbilityComponent = styled.section`
             &::before {
                 position: absolute;
                 content: '';
-                width: 200px;
-                height: 200px;
+                width: 180px;
+                height: 180px;
                 background-color: ${({ theme }) => theme.quaternary};
                 border-radius: 15px;
                 z-index: 1;
@@ -97,7 +98,8 @@ export const AbilityComponent = styled.section`
             background-color: #ffa518;
         }
         & .cypress::after {
-            background-color: #1b1e2e;
+            /* background-color: #1b1e2e; */
+            background-color: #69d3a7;
         }
         & .jest::after {
             background-color: #99425b;
@@ -118,7 +120,8 @@ export const AbilityComponent = styled.section`
             background-color: #f05033;
         }
         & .github::after {
-            background-color: #000000;
+            /* background-color: #000000; */
+            background-color: #fff;
         }
         & .vscode::after {
             background-color: #3c99d4;
@@ -136,6 +139,11 @@ export const AbilityComponent = styled.section`
 
     @media (max-width: 1024px) {
         padding: 30px;
+
+        & .tecnologias {
+
+            grid-template-columns: repeat(3, 1fr);
+        }
 
         & .titulo {
             flex-wrap: wrap-reverse;
@@ -167,6 +175,7 @@ export const AbilityComponent = styled.section`
     }
 
     @media (max-width: 690px) {
+        padding: 30px;
         & .tecnologias {
             grid-template-columns: repeat(2, 0.8fr);
         }

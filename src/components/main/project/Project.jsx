@@ -94,7 +94,7 @@ const projetos = [
         img: PORTIFOLIO_V1,
         titulo: 'Primeiro Portifólio.',
         descricao:
-            'Portifólio criado após o término do curso de HTML e CSS. Posteriormente, foi adicionado JavaScript para dar função de abrir e fechar ao menu mobile.',
+            'Portifólio criado após o curso de HTML e CSS. Posteriormente, foi adicionado JavaScript para dar função de abrir e fechar ao menu mobile.',
         tecnologias: [HTML, CSS, JS],
         link_projeto: 'https://renatogomesf.github.io/Primeiro-Portifolio/',
         link_codigo: 'https://github.com/renatogomesf/Portifolio'
@@ -129,7 +129,16 @@ const projetos = [
 
 const Project = () => {
     return (
-        <ProjectComponent id="project">
+        <ProjectComponent id="project" className="section">
+            <svg
+                className="curva2"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 1000 100"
+                fill="#000"
+            >
+                <path d="M1000 100C500 100 500 4 0 4V0h1000v100Z"></path>
+            </svg>
+
             <div className="titulo">
                 <img
                     className="img_projeto"
@@ -149,48 +158,54 @@ const Project = () => {
                                     src={item.img}
                                     alt={item.titulo}
                                 />
-                            </div>
-
-                            <div className="açoes">
-                                <h4 className="titulo_projeto">
-                                    {item.titulo}
-                                </h4>
-                                <div className="btn_links">
-                                    <a href={item.link_projeto} target="blank">
-                                        <div>
-                                            <GoProjectSymlink className="icon" />
-                                            <span>Ver projeto</span>
+                                <div className="info">
+                                    <div className="açoes">
+                                        <h4 className="titulo_projeto">
+                                            {item.titulo}
+                                        </h4>
+                                        <div className="btn_links">
+                                            <a
+                                                href={item.link_projeto}
+                                                target="blank"
+                                            >
+                                                <div>
+                                                    <GoProjectSymlink className="icon" />
+                                                    <span>Ver projeto</span>
+                                                </div>
+                                                <hr />
+                                            </a>
+                                            <a
+                                                href={item.link_codigo}
+                                                target="blank"
+                                            >
+                                                <div>
+                                                    <FaCode className="icon" />
+                                                    <span>Ver Código</span>
+                                                </div>
+                                                <hr />
+                                            </a>
                                         </div>
-                                        <hr />
-                                    </a>
-                                    <a href={item.link_codigo} target="blank">
-                                        <div>
-                                            <FaCode className="icon" />
-                                            <span>Ver Código</span>
-                                        </div>
-                                        <hr />
-                                    </a>
-                                </div>
-                            </div>
+                                    </div>
 
-                            <div className="info">
-                                <div>
-                                    <p className="descricao">Descrição:</p>
-                                    <p>{item.descricao}</p>
+                                    <div>
+                                        <p className="descricao">Descrição:</p>
+                                        <p>{item.descricao}</p>
+                                    </div>
                                 </div>
-                                <p className="tec_usada">Tecnologias usadas:</p>
-
-                                <div className="tecnologias">
-                                    {item.tecnologias.map((img, i) => {
-                                        return (
-                                            <img
-                                                className="img_tec"
-                                                key={i}
-                                                src={img}
-                                                alt=""
-                                            />
-                                        )
-                                    })}
+                                <div className='tec'>
+                                    <p className="tec_usada">Tecnologias usadas:</p>
+                                    <div className="tecnologias">
+                                        {item.tecnologias.map((img, i) => {
+                                            return (
+                                                <img
+                                                    className="img_tec"
+                                                    key={i}
+                                                    src={img}
+                                                    alt=""
+                                                />
+                                            )
+                                        })}
+                                    </div>
                                 </div>
                             </div>
                         </div>
