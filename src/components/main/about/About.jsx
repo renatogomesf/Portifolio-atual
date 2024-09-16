@@ -17,11 +17,10 @@ const About = () => {
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
         const tl = gsap.timeline({
-            delay: 0.3,
             scrollTrigger: {
                 trigger: '#about',
-                start: 'top 150px',
-                animation: Tween
+                start: 'top 300px',
+                animation: Tween,
                 // markers: true
             }
         })

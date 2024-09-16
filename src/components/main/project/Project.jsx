@@ -146,20 +146,18 @@ const Project = () => {
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
         const tl = gsap.timeline({
-            delay: 0.2,
             scrollTrigger: {
                 trigger: '#project',
-                start: '100px 150px',
-                animation: Tween
-                // markers: true,
+                start: '100px 300px',
+                animation: Tween,
+                // markers: true
             }
         })
 
         const tl02 = gsap.timeline({
-            delay: 0.2,
             scrollTrigger: {
                 trigger: '#project',
-                start: '100px 150px',
+                start: '100px 300px',
                 // markers: true,
                 animation: Tween
             }

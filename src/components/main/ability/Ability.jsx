@@ -47,20 +47,18 @@ const Ability = () => {
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
         const tl = gsap.timeline({
-            delay: 0.2,
             scrollTrigger: {
                 trigger: '#ability',
-                start: 'top 150px',
+                start: 'top 300px',
                 // markers: true,
                 animation: Tween
             }
         })
 
         const tl02 = gsap.timeline({
-            delay: 0.2,
             scrollTrigger: {
                 trigger: '#ability',
-                start: 'top 150px',
+                start: 'top 300px',
                 // markers: true,
                 animation: Tween
             }
