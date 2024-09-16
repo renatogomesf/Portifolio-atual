@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 
 import { ContactComponent } from "./ContactStyle";
 
@@ -7,9 +7,21 @@ import { FaLinkedin } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
 // import { FaExternalLinkAlt } from 'react-icons/fa'
 
+import { gsap } from 'gsap'
+
 const Contact = () => {
+
+    useEffect(()=>{
+        // const tl = gsap.timeline({defaults: {delay: 0.4}})
+
+        gsap.fromTo(".component",
+            {x: -80, opacity: 0},
+            {x: 0, opacity: 1, delay: 0.5}
+        )
+    }, [])
+
     return (
-        <ContactComponent>
+        <ContactComponent className="component">
             <div className="contatos">
                 <div className="linkss">
                     <a href="https://github.com/renatogomesf" target="blanck">

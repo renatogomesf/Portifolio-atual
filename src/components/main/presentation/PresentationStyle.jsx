@@ -15,6 +15,8 @@ export const PresentationComponent = styled.section`
 
 
     & div {
+        opacity: 0;
+
         & p {
             font-weight: bold;
             color: ${({ theme }) => theme.secondary};

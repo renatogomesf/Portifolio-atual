@@ -1,25 +1,37 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { PresentationComponent } from './PresentationStyle'
 // import DEV from '../../../image/dev.png'
 
 // import svg from '../../../../public/arc-divider.svg'
 
-import { FaGithub } from 'react-icons/fa'
-import { FaLinkedin } from 'react-icons/fa'
-import { MdEmail } from 'react-icons/md'
-import { FaExternalLinkAlt } from 'react-icons/fa'
+// import { FaGithub } from 'react-icons/fa'
+// import { FaLinkedin } from 'react-icons/fa'
+// import { MdEmail } from 'react-icons/md'
+// import { FaExternalLinkAlt } from 'react-icons/fa'
+
+import { gsap } from 'gsap'
 
 const Presentation = () => {
+
+    useEffect(()=>{
+        // const tl = gsap.timeline({defaults: {delay: 0.4}})
+
+        gsap.fromTo(".textos",
+            {y: 100, opacity: 0},
+            {y: 0, opacity: 1, delay: 0.5}
+        )
+    }, [])
+
     return (
         <PresentationComponent id="presentation" className="section">
-            <div>
+            <div className='textos'>
                 {/* <p>Olá! Meu nome é</p> */}
                 <h1>Olá! Meu nome é Renato Gomes</h1>
                 <h2>Desenvolvedor Full Stack</h2>
             </div>
             {/* <img className="img_dev" src={DEV} alt="Desenvolvedor" /> */}
 
-            <div className="contatos">
+            {/* <div className="contatos">
                 <div className="redes_sociais">
                     <a href="https://github.com/renatogomesf" target="blanck">
                         <div>
@@ -74,7 +86,7 @@ const Presentation = () => {
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> */}
         </PresentationComponent>
     )
 }

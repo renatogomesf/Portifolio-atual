@@ -87,6 +87,8 @@ export const HeaderComponent = styled.header`
     }
 
     & .header {
+        opacity: 0;
+
         & .logo {
             display: flex;
             align-items: center;
@@ -157,6 +159,10 @@ export const HeaderComponent = styled.header`
                 /* flex-direction: column; */
                 gap: 20px;
                 list-style: none;
+
+                & .links {
+                    opacity: 0;
+                }
             }
         }
 
@@ -226,7 +232,7 @@ export const HeaderComponent = styled.header`
     }
 
     @media (max-width: 690px) {
-        background-color: transparent;
+        /* background-color: transparent; */
         padding: 0px;
 
         & .header {

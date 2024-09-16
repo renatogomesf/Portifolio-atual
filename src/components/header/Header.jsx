@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { HeaderComponent } from './HeaderStyle'
 
 import { FaGithub } from 'react-icons/fa'
@@ -12,7 +12,8 @@ import { MdEmail } from 'react-icons/md'
 
 import LOGO from '../../../public/logo.png'
 
-// import { NavLink } from 'react-router-dom'
+import { gsap } from 'gsap'
+// import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const Header = () => {
     const Menu = () => {
@@ -48,10 +49,38 @@ const Header = () => {
         }
     })
 
+    useEffect(()=>{
+        const tl = gsap.timeline({defaults: {delay: 0.4}})
+
+        gsap.fromTo(".header",
+            {x: -100, opacity: 0},
+            {x: 0, opacity: 1, delay: 0.5}
+        )
+
+        gsap.fromTo("#menuMobile",
+            {x: 200, opacity: 0},
+            {x: 0, opacity: 1, delay: 0.5}
+        )
+
+        tl.fromTo(".link01",
+            {y: -100, opacity: 0},
+            {y: 0, opacity: 1},
+        ).fromTo(".link02",
+            {y: -100, opacity: 0},
+            {y: 0, opacity: 1}, "-=0.8"
+        ).fromTo(".link03",
+            {y: -100, opacity: 0},
+            {y: 0, opacity: 1}, "-=0.8"
+        ).fromTo(".link04",
+            {y: -100, opacity: 0},
+            {y: 0, opacity: 1}, "-=0.8"
+        )
+    }, [])
+
     return (
         <HeaderComponent className="topo">
             <div className="header">
-                <div className="logo">
+                <div id='logo' className="logo">
                     <img src={LOGO} alt="" />
                     <h1>
                         <span className="R">R</span>
@@ -68,7 +97,7 @@ const Header = () => {
                     <ul>
                         <a
                             href="#presentation"
-                            className="links active"
+                            className="links active link01"
                             onClick={Menu}
                         >
                             <div>
@@ -76,19 +105,19 @@ const Header = () => {
                                 <li>Home</li>
                             </div>
                         </a>
-                        <a href="#about" className="links" onClick={Menu}>
+                        <a href="#about" className="links link02" onClick={Menu}>
                             <div>
                                 {/* <IoPersonSharp className="icon" /> */}
                                 <li>Sobre mim</li>
                             </div>
                         </a>
-                        <a href="#ability" className="links" onClick={Menu}>
+                        <a href="#ability" className="links link03" onClick={Menu}>
                             <div>
                                 {/* <GrVulnerability className="icon" /> */}
                                 <li>Habilidades</li>
                             </div>
                         </a>
-                        <a href="#project" className="links" onClick={Menu}>
+                        <a href="#project" className="links link04" onClick={Menu}>
                             <div>
                                 {/* <FaDiagramProject className="icon" /> */}
                                 <li>Projetos</li>

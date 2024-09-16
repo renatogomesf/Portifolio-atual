@@ -16,6 +16,7 @@ export const ContactComponent = styled.section`
     box-shadow: 3px 3px 10px black;
     overflow: hidden;
     transition: 0.2s;
+    opacity: 0;
 
     &:hover{
         width: 260px;
