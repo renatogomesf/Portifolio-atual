@@ -26,9 +26,7 @@ const AppComponent = styled.div`
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
-
                 overflow: hidden;
-
                 padding: 0px 0px 100px 0px;
 
                 & .curva {

@@ -4,16 +4,10 @@ import { HeaderComponent } from './HeaderStyle'
 import { FaGithub } from 'react-icons/fa'
 import { FaLinkedin } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
-// import { FaExternalLinkAlt } from 'react-icons/fa'
-// import { IoPersonSharp } from 'react-icons/io5'
-// import { GrVulnerability } from 'react-icons/gr'
-// import { FaDiagramProject } from 'react-icons/fa6'
-// import { FaHome } from 'react-icons/fa'
 
 import LOGO from '../../../public/logo.png'
 
 import { gsap } from 'gsap'
-// import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const Header = () => {
     const Menu = () => {
@@ -42,45 +36,51 @@ const Header = () => {
 
         if (top > 0) {
             topo.style.boxShadow = '0px 0px 50px rgba(0, 0, 0, 0.2)'
-            // topo.style.backgroundColor = 'white'
         } else {
             topo.style.boxShadow = '0px 0px 0px rgba(0, 0, 0, 0.2)'
-            // topo.style.backgroundColor = 'transparent'
         }
     })
 
-    useEffect(()=>{
-        const tl = gsap.timeline({defaults: {delay: 0.4}})
+    useEffect(() => {
+        const tl = gsap.timeline({ defaults: { delay: 0.4 } })
 
-        gsap.fromTo(".header",
-            {x: -100, opacity: 0},
-            {x: 0, opacity: 1, delay: 0.5}
+        gsap.fromTo(
+            '.header',
+            { x: -100, opacity: 0 },
+            { x: 0, opacity: 1, delay: 0.5 }
         )
 
-        gsap.fromTo("#menuMobile",
-            {x: 200, opacity: 0},
-            {x: 0, opacity: 1, delay: 0.5}
+        gsap.fromTo(
+            '#menuMobile',
+            { x: 200, opacity: 0 },
+            { x: 0, opacity: 1, delay: 0.5 }
         )
 
-        tl.fromTo(".link01",
-            {y: -100, opacity: 0},
-            {y: 0, opacity: 1},
-        ).fromTo(".link02",
-            {y: -100, opacity: 0},
-            {y: 0, opacity: 1}, "-=0.8"
-        ).fromTo(".link03",
-            {y: -100, opacity: 0},
-            {y: 0, opacity: 1}, "-=0.8"
-        ).fromTo(".link04",
-            {y: -100, opacity: 0},
-            {y: 0, opacity: 1}, "-=0.8"
-        )
+        tl.fromTo('.link01', { y: -100, opacity: 0 }, { y: 0, opacity: 1 })
+            .fromTo(
+                '.link02',
+                { y: -100, opacity: 0 },
+                { y: 0, opacity: 1 },
+                '-=0.8'
+            )
+            .fromTo(
+                '.link03',
+                { y: -100, opacity: 0 },
+                { y: 0, opacity: 1 },
+                '-=0.8'
+            )
+            .fromTo(
+                '.link04',
+                { y: -100, opacity: 0 },
+                { y: 0, opacity: 1 },
+                '-=0.8'
+            )
     }, [])
 
     return (
         <HeaderComponent className="topo">
             <div className="header">
-                <div id='logo' className="logo">
+                <div id="logo" className="logo">
                     <img src={LOGO} alt="" />
                     <h1>
                         <span className="R">R</span>
@@ -101,25 +101,33 @@ const Header = () => {
                             onClick={Menu}
                         >
                             <div>
-                                {/* <FaHome className="icon" /> */}
                                 <li>Home</li>
                             </div>
                         </a>
-                        <a href="#about" className="links link02" onClick={Menu}>
+                        <a
+                            href="#about"
+                            className="links link02"
+                            onClick={Menu}
+                        >
                             <div>
-                                {/* <IoPersonSharp className="icon" /> */}
                                 <li>Sobre mim</li>
                             </div>
                         </a>
-                        <a href="#ability" className="links link03" onClick={Menu}>
+                        <a
+                            href="#ability"
+                            className="links link03"
+                            onClick={Menu}
+                        >
                             <div>
-                                {/* <GrVulnerability className="icon" /> */}
                                 <li>Habilidades</li>
                             </div>
                         </a>
-                        <a href="#project" className="links link04" onClick={Menu}>
+                        <a
+                            href="#project"
+                            className="links link04"
+                            onClick={Menu}
+                        >
                             <div>
-                                {/* <FaDiagramProject className="icon" /> */}
                                 <li>Projetos</li>
                             </div>
                         </a>
@@ -134,9 +142,6 @@ const Header = () => {
                             <div>
                                 <FaGithub className="icon" />
                                 <p>github.com</p>
-                                {/* <button className="btn_redes">
-                                    <FaExternalLinkAlt />
-                                </button> */}
                             </div>
                         </a>
                         <a
@@ -146,9 +151,6 @@ const Header = () => {
                             <div>
                                 <FaLinkedin className="icon" />
                                 <p>linkedin.com</p>
-                                {/* <button className="btn_redes">
-                                    <FaExternalLinkAlt />
-                                </button> */}
                             </div>
                         </a>
                     </div>

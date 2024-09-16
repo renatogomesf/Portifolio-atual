@@ -8,7 +8,6 @@ export const AboutComponent = styled.section`
     margin: 50px 0px;
     scroll-margin-top: 70px;
 
-
     & .titulo {
         display: flex;
         align-items: center;
@@ -19,7 +18,6 @@ export const AboutComponent = styled.section`
         & h1 {
             font-size: 4rem;
             font-weight: 800;
-            /* color: ${({ theme }) => theme.secondary}; */
             color: white;
         }
 
@@ -91,20 +89,11 @@ export const AboutComponent = styled.section`
         }
     }
 
-    /* @media (max-width: 1024px) {
-        padding: 60px;
-
-        & .titulo {
-            flex-wrap: wrap;
-        }
-    } */
-
     @media (max-width: 915px) {
         scroll-margin-top: 70px;
     }
 
     @media (max-width: 768px) {
-
         & .titulo {
             flex-direction: column;
             gap: 20px;

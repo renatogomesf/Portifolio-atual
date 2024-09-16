@@ -1,22 +1,19 @@
-import React, { useEffect } from "react";
+import React, { useEffect } from 'react'
 
-import { ContactComponent } from "./ContactStyle";
+import { ContactComponent } from './ContactStyle'
 
 import { FaGithub } from 'react-icons/fa'
 import { FaLinkedin } from 'react-icons/fa'
 import { MdEmail } from 'react-icons/md'
-// import { FaExternalLinkAlt } from 'react-icons/fa'
 
 import { gsap } from 'gsap'
 
 const Contact = () => {
-
-    useEffect(()=>{
-        // const tl = gsap.timeline({defaults: {delay: 0.4}})
-
-        gsap.fromTo(".component",
-            {x: -80, opacity: 0},
-            {x: 0, opacity: 1, delay: 0.5}
+    useEffect(() => {
+        gsap.fromTo(
+            '.component',
+            { x: -80, opacity: 0 },
+            { x: 0, opacity: 1, delay: 0.5 }
         )
     }, [])
 
@@ -28,12 +25,7 @@ const Contact = () => {
                         <div>
                             <FaGithub className="icon" />
                             <p>github.com</p>
-
-                            {/* <button className="btn_redes">
-                                <FaExternalLinkAlt />
-                            </button> */}
                         </div>
-                        {/* <hr /> */}
                     </a>
 
                     <a
@@ -43,12 +35,7 @@ const Contact = () => {
                         <div>
                             <FaLinkedin className="icon" />
                             <p>linkedin.com</p>
-
-                            {/* <button className="btn_redes">
-                                <FaExternalLinkAlt />
-                            </button> */}
                         </div>
-                        {/* <hr /> */}
                     </a>
                 </div>
 
@@ -61,7 +48,6 @@ const Contact = () => {
                                     renato.gfe.dev@gmail.com
                                 </p>
                             </div>
-                            {/* <hr /> */}
                         </a>
                     </div>
 
@@ -73,13 +59,12 @@ const Contact = () => {
                                     renato_s5s@hotmail.com
                                 </p>
                             </div>
-                            {/* <hr /> */}
                         </a>
                     </div>
                 </div>
             </div>
         </ContactComponent>
-    );
+    )
 }
- 
-export default Contact;
+
+export default Contact

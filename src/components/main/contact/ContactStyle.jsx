@@ -18,7 +18,7 @@ export const ContactComponent = styled.section`
     transition: 0.2s;
     opacity: 0;
 
-    &:hover{
+    &:hover {
         width: 260px;
     }
 
@@ -63,7 +63,6 @@ export const ContactComponent = styled.section`
             }
         }
     }
-
 
     @media (max-width: 690px) {
         display: none;

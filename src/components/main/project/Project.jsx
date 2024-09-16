@@ -143,98 +143,45 @@ const projetos = [
 ]
 
 const Project = () => {
-
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
         const tl = gsap.timeline({
-            delay: 0.3,
+            delay: 0.2,
             scrollTrigger: {
                 trigger: '#project',
                 start: '100px 150px',
-                // end: 'top 100px',
-                animation: Tween,
+                animation: Tween
                 // markers: true,
-                // scrub: 1,
             }
         })
 
         const tl02 = gsap.timeline({
-            delay: 0.3,
+            delay: 0.2,
             scrollTrigger: {
                 trigger: '#project',
                 start: '100px 150px',
-                // end: "100px 100px",
                 // markers: true,
-                animation: Tween,
-                // scrub: 1
+                animation: Tween
             }
         })
 
         tl02.fromTo(
             '.img_proje',
-            { y: 100, opacity: 0 },
-            { y: 0, opacity: 1 },
-        ).fromTo(
-            '.proje',
             { y: -100, opacity: 0 },
-            { y: 0, opacity: 1 },
-        )
+            { y: 0, opacity: 1 }
+        ).fromTo('.proje', { y: 100, opacity: 0 }, { y: 0, opacity: 1 })
 
-        tl.fromTo(
-            '#projeto1',
-            { y: -50, opacity: 0 },
-            { y: 0, opacity: 1 },
-        )
-            .fromTo(
-                '#projeto2',
-                { y: 50, opacity: 0 },
-                { y: 0, opacity: 1 },
-            )
-            .fromTo(
-                '#projeto3',
-                { y: -50, opacity: 0 },
-                { y: 0, opacity: 1 },
-            )
-            .fromTo(
-                '#projeto4',
-                { y: 50, opacity: 0 },
-                { y: 0, opacity: 1 },
-            )
-            .fromTo(
-                '#projeto5',
-                { y: -50, opacity: 0 },
-                { y: 0, opacity: 1 },
-            )
-            .fromTo(
-                '#projeto6',
-                { y: 50, opacity: 0 },
-                { y: 0, opacity: 1 },
-            )
-            .fromTo(
-                '#projeto7',
-                { y: -50, opacity: 0 },
-                { y: 0, opacity: 1 },
-            )
-            .fromTo(
-                '#projeto8',
-                { y: 50, opacity: 0 },
-                { y: 0, opacity: 1 },
-            )
-            .fromTo(
-                '#projeto9',
-                { y: -50, opacity: 0 },
-                { y: 0, opacity: 1 },
-            )
-            .fromTo(
-                '#projeto10',
-                { y: 50, opacity: 0 },
-                { y: 0, opacity: 1 },
-            )
-            .fromTo(
-                '#projeto11',
-                { y: -50, opacity: 0 },
-                { y: 0, opacity: 1 },
-            )
+        tl.fromTo('#projeto1', { y: -50, opacity: 0 }, { y: 0, opacity: 1 })
+            .fromTo('#projeto2', { y: 50, opacity: 0 }, { y: 0, opacity: 1 })
+            .fromTo('#projeto3', { y: -50, opacity: 0 }, { y: 0, opacity: 1 })
+            .fromTo('#projeto4', { y: 50, opacity: 0 }, { y: 0, opacity: 1 })
+            .fromTo('#projeto5', { y: -50, opacity: 0 }, { y: 0, opacity: 1 })
+            .fromTo('#projeto6', { y: 50, opacity: 0 }, { y: 0, opacity: 1 })
+            .fromTo('#projeto7', { y: -50, opacity: 0 }, { y: 0, opacity: 1 })
+            .fromTo('#projeto8', { y: 50, opacity: 0 }, { y: 0, opacity: 1 })
+            .fromTo('#projeto9', { y: -50, opacity: 0 }, { y: 0, opacity: 1 })
+            .fromTo('#projeto10', { y: 50, opacity: 0 }, { y: 0, opacity: 1 })
+            .fromTo('#projeto11', { y: -50, opacity: 0 }, { y: 0, opacity: 1 })
     }, [])
 
     return (
@@ -254,7 +201,7 @@ const Project = () => {
                     src={PROJETO}
                     alt="imagem de projeto"
                 />
-                <h1 className='proje'>Projetos</h1>
+                <h1 className="proje">Projetos</h1>
             </div>
 
             <div className="projetos">
@@ -302,8 +249,10 @@ const Project = () => {
                                         <p>{item.descricao}</p>
                                     </div>
                                 </div>
-                                <div className='tec'>
-                                    <p className="tec_usada">Tecnologias usadas:</p>
+                                <div className="tec">
+                                    <p className="tec_usada">
+                                        Tecnologias usadas:
+                                    </p>
                                     <div className="tecnologias">
                                         {item.tecnologias.map((img, i) => {
                                             return (

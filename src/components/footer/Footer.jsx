@@ -10,7 +10,7 @@ const Footer = () => {
     return (
         <FooterComponent>
             <div className="info_portifolio">
-                <div className='info'>
+                <div className="info">
                     <div className="logo">
                         <img src={LOGO} alt="" />
                         <h1>

@@ -2,14 +2,10 @@ import styled from 'styled-components'
 
 export const FooterComponent = styled.section`
     width: 100%;
-    /* background-color: ${({ theme }) => theme.secondary}; */
     background-color: #1f1f1f;
 
     & .info_portifolio {
         padding: 40px 60px;
-        /* display: flex; */
-        /* flex-direction: row; */
-        /* justify-content: space-between; */
 
         & .info {
             display: flex;
@@ -30,15 +26,10 @@ export const FooterComponent = styled.section`
                     font-size: 3rem;
 
                     color: ${({ theme }) => theme.light_green};
-
-                    & .R {
-                        /* color: #000113; */
-                    }
                 }
 
                 & img {
                     height: 80px;
-                    /* filter: drop-shadow(2px 2px 0px black); */
                 }
             }
 
@@ -47,10 +38,6 @@ export const FooterComponent = styled.section`
                 flex-direction: column;
                 gap: 20px;
                 color: white;
-
-                & p {
-                    /* font-weight: bold; */
-                }
 
                 & div {
                     display: flex;
@@ -68,17 +55,14 @@ export const FooterComponent = styled.section`
             border: none;
             height: 1px;
             margin-top: 50px;
-            /* background-color: ${({ theme }) => theme.secondary}; */
             background-color: #fff;
         }
     }
 
     & .copy {
         display: flex;
-        /* flex-direction: column; */
         justify-content: center;
         gap: 10px;
-        /* font-weight: bold; */
         color: white;
         margin-bottom: 50px;
     }
@@ -88,9 +72,7 @@ export const FooterComponent = styled.section`
             padding: 40px 30px;
 
             & .info {
-                /* display: flex; */
                 align-items: start;
-                /* justify-content: start; */
                 flex-direction: column;
                 gap: 30px;
 

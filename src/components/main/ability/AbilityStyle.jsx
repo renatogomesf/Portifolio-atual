@@ -4,6 +4,7 @@ export const AbilityComponent = styled.section`
     padding: 65px;
     margin: 50px 0px;
     scroll-margin-top: 70px;
+
     & .titulo {
         display: flex;
         align-items: center;
@@ -33,13 +34,10 @@ export const AbilityComponent = styled.section`
             flex-direction: column;
             align-items: center;
             justify-content: center;
-
-            /* background-color: ${({ theme }) => theme.primary}; */
             background-color: #000113;
             margin: auto;
             padding: 10px;
             border-radius: 20px;
-
             width: 190px;
             height: 190px;
             overflow: hidden;
@@ -141,7 +139,6 @@ export const AbilityComponent = styled.section`
         padding: 30px;
 
         & .tecnologias {
-
             grid-template-columns: repeat(3, 1fr);
         }
 
@@ -175,7 +172,7 @@ export const AbilityComponent = styled.section`
     }
 
     @media (max-width: 690px) {
-        padding: 30px;
+        padding: 0px;
         & .tecnologias {
             grid-template-columns: repeat(2, 0.8fr);
         }
@@ -191,12 +188,13 @@ export const AbilityComponent = styled.section`
                 width: 250px;
             }
         }
-    }
 
-    @media (max-width: 430px) {
         & .tecnologias {
             grid-template-columns: repeat(1, 1fr);
         }
+    }
+
+    @media (max-width: 430px) {
     }
 
     @media (max-width: 375px) {

@@ -3,25 +3,18 @@ import styled from 'styled-components'
 export const ProjectComponent = styled.section`
     position: relative;
     width: 100%;
-    /* margin: 50px 0px; */
     scroll-margin-top: 30px;
-
-    position: relative;
     background-image: url('https://cdn.svgator.com/images/2022/06/use-svg-as-background-image-particle-strokes.svg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
-    /* overflow: hidden; */
-
     padding: 0px 0px 100px 0px;
 
     & .curva2 {
         position: absolute;
         top: -1px;
         fill: #fafafa;
-        /* padding-bottom: 100px; */
     }
 
     & .titulo {
@@ -35,7 +28,6 @@ export const ProjectComponent = styled.section`
         & h1 {
             font-size: 4rem;
             font-weight: 800;
-            /* color: ${({ theme }) => theme.secondary}; */
             color: white;
         }
 
@@ -51,14 +43,6 @@ export const ProjectComponent = styled.section`
         padding: 0px 60px;
 
         & .projeto {
-            /* display: grid; */
-            /* grid-template-columns: repeat(2, 1fr); */
-            /* gap: 50px; */
-            /* flex-direction: row; */
-            /* border-radius: 10px; */
-            /* height: min-content; */
-            /* padding: 10px; */
-            /* background-color: ${({ theme }) => theme.quaternary}; */
 
             &:hover {
                 & .div_img {
@@ -88,8 +72,6 @@ export const ProjectComponent = styled.section`
                 & .img_projeto {
                     width: 100%;
                     height: 100%;
-                    /* max-width: 600px; */
-                    /* border-radius: 10px; */
                     transition: 0.2s;
                     border-radius: 10px;
                 }
@@ -103,7 +85,6 @@ export const ProjectComponent = styled.section`
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
-                    /* height: fit-content; */
                     padding: 20px;
                     opacity: 0;
                     overflow: auto;
@@ -122,7 +103,6 @@ export const ProjectComponent = styled.section`
                     & .açoes {
                         display: flex;
                         flex-direction: column;
-                        /* padding: 10px; */
                         gap: 10px;
 
                         & .titulo_projeto {
@@ -136,7 +116,6 @@ export const ProjectComponent = styled.section`
                             gap: 20px;
 
                             & a {
-                                /* color: ${({ theme }) => theme.tertiary}; */
                                 color: white;
 
                                 &:hover {
@@ -151,15 +130,11 @@ export const ProjectComponent = styled.section`
 
                                     & .icon {
                                         font-size: 1.3rem;
-                                        /* color: ${({ theme }) =>
-                                            theme.tertiary}; */
                                     }
                                 }
 
                                 & hr {
                                     border: none;
-                                    /* background-color: ${({ theme }) =>
-                                        theme.tertiary}; */
                                     height: 2px;
                                 }
                             }
@@ -177,7 +152,6 @@ export const ProjectComponent = styled.section`
 
                     & .tec_usada {
                         font-size: 1.2rem;
-                        /* font-weight: bold; */
                         color: ${({ theme }) => theme.light_green};
                     }
 
@@ -197,10 +171,7 @@ export const ProjectComponent = styled.section`
     }
 
     @media (max-width: 1024px) {
-        /* padding: 30px; */
-
         & .titulo {
-            /* flex-direction: column; */
             flex-wrap: wrap-reverse;
         }
     }
@@ -241,23 +212,21 @@ export const ProjectComponent = styled.section`
 
             & .projeto {
                 & .div_img {
-                    
                     & .tec {
                         position: absolute;
                         bottom: 10px;
                         left: 10px;
-        
+
                         & .tec_usada {
                             font-size: 1.1rem;
-                            /* font-weight: bold; */
                             color: ${({ theme }) => theme.light_green};
                         }
-        
+
                         & .tecnologias {
                             display: flex;
                             align-items: center;
                             gap: 10px;
-        
+
                             & .img_tec {
                                 width: 30px;
                                 filter: drop-shadow(1px 1px 0px black);
@@ -288,7 +257,6 @@ export const ProjectComponent = styled.section`
                 & .div_img {
                     & .img_projeto {
                         width: 100%;
-                        /* height: max-content; */
                     }
                 }
             }

@@ -17,35 +17,18 @@ const About = () => {
     useEffect(() => {
         gsap.registerPlugin(ScrollTrigger)
         const tl = gsap.timeline({
-            delay: 1,
+            delay: 0.3,
             scrollTrigger: {
                 trigger: '#about',
                 start: 'top 150px',
-                // end: 'top 100px',
-                animation: Tween,
-                markers: true
-                // scrub: 1,
+                animation: Tween
+                // markers: true
             }
         })
 
-        tl.fromTo(
-            '.img_fala',
-            { x: -100, opacity: 0 },
-            { x: 0, opacity: 1 },
-            '-=0.2'
-        )
-            .fromTo(
-                '.sobre',
-                { x: 100, opacity: 0 },
-                { x: 0, opacity: 1 },
-                '-=0.2'
-            )
-            .fromTo(
-                '.textos',
-                { y: 100, opacity: 0 },
-                { y: 0, opacity: 1 },
-                '-=0.2'
-            )
+        tl.fromTo('.img_fala', { y: -100, opacity: 0 }, { y: 0, opacity: 1 })
+            .fromTo('.sobre', { y: 100, opacity: 0 }, { y: 0, opacity: 1 })
+            .fromTo('.textos', { y: 100, opacity: 0 }, { y: 0, opacity: 1 })
     }, [])
 
     return (

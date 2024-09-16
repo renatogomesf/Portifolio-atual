@@ -5,8 +5,6 @@ export const GlobalStyle = createGlobalStyle`
     *{
         margin: 0px;
         padding: 0px;
-
-        /* font-family: "Nunito", sans-serif; */
         font-family: "Source Sans 3", sans-serif;
         text-decoration: none;
         box-sizing: border-box;

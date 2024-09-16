@@ -6,13 +6,11 @@ export const PresentationComponent = styled.section`
     justify-content: center;
     gap: 10px;
     padding: 70px;
-    /* margin: 50px 0px; */
     flex-wrap: wrap;
     width: 100%;
     height: 88vh;
     margin-top: 75px;
     scroll-margin-top: 70px;
-
 
     & div {
         opacity: 0;
@@ -25,9 +23,7 @@ export const PresentationComponent = styled.section`
         & h1 {
             font-size: 5rem;
             font-weight: 800;
-            /* color: ${({ theme }) => theme.secondary}; */
             color: white;
-            /* white-space: nowrap; */
         }
 
         & h2 {
@@ -36,24 +32,6 @@ export const PresentationComponent = styled.section`
             color: ${({ theme }) => theme.light_green};
             font-family: monospace;
             font-size: 1.8rem;
-
-            /* &::before {
-                display: flex;
-                justify-content: end;
-                align-items: end;
-                position: absolute;
-                top: 0px;
-                right: -2px;
-                bottom: 0px;
-                content: '';
-                width: 101%;
-                border-left: 3px solid ${({ theme }) => theme.secondary};
-                background-color: ${({ theme }) => theme.primary};
-
-                animation:
-                    digitar 5s steps(24) infinite alternate,
-                    piscar 0.5s infinite linear;
-            } */
 
             @keyframes digitar {
                 0% {
@@ -183,16 +161,7 @@ export const PresentationComponent = styled.section`
         }
     }
 
-    /* @media (max-width: 1024px) {
-        padding: 60px;
-    } */
-
     @media (max-width: 915px) and (min-width: 690px) {
-        /* gap: 20px; */
-        /* & .contatos {
-            display: flex;
-            flex-direction: column;
-        } */
     }
 
     @media (max-width: 690px) {
