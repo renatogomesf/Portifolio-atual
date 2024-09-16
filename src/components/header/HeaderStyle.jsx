@@ -6,12 +6,13 @@ export const HeaderComponent = styled.header`
     top: 0px;
     display: flex;
     /* flex-direction: column; */
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 
     background-color: ${({ theme }) => theme.quaternary};
     width: 100%;
     height: 70px;
+    padding: 0px 60px;
     /* height: 100vh; */
     /* max-width: 270px; */
     z-index: 1111111111;
@@ -92,13 +93,13 @@ export const HeaderComponent = styled.header`
             justify-content: center;
 
             & h1 {
-                opacity: 0;
-                width: 0px;
+                /* opacity: 0;
+                width: 0px; */
                 margin-left: 5px;
                 font-weight: 800;
 
-                animation: logo 2s forwards;
-                animation-delay: 2s;
+                /* animation: logo 2s forwards;
+                animation-delay: 2s; */
 
                 color: ${({ theme }) => theme.light_green};
 
@@ -112,7 +113,7 @@ export const HeaderComponent = styled.header`
                 /* filter: drop-shadow(2px 2px 0px black); */
             }
 
-            @keyframes logo {
+            /* @keyframes logo {
                 0% {
                     opacity: 0;
                     width: 0px;
@@ -131,7 +132,7 @@ export const HeaderComponent = styled.header`
                     opacity: 1;
                     width: 100%;
                 }
-            }
+            } */
         }
 
         & #menuMobile {
@@ -226,11 +227,13 @@ export const HeaderComponent = styled.header`
 
     @media (max-width: 690px) {
         background-color: transparent;
+        padding: 0px;
 
         & .header {
             display: flex;
-            justify-content: space-around;
+            justify-content: space-between;
             align-items: center;
+            padding: 30px;
             width: 100%;
             height: 100%;
             background-color: ${({ theme }) => theme.primary};

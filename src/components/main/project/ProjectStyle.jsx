@@ -177,15 +177,15 @@ export const ProjectComponent = styled.section`
 
                     & .tec_usada {
                         font-size: 1.2rem;
-                        font-weight: bold;
+                        /* font-weight: bold; */
                         color: ${({ theme }) => theme.light_green};
                     }
-    
+
                     & .tecnologias {
                         display: flex;
                         align-items: center;
                         gap: 10px;
-    
+
                         & .img_tec {
                             width: 40px;
                             filter: drop-shadow(1px 1px 0px black);
@@ -215,7 +215,6 @@ export const ProjectComponent = styled.section`
         & .projetos {
             justify-content: center;
             grid-template-columns: repeat(1, 1fr);
-            gap: 50px;
         }
     }
 
@@ -237,8 +236,36 @@ export const ProjectComponent = styled.section`
     @media (max-width: 690px) {
         & .projetos {
             justify-content: center;
-            gap: 50px;
+            gap: 90px;
             padding: 30px;
+
+            & .projeto {
+                & .div_img {
+                    
+                    & .tec {
+                        position: absolute;
+                        bottom: 10px;
+                        left: 10px;
+        
+                        & .tec_usada {
+                            font-size: 1.1rem;
+                            /* font-weight: bold; */
+                            color: ${({ theme }) => theme.light_green};
+                        }
+        
+                        & .tecnologias {
+                            display: flex;
+                            align-items: center;
+                            gap: 10px;
+        
+                            & .img_tec {
+                                width: 30px;
+                                filter: drop-shadow(1px 1px 0px black);
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -255,20 +282,16 @@ export const ProjectComponent = styled.section`
 
         & .projetos {
             justify-content: center;
-            gap: 50px;
             padding: 10px;
 
             & .projeto {
-
                 & .div_img {
-
                     & .img_projeto {
                         width: 100%;
                         /* height: max-content; */
                     }
                 }
             }
-
         }
     }
 
