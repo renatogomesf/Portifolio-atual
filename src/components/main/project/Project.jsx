@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { ProjectComponent } from './ProjectStyle'
 
 import PROJETO from '../../../image/projeto.png'
@@ -28,8 +28,13 @@ import LISTA from '../../../image/imgProjeto/lista.png'
 import { FaCode } from 'react-icons/fa'
 import { GoProjectSymlink } from 'react-icons/go'
 
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { Tween } from 'gsap/gsap-core'
+
 const projetos = [
     {
+        id: 'projeto1',
         img: DIGITAL_STORE,
         titulo: 'Digital Store',
         descricao: 'E-commerce de sapatos, roupas e acessórios',
@@ -38,6 +43,7 @@ const projetos = [
         link_codigo: 'https://github.com/renatogomesf/Digital-Store'
     },
     {
+        id: 'projeto2',
         img: PORTIFOLIO_V2,
         titulo: 'Portifólio v2',
         descricao: 'Segunda versão do meu portifólio.',
@@ -46,6 +52,7 @@ const projetos = [
         link_codigo: 'https://github.com/renatogomesf/Portifolio-v2'
     },
     {
+        id: 'projeto3',
         img: FORM_MONGODB,
         titulo: 'Formulário Full-Stack (MongoDB Atlas)',
         descricao:
@@ -55,6 +62,7 @@ const projetos = [
         link_codigo: 'https://github.com/renatogomesf/Formulario-MongoDB'
     },
     {
+        id: 'projeto4',
         img: FORM_MYSQL,
         titulo: 'Formulário Full-Stack (MySQL)',
         descricao:
@@ -64,6 +72,7 @@ const projetos = [
         link_codigo: 'https://github.com/renatogomesf/Formulario-MySQL'
     },
     {
+        id: 'projeto5',
         img: LANDING_BARBEARIA,
         titulo: 'Landing page Barbearia',
         descricao:
@@ -73,6 +82,7 @@ const projetos = [
         link_codigo: 'https://github.com/renatogomesf/Landing-Page-Barbearia'
     },
     {
+        id: 'projeto6',
         img: LANDING_PAGE,
         titulo: 'Landing page Restaurante.',
         descricao:
@@ -82,6 +92,7 @@ const projetos = [
         link_codigo: 'https://github.com/renatogomesf/Landing-Page'
     },
     {
+        id: 'projeto7',
         img: PAGINA_RESORTS,
         titulo: 'Página de Resorts.',
         descricao:
@@ -91,6 +102,7 @@ const projetos = [
         link_codigo: 'https://github.com/renatogomesf/Pagina-de-Resorts'
     },
     {
+        id: 'projeto8',
         img: PORTIFOLIO_V1,
         titulo: 'Primeiro Portifólio.',
         descricao:
@@ -100,6 +112,7 @@ const projetos = [
         link_codigo: 'https://github.com/renatogomesf/Portifolio'
     },
     {
+        id: 'projeto9',
         img: JOGO_PERGUNTA,
         titulo: 'Perguntas e Respostas.',
         descricao:
@@ -109,6 +122,7 @@ const projetos = [
         link_codigo: 'https://github.com/renatogomesf/Perguntas-e-Respostas'
     },
     {
+        id: 'projeto10',
         img: CALCULADORA,
         titulo: 'Calculadora.',
         descricao: 'Aplicativo para efetuar calculos simples e rápidos.',
@@ -117,6 +131,7 @@ const projetos = [
         link_codigo: 'https://github.com/renatogomesf/Calculadora'
     },
     {
+        id: 'projeto11',
         img: LISTA,
         titulo: 'Lista.',
         descricao:
@@ -128,6 +143,100 @@ const projetos = [
 ]
 
 const Project = () => {
+
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger)
+        const tl = gsap.timeline({
+            delay: 0.3,
+            scrollTrigger: {
+                trigger: '#project',
+                start: '100px 150px',
+                // end: 'top 100px',
+                animation: Tween,
+                // markers: true,
+                // scrub: 1,
+            }
+        })
+
+        const tl02 = gsap.timeline({
+            delay: 0.3,
+            scrollTrigger: {
+                trigger: '#project',
+                start: '100px 150px',
+                // end: "100px 100px",
+                // markers: true,
+                animation: Tween,
+                // scrub: 1
+            }
+        })
+
+        tl02.fromTo(
+            '.img_proje',
+            { y: 100, opacity: 0 },
+            { y: 0, opacity: 1 },
+        ).fromTo(
+            '.proje',
+            { y: -100, opacity: 0 },
+            { y: 0, opacity: 1 },
+        )
+
+        tl.fromTo(
+            '#projeto1',
+            { y: -50, opacity: 0 },
+            { y: 0, opacity: 1 },
+        )
+            .fromTo(
+                '#projeto2',
+                { y: 50, opacity: 0 },
+                { y: 0, opacity: 1 },
+            )
+            .fromTo(
+                '#projeto3',
+                { y: -50, opacity: 0 },
+                { y: 0, opacity: 1 },
+            )
+            .fromTo(
+                '#projeto4',
+                { y: 50, opacity: 0 },
+                { y: 0, opacity: 1 },
+            )
+            .fromTo(
+                '#projeto5',
+                { y: -50, opacity: 0 },
+                { y: 0, opacity: 1 },
+            )
+            .fromTo(
+                '#projeto6',
+                { y: 50, opacity: 0 },
+                { y: 0, opacity: 1 },
+            )
+            .fromTo(
+                '#projeto7',
+                { y: -50, opacity: 0 },
+                { y: 0, opacity: 1 },
+            )
+            .fromTo(
+                '#projeto8',
+                { y: 50, opacity: 0 },
+                { y: 0, opacity: 1 },
+            )
+            .fromTo(
+                '#projeto9',
+                { y: -50, opacity: 0 },
+                { y: 0, opacity: 1 },
+            )
+            .fromTo(
+                '#projeto10',
+                { y: 50, opacity: 0 },
+                { y: 0, opacity: 1 },
+            )
+            .fromTo(
+                '#projeto11',
+                { y: -50, opacity: 0 },
+                { y: 0, opacity: 1 },
+            )
+    }, [])
+
     return (
         <ProjectComponent id="project" className="section">
             <svg
@@ -141,17 +250,18 @@ const Project = () => {
 
             <div className="titulo">
                 <img
-                    className="img_projeto"
+                    className="img_proje"
                     src={PROJETO}
                     alt="imagem de projeto"
                 />
-                <h1>Projetos</h1>
+                <h1 className='proje'>Projetos</h1>
             </div>
 
             <div className="projetos">
                 {projetos.map((item, index) => {
+                    console.log(index)
                     return (
-                        <div className="projeto" key={index}>
+                        <div id={item.id} className="projeto" key={index}>
                             <div className="div_img">
                                 <img
                                     className="img_projeto"

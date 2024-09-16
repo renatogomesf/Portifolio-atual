@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { AboutComponent } from './AboutStyle'
 
 import FALA from '../../../image/fala.png'
@@ -9,12 +9,50 @@ import { GoProjectSymlink } from 'react-icons/go'
 import { MdOutlineFileDownload } from 'react-icons/md'
 import { FaExternalLinkAlt } from 'react-icons/fa'
 
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { Tween } from 'gsap/gsap-core'
+
 const About = () => {
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger)
+        const tl = gsap.timeline({
+            delay: 1,
+            scrollTrigger: {
+                trigger: '#about',
+                start: 'top 150px',
+                // end: 'top 100px',
+                animation: Tween,
+                markers: true
+                // scrub: 1,
+            }
+        })
+
+        tl.fromTo(
+            '.img_fala',
+            { x: -100, opacity: 0 },
+            { x: 0, opacity: 1 },
+            '-=0.2'
+        )
+            .fromTo(
+                '.sobre',
+                { x: 100, opacity: 0 },
+                { x: 0, opacity: 1 },
+                '-=0.2'
+            )
+            .fromTo(
+                '.textos',
+                { y: 100, opacity: 0 },
+                { y: 0, opacity: 1 },
+                '-=0.2'
+            )
+    }, [])
+
     return (
-        <AboutComponent id="about" className='section'>
+        <AboutComponent id="about" className="section">
             <div className="titulo">
                 <img className="img_fala" src={FALA} alt="imagem de fala" />
-                <h1>Sobre mim</h1>
+                <h1 className="sobre">Sobre mim</h1>
             </div>
             <div className="textos">
                 <p>

@@ -39,7 +39,7 @@ export const ProjectComponent = styled.section`
             color: white;
         }
 
-        & .img_projeto {
+        & .img_proje {
             width: 300px;
         }
     }
@@ -275,7 +275,7 @@ export const ProjectComponent = styled.section`
                 font-size: 3rem;
             }
 
-            & .img_projeto {
+            & .img_proje {
                 width: 250px;
             }
         }
@@ -302,7 +302,7 @@ export const ProjectComponent = styled.section`
                 font-size: 2rem;
             }
 
-            & .img_projeto {
+            & .img_proje {
                 width: 200px;
             }
         }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { AbilityComponent } from './AbilityStyle'
 
 import HABILIDADE from '../../../image/habilidade.png'
@@ -20,6 +20,10 @@ import CYPRESS from '../../../image/imgHabilidade/cypress.png'
 import JEST from '../../../image/imgHabilidade/jest.png'
 import VITEST from '../../../image/imgHabilidade/vitest.png'
 
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { Tween } from 'gsap/gsap-core'
+
 const habilidades = [
     { img: HTML, title: 'HTML', class: 'html' },
     { img: CSS, title: 'CSS', class: 'css' },
@@ -40,10 +44,146 @@ const habilidades = [
 ]
 
 const Ability = () => {
+    useEffect(() => {
+        gsap.registerPlugin(ScrollTrigger)
+        const tl = gsap.timeline({
+            delay: 0.3,
+            scrollTrigger: {
+                trigger: '#ability',
+                start: 'top 150px',
+                // end: "100px 100px",
+                // markers: true,
+                animation: Tween
+                // scrub: 1
+            }
+        })
+
+        const tl02 = gsap.timeline({
+            delay: 0.3,
+            scrollTrigger: {
+                trigger: '#ability',
+                start: 'top 150px',
+                // end: "100px 100px",
+                // markers: true,
+                animation: Tween
+                // scrub: 1
+            }
+        })
+
+        tl02.fromTo(
+            '.img_habilidade',
+            { y: 100, opacity: 0 },
+            { y: 0, opacity: 1 },
+            '-=0.2'
+        ).fromTo(
+            '.habili',
+            { y: -100, opacity: 0 },
+            { y: 0, opacity: 1 },
+            '-=0.2'
+        )
+
+        tl.fromTo(
+            '.html',
+            { y: 100, opacity: 0 },
+            { y: 0, opacity: 1 },
+            '-=0.2'
+        )
+            .fromTo(
+                '.css',
+                { y: 100, opacity: 0 },
+                { y: 0, opacity: 1 },
+                '-=0.2'
+            )
+            .fromTo(
+                '.js',
+                { y: 100, opacity: 0 },
+                { y: 0, opacity: 1 },
+                '-=0.2'
+            )
+            .fromTo(
+                '.react',
+                { y: 100, opacity: 0 },
+                { y: 0, opacity: 1 },
+                '-=0.2'
+            )
+            .fromTo(
+                '.sc',
+                { y: 100, opacity: 0 },
+                { y: 0, opacity: 1 },
+                '-=0.2'
+            )
+            .fromTo(
+                '.node',
+                { y: 100, opacity: 0 },
+                { y: 0, opacity: 1 },
+                '-=0.2'
+            )
+            .fromTo(
+                '.mysql',
+                { y: 100, opacity: 0 },
+                { y: 0, opacity: 1 },
+                '-=0.2'
+            )
+            .fromTo(
+                '.cypress',
+                { y: 100, opacity: 0 },
+                { y: 0, opacity: 1 },
+                '-=0.2'
+            )
+            .fromTo(
+                '.jest',
+                { y: 100, opacity: 0 },
+                { y: 0, opacity: 1 },
+                '-=0.2'
+            )
+            .fromTo(
+                '.vitest',
+                { y: 100, opacity: 0 },
+                { y: 0, opacity: 1 },
+                '-=0.2'
+            )
+            .fromTo(
+                '.mongo',
+                { y: 100, opacity: 0 },
+                { y: 0, opacity: 1 },
+                '-=0.2'
+            )
+            .fromTo(
+                '.tailwind',
+                { y: 100, opacity: 0 },
+                { y: 0, opacity: 1 },
+                '-=0.2'
+            )
+            .fromTo(
+                '.vite',
+                { y: 100, opacity: 0 },
+                { y: 0, opacity: 1 },
+                '-=0.2'
+            )
+            .fromTo(
+                '.git',
+                { y: 100, opacity: 0 },
+                { y: 0, opacity: 1 },
+                '-=0.2'
+            )
+            .fromTo(
+                '.github',
+                { y: 100, opacity: 0 },
+                { y: 0, opacity: 1 },
+                '-=0.2'
+            )
+            .fromTo(
+                '.vscode',
+                { y: 100, opacity: 0 },
+                { y: 0, opacity: 1 },
+                '-=0.2'
+            )
+    }, [])
+
     return (
-        <AbilityComponent id="ability" className='section'>
+        <AbilityComponent id="ability" className="section">
             <div className="titulo">
-                <h1>Habilidades</h1>
+                <h1 className='habili'>Habilidades</h1>
                 <img
                     className="img_habilidade"
                     src={HABILIDADE}

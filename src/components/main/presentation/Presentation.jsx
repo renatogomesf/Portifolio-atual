@@ -16,7 +16,7 @@ const Presentation = () => {
     useEffect(()=>{
         // const tl = gsap.timeline({defaults: {delay: 0.4}})
 
-        gsap.fromTo(".textos",
+        gsap.fromTo(".nome",
             {y: 100, opacity: 0},
             {y: 0, opacity: 1, delay: 0.5}
         )
@@ -24,7 +24,7 @@ const Presentation = () => {
 
     return (
         <PresentationComponent id="presentation" className="section">
-            <div className='textos'>
+            <div className='nome'>
                 {/* <p>Olá! Meu nome é</p> */}
                 <h1>Olá! Meu nome é Renato Gomes</h1>
                 <h2>Desenvolvedor Full Stack</h2>
