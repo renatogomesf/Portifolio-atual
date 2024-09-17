@@ -19,8 +19,8 @@ const About = () => {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: '#about',
-                start: 'top 300px',
-                animation: Tween,
+                start: 'top 400px',
+                animation: Tween
                 // markers: true
             }
         })
