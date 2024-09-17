@@ -28,7 +28,7 @@ const AppComponent = styled.div`
                 background-attachment: fixed;
                 padding: 0px 0px 100px 0px;
 
-                min-height: 100dvh;
+                min-height: 100lvh;
 
                 & .curva {
                     position: absolute;
