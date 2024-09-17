@@ -26,13 +26,13 @@ const AppComponent = styled.div`
                 background-size: cover;
                 background-repeat: no-repeat;
                 background-attachment: fixed;
-                overflow: hidden;
                 padding: 0px 0px 100px 0px;
 
                 & .curva {
                     position: absolute;
-                    bottom: -1px;
-                    right: -1px;
+                    bottom: -2px;
+                    left: 0px;
+                    right: 0px;
                     transform: rotateX(180deg);
                     fill: #fafafa;
                 }
