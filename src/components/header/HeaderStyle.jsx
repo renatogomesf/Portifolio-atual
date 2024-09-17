@@ -172,7 +172,7 @@ export const HeaderComponent = styled.header`
                     top: 4px;
                     content: '';
                     width: 26px;
-                    height: 2px;
+                    height: 3px;
                     border-radius: 1px;
                     background-color: black;
                     transform-origin: center;
@@ -195,7 +195,7 @@ export const HeaderComponent = styled.header`
                     top: 20px;
                     content: '';
                     width: 26px;
-                    height: 2px;
+                    height: 3px;
                     border-radius: 1px;
                     background-color: black;
                     transform-origin: center;
@@ -216,7 +216,7 @@ export const HeaderComponent = styled.header`
                 & .menuOpen {
                     display: block;
                     width: 26px;
-                    height: 2px;
+                    height: 3px;
                     border-radius: 1px;
                     background-color: black;
                     animation: AbrirMenu 0.3s forwards;
@@ -244,7 +244,7 @@ export const HeaderComponent = styled.header`
                     top: 4px;
                     content: '';
                     width: 26px;
-                    height: 2px;
+                    height: 3px;
                     border-radius: 1px;
                     background-color: black;
                     transform-origin: center;
@@ -267,7 +267,7 @@ export const HeaderComponent = styled.header`
                     top: 20px;
                     content: '';
                     width: 26px;
-                    height: 2px;
+                    height: 3px;
                     border-radius: 1px;
                     background-color: black;
                     transform-origin: center;
@@ -288,7 +288,7 @@ export const HeaderComponent = styled.header`
                 & .menuClose {
                     display: block;
                     width: 26px;
-                    height: 2px;
+                    height: 3px;
                     border-radius: 1px;
                     background-color: black;
                     animation: FecharMenu 0.3s forwards;
