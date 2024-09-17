@@ -30,7 +30,7 @@ const AppComponent = styled.div`
 
                 & .curva {
                     position: absolute;
-                    bottom: -2px;
+                    bottom: -1px;
                     left: 0px;
                     right: 0px;
                     transform: rotateX(180deg);
