@@ -38,8 +38,7 @@ const About = () => {
             </div>
             <div className="textos">
                 <p>
-                    Oi! Sou <strong>Renato Gomes</strong>, tenho 27 anos e moro
-                    em Fortaleza - Ceará. Sou{' '}
+                    Oi! Sou <strong>Renato Gomes</strong>. Sou{' '}
                     <strong>Desenvolvedor Full Stack</strong> em início de
                     carreira, apaixonado por tecnologia e por transformar ideias
                     em soluções funcionais. Possuo mais de 1 ano de estudo
