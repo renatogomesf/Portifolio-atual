@@ -27,6 +27,7 @@ const AppComponent = styled.div`
                 background-repeat: no-repeat;
                 background-attachment: fixed;
                 padding: 0px 0px 100px 0px;
+                width: 100%;
 
                 min-height: 100lvh;
 
@@ -37,6 +38,7 @@ const AppComponent = styled.div`
                     right: 0px;
                     transform: rotateX(180deg);
                     fill: #fafafa;
+                    width: 100%;
                 }
             }
         }

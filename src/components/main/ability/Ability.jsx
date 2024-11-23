@@ -6,12 +6,14 @@ import HABILIDADE from '../../../image/habilidade.png'
 import HTML from '../../../image/imgHabilidade/html.png'
 import CSS from '../../../image/imgHabilidade/css.png'
 import JS from '../../../image/imgHabilidade/javascript.png'
+import TS from '../../../image/imgHabilidade/typescript.png'
 import REACT from '../../../image/imgHabilidade/react.png'
 import SC from '../../../image/imgHabilidade/styled-components.png'
 import NODE from '../../../image/imgHabilidade/node-js.png'
 import MYSQL from '../../../image/imgHabilidade/mysql.png'
 import MONGODB from '../../../image/imgHabilidade/mongodb.png'
 import TAILWIND from '../../../image/imgHabilidade/tailwind.png'
+import INSOMNIA from '../../../image/imgHabilidade/insomnia.png'
 import VITE from '../../../image/imgHabilidade/vite.png'
 import GIT from '../../../image/imgHabilidade/git.png'
 import GITHUB from '../../../image/imgHabilidade/github.png'
@@ -28,6 +30,7 @@ const habilidades = [
     { img: HTML, title: 'HTML', class: 'html' },
     { img: CSS, title: 'CSS', class: 'css' },
     { img: JS, title: 'JavaScript', class: 'js' },
+    { img: TS, title: 'TypeScript', class: 'ts' },
     { img: REACT, title: 'React.js', class: 'react' },
     { img: SC, title: 'Styled Components', class: 'sc' },
     { img: NODE, title: 'Node.js', class: 'node' },
@@ -37,6 +40,7 @@ const habilidades = [
     { img: VITEST, title: 'Vitest', class: 'vitest' },
     { img: MONGODB, title: 'MongoDB Atlas', class: 'mongo' },
     { img: TAILWIND, title: 'Tailwind', class: 'tailwind' },
+    { img: INSOMNIA, title: 'Insomnia', class: 'insomnia' },
     { img: VITE, title: 'Vite', class: 'vite' },
     { img: GIT, title: 'Git', class: 'git' },
     { img: GITHUB, title: 'GitHub', class: 'github' },
@@ -73,6 +77,7 @@ const Ability = () => {
         tl.fromTo('.html', { y: 100, opacity: 0 }, { y: 0, opacity: 1 })
             .fromTo('.css', { y: 100, opacity: 0 }, { y: 0, opacity: 1 })
             .fromTo('.js', { y: 100, opacity: 0 }, { y: 0, opacity: 1 })
+            .fromTo('.ts', { y: 100, opacity: 0 }, { y: 0, opacity: 1 })
             .fromTo('.react', { y: 100, opacity: 0 }, { y: 0, opacity: 1 })
             .fromTo('.sc', { y: 100, opacity: 0 }, { y: 0, opacity: 1 })
             .fromTo('.node', { y: 100, opacity: 0 }, { y: 0, opacity: 1 })
@@ -82,6 +87,7 @@ const Ability = () => {
             .fromTo('.vitest', { y: 100, opacity: 0 }, { y: 0, opacity: 1 })
             .fromTo('.mongo', { y: 100, opacity: 0 }, { y: 0, opacity: 1 })
             .fromTo('.tailwind', { y: 100, opacity: 0 }, { y: 0, opacity: 1 })
+            .fromTo('.insomnia', { y: 100, opacity: 0 }, { y: 0, opacity: 1 })
             .fromTo('.vite', { y: 100, opacity: 0 }, { y: 0, opacity: 1 })
             .fromTo('.git', { y: 100, opacity: 0 }, { y: 0, opacity: 1 })
             .fromTo('.github', { y: 100, opacity: 0 }, { y: 0, opacity: 1 })

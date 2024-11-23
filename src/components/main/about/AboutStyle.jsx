@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const AboutComponent = styled.section`
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 10px;
     padding: 65px;
     margin: 50px 0px;
@@ -33,6 +34,7 @@ export const AboutComponent = styled.section`
         padding: 20px;
         border-radius: 10px;
         background-color: ${({ theme }) => theme.quaternary};
+        max-width: 1400px;
 
         & p {
             text-indent: 15px;

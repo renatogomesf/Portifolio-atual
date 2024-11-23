@@ -83,6 +83,9 @@ export const AbilityComponent = styled.section`
         & .js::after {
             background-color: #f0dc4e;
         }
+        & .ts::after {
+            background-color: #007acc;
+        }
         & .react::after {
             background-color: #61dafb;
         }
@@ -110,6 +113,9 @@ export const AbilityComponent = styled.section`
         }
         & .tailwind::after {
             background-color: #35bef8;
+        }
+        & .insomnia::after {
+            background-color: #5c00d1;
         }
         & .vite::after {
             background-image: linear-gradient(#46caff, #bd34ff);
