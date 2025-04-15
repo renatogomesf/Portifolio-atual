@@ -45,7 +45,7 @@ export const AbilityComponent = styled.section`
             & img {
                 margin: 20px;
                 width: 100px;
-                filter: drop-shadow(2px 2px 0px black);
+                filter: drop-shadow(1px 1px 0px black);
                 z-index: 10;
             }
 

@@ -8,6 +8,7 @@ import CSS from '../../../image/imgHabilidade/css.png'
 import JS from '../../../image/imgHabilidade/javascript.png'
 import TS from '../../../image/imgHabilidade/typescript.png'
 import REACT from '../../../image/imgHabilidade/react.png'
+import NEXT from '../../../image/imgHabilidade/next.svg'
 import SC from '../../../image/imgHabilidade/styled-components.png'
 import NODE from '../../../image/imgHabilidade/node-js.png'
 import MYSQL from '../../../image/imgHabilidade/mysql.png'
@@ -32,6 +33,7 @@ const habilidades = [
     { img: JS, title: 'JavaScript', class: 'js' },
     { img: TS, title: 'TypeScript', class: 'ts' },
     { img: REACT, title: 'React.js', class: 'react' },
+    { img: NEXT, title: 'Next.js (Estudando)', class: 'next' },
     { img: SC, title: 'Styled Components', class: 'sc' },
     { img: NODE, title: 'Node.js', class: 'node' },
     { img: MYSQL, title: 'MySQL', class: 'mysql' },
@@ -79,6 +81,7 @@ const Ability = () => {
             .fromTo('.js', { y: 100, opacity: 0 }, { y: 0, opacity: 1 })
             .fromTo('.ts', { y: 100, opacity: 0 }, { y: 0, opacity: 1 })
             .fromTo('.react', { y: 100, opacity: 0 }, { y: 0, opacity: 1 })
+            .fromTo('.next', { y: 100, opacity: 0 }, { y: 0, opacity: 1 })
             .fromTo('.sc', { y: 100, opacity: 0 }, { y: 0, opacity: 1 })
             .fromTo('.node', { y: 100, opacity: 0 }, { y: 0, opacity: 1 })
             .fromTo('.mysql', { y: 100, opacity: 0 }, { y: 0, opacity: 1 })

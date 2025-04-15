@@ -3,7 +3,7 @@ import { AboutComponent } from './AboutStyle'
 
 import FALA from '../../../image/fala.png'
 
-import Curriculo from './pdf/Currículo_Renato_Gomes_Ferreira.pdf'
+import Curriculo from './pdf/Curriculo_Renato_Gomes.pdf'
 
 import { GoProjectSymlink } from 'react-icons/go'
 import { MdOutlineFileDownload } from 'react-icons/md'
@@ -41,8 +41,8 @@ const About = () => {
                     Oi! Sou <strong>Renato Gomes</strong>. Sou{' '}
                     <strong>Desenvolvedor Full Stack</strong> em início de
                     carreira, apaixonado por tecnologia e por transformar ideias
-                    em soluções funcionais. Possuo mais de 1 ano de estudo
-                    independentes na área, neste ano fiz o curso full stack da{' '}
+                    em soluções funcionais. Possuo mais de 1 ano e meio de estudo
+                    independentes na área, fui aluno da primeira turma do curso full stack da{' '}
                     <span>
                         <a
                             href="https://geracaotech.iel-ce.org.br/"
@@ -51,7 +51,7 @@ const About = () => {
                             Geração Tech <FaExternalLinkAlt className="icon" />
                         </a>
                     </span>
-                    e, também neste ano, me tornei aluno de{' '}
+                    e sou aluno de{' '}
                     <strong>Engenharia de Software</strong> no Centro
                     Universitário União das Américas Descomplica.
                 </p>
@@ -81,7 +81,7 @@ const About = () => {
                     </a>
                     <a
                         href={Curriculo}
-                        download="Currículo_Renato_Gomes_Ferreira.pdf"
+                        download="Curriculo_Renato_Gomes.pdf"
                     >
                         <div>
                             <MdOutlineFileDownload className="icon" />
