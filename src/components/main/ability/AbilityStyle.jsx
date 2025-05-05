@@ -89,6 +89,9 @@ export const AbilityComponent = styled.section`
         & .react::after {
             background-color: #61dafb;
         }
+        & .next::after {
+            background-color: #ffffff;
+        }
         & .sc::after {
             background-color: #ce6dba;
         }

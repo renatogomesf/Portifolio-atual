@@ -33,7 +33,7 @@ const habilidades = [
     { img: JS, title: 'JavaScript', class: 'js' },
     { img: TS, title: 'TypeScript', class: 'ts' },
     { img: REACT, title: 'React.js', class: 'react' },
-    { img: NEXT, title: 'Next.js (Estudando)', class: 'next' },
+    { img: NEXT, title: 'Next.js', class: 'next' },
     { img: SC, title: 'Styled Components', class: 'sc' },
     { img: NODE, title: 'Node.js', class: 'node' },
     { img: MYSQL, title: 'MySQL', class: 'mysql' },
